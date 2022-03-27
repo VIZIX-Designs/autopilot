@@ -16,8 +16,8 @@
   <Button Name="VS_BTN" Pin="33" />
   <Output Name="FD_LED" Pin="34" />
   <Button Name="FD_BTN" Pin="35" />
-  <Output Name="AP_LED" Pin="2" />
-  <Button Name="AP_BTN" Pin="3" />
+  <Output Name="AP_LED" Pin="20" />
+  <Button Name="AP_BTN" Pin="21" />
   <Button Name="SPD_KNB_BTN" Pin="37" />
   <Button Name="HDG_KNB_BTN" Pin="36" />
   <Button Name="ALT_KNB_BTN" Pin="43" />
@@ -27,6 +27,6 @@
   <Encoder Name="HDG_KNB" PinLeft="40" PinRight="38" EncoderType="0" />
   <Encoder Name="ALT_KNB" PinLeft="47" PinRight="45" EncoderType="0" />
   <Encoder Name="VS_KNB" PinLeft="46" PinRight="44" EncoderType="0" />
-  <Button Name="FPA_BTN" Pin="13" />
+  <Button Name="FPA_BTN" Pin="19" />
   <LedModule Name="VS_DSP" DinPin="48" ClsPin="50" ClkPin="52" Brightness="3" NumModules="1" />
 </Config>
