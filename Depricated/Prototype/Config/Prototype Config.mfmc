@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ModuleName>Autopilot</ModuleName>
+  <PowerSavingTime>600</PowerSavingTime>
+  <Output Name="SPD_LED" Pin="22" />
+  <Button Name="SPD_BTN" Pin="23" />
+  <Output Name="HDG_LED" Pin="24" />
+  <Button Name="HDG_BTN" Pin="25" />
+  <Output Name="NAV_LED" Pin="26" />
+  <Button Name="NAV_BTN" Pin="27" />
+  <Output Name="APR_LED" Pin="28" />
+  <Button Name="APR_BTN" Pin="29" />
+  <Output Name="ALT_LED" Pin="30" />
+  <Button Name="ALT_BTN" Pin="31" />
+  <Output Name="VS_LED" Pin="32" />
+  <Button Name="VS_BTN" Pin="33" />
+  <Output Name="FD_LED" Pin="34" />
+  <Button Name="FD_BTN" Pin="35" />
+  <Output Name="AP_LED" Pin="2" />
+  <Button Name="AP_BTN" Pin="3" />
+  <Button Name="SPD_KNB_BTN" Pin="37" />
+  <Button Name="HDG_KNB_BTN" Pin="36" />
+  <Button Name="ALT_KNB_BTN" Pin="43" />
+  <Button Name="VS_KNB_BTN" Pin="42" />
+  <LedModule Name="SPD_HDG_ALT_DSP" DinPin="49" ClsPin="51" ClkPin="53" Brightness="3" NumModules="2" />
+  <Encoder Name="SPD_KNB" PinLeft="41" PinRight="39" EncoderType="0" />
+  <Encoder Name="HDG_KNB" PinLeft="40" PinRight="38" EncoderType="0" />
+  <Encoder Name="ALT_KNB" PinLeft="47" PinRight="45" EncoderType="0" />
+  <Encoder Name="VS_KNB" PinLeft="46" PinRight="44" EncoderType="0" />
+  <Button Name="FPA_BTN" Pin="13" />
+  <LedModule Name="VS_DSP" DinPin="48" ClsPin="50" ClkPin="52" Brightness="3" NumModules="1" />
+</Config>
