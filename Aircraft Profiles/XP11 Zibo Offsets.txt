@@ -1,0 +1,117 @@
+#MCP A/T ARM toggle
+Command 0x6520 UINT8 1 0 laminar/B738/autopilot/autothrottle_arm_toggle _
+0 1 laminar/B738/autopilot/autothrottle_arm_toggle
+
+# MCP N1 switch
+Command 0x6521 UINT8 1 0 laminar/B738/autopilot/n1_press _
+0 0 laminar/B738/autopilot/n1_press
+
+#MCP SPEED switch
+Command 0x6522 UINT8 1 0 laminar/B738/autopilot/speed_press _
+0 0 laminar/B738/autopilot/speed_press
+
+# MCP LVLCHG switch
+Command 0x6523 UINT8 1 0 laminar/B738/autopilot/lvl_chg_press _
+0 0 laminar/B738/autopilot/lvl_chg_press
+
+#MCP HDGSEL switch
+Command 0x6524 UINT8 1 0 laminar/B738/autopilot/hdg_sel_press _
+0 0 laminar/B738/autopilot/hdg_sel_press
+
+#MCP APP switch
+Command 0x6525 UINT8 1 0 laminar/B738/autopilot/app_press _
+0 0 laminar/B738/autopilot/app_press
+
+#MCP ALTHLD switch
+Command 0x6526 UINT8 1 0 laminar/B738/autopilot/alt_hld_press _
+0 0 laminar/B738/autopilot/alt_hld_press
+
+#MCP VORLOC switch
+Command 0x6527 UINT8 1 0 laminar/B738/autopilot/vorloc_press _
+0 0 laminar/B738/autopilot/vorloc_press
+
+#MCP VS switch
+Command 0x6528 UINT8 1 0 laminar/B738/autopilot/vs_press _
+0 0 laminar/B738/autopilot/vs_press
+
+#MCP CO switch
+Command 0x6529 UINT8 1 1 laminar/B738/autopilot/change_over_press _
+
+#MCP LNAV switch
+Command 0x6530 UINT8 1 0 laminar/B738/autopilot/lnav_press _
+0 0 laminar/B738/autopilot/lnav_press
+
+#MCP VNAV switch
+Command 0x6531 UINT8 1 0 laminar/B738/autopilot/vnav_press _
+0 0 laminar/B738/autopilot/vnav_press
+
+#MCP CMDA switch
+Command 0x6532 UINT8 1 1 laminar/B738/autopilot/cmd_a_press _
+
+#MCP CMDB switch
+Command 0x6533 UINT8 1 1 laminar/B738/autopilot/cmd_b_press _
+
+#MCP CWSA switch
+Command 0x6534 UINT8 1 1 laminar/B738/autopilot/cws_a_press _
+
+#MCP CWSB switch
+Command 0x6535 UINT8 1 1 laminar/B738/autopilot/cws_b_press _
+
+#MCP ALTINTV switch
+Command 0x6536 UINT8 1 0 laminar/B738/autopilot/alt_interv _
+0 0 laminar/B738/autopilot/alt_interv
+
+#MCP SPD INTV switch
+Command 0x6537 UINT8 1 0 laminar/B738/autopilot/spd_interv _
+0 0 laminar/B738/autopilot/spd_interv
+
+# MCP FDCA toggle
+Command 0x6538 UINT8 1 0 laminar/B738/autopilot/flight_director_toggle _
+0 1 laminar/B738/autopilot/flight_director_toggle
+
+# MCP FDFO toggle
+Command 0x6539 UINT8 1 0 laminar/B738/autopilot/flight_director_fo_toggle _
+0 1 laminar/B738/autopilot/flight_director_fo_toggle
+
+# MCP DISENGAGE toggle
+Command 0x6540 UINT8 1 0 laminar/B738/autopilot/disconnect_toggle _
+0 1 laminar/B738/autopilot/disconnect_toggle
+
+
+
+
+#MCP ALT ENCODER
+Command 0x6541 UINT8 1 1 laminar/B738/autopilot/altitude_up _
+1 0 laminar/B738/autopilot/altitude_up
+Command 0x6542 UINT8 1 1 laminar/B738/autopilot/altitude_dn _
+1 0 laminar/B738/autopilot/altitude_dn
+
+#MCP SPEED ENCODER
+Command 0x6543 UINT8 1 1 sim/autopilot/airspeed_up _
+1 0 sim/autopilot/airspeed_up
+Command 0x6544 UINT8 1 1 sim/autopilot/airspeed_down _
+1 0 sim/autopilot/airspeed_down
+
+#MCP HDG ENCODER
+Command 0x6545 UINT8 1 1 laminar/B738/autopilot/heading_up _
+1 0 laminar/B738/autopilot/heading_up
+Command 0x6546 UINT8 1 1 laminar/B738/autopilot/heading_dn _
+1 0 laminar/B738/autopilot/heading_dn
+
+#MCP VS ENCODER
+Command 0x6547 UINT8 1 1 sim/autopilot/vertical_speed_up _
+1 0 sim/autopilot/vertical_speed_up
+Command 0x6548 UINT8 1 1 sim/autopilot/vertical_speed_down _
+1 0 sim/autopilot/vertical_speed_down
+
+#MCP CRS CAPT ENCODER
+Command 0x6549 UINT8 1 1 laminar/B738/autopilot/course_pilot_up _
+1 0 laminar/B738/autopilot/course_pilot_up
+Command 0x6550 UINT8 1 1 laminar/B738/autopilot/course_pilot_dn _
+1 0 laminar/B738/autopilot/course_pilot_dn
+
+#MCP CRS FO ENCODER
+Command 0x6551 UINT8 1 1 laminar/B738/autopilot/course_copilot_up _
+1 0 laminar/B738/autopilot/course_copilot_up
+Command 0x6552 UINT8 1 1 laminar/B738/autopilot/course_copilot_dn _
+1 0 laminar/B738/autopilot/course_copilot_dn
