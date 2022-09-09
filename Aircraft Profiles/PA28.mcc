@@ -157,13 +157,13 @@
       <active>true</active>
       <description>SPD_DSP</description>
       <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=9.4.0.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-        <source type="SimConnect" VarType="CODE" Value="(A:AUTOPILOT AIRSPEED HOLD VAR,Knots)" />
+        <source type="SimConnect" VarType="CODE" Value="(A:NAV OBS:1,Degrees)" UUID="6bbf319a-5031-477e-ba46-8a24936f7d25" />
         <comparison active="True" value="88888" operand="=" ifValue="---" elseValue="" />
         <display type="Display Module" serial="Autopilot/ SN-bf3-83d" trigger="normal" ledAddress="SPD_HDG_ALT_DSP" ledConnector="1" ledModuleSize="8" ledPadding="True" ledPaddingChar="0" ledDigits="5,6,7" />
         <preconditions>
           <precondition type="config" active="true" ref="e4a1285a-874e-4853-88f7-3277c6f75f10" operand="&lt;" value="1" logic="and" />
         </preconditions>
-        <transformation active="True" expression="if( #==1, $, 88888 )" substrStart="0" substrEnd="7" />
+        <transformation active="False" expression="if( #==1, $, 88888 )" substrStart="0" substrEnd="7" />
         <configrefs>
           <configref active="False" ref="dd6aaff4-21e3-4c34-9b07-76715427c3c6" placeholder="B" />
           <configref active="False" ref="a38f9933-e299-4fc7-bd88-bfc2c9d87700" placeholder="A" />
@@ -236,7 +236,7 @@
       </settings>
     </config>
     <config guid="6fa41018-f843-4f1a-816d-aacf9ebba41c">
-      <active>true</active>
+      <active>false</active>
       <description>Difference_ALT</description>
       <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=9.4.0.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <source type="SimConnect" VarType="CODE" Value="(A:INDICATED ALTITUDE,Feet)" />
@@ -477,7 +477,7 @@
       </settings>
     </config>
     <config guid="ac343bab-a681-42b6-9bde-b01cd6a8d367">
-      <active>true</active>
+      <active>false</active>
       <description>ALT_INC</description>
       <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=9.4.0.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <source type="Variable" varType="number" varName="ALT_Toggle" varExpression="$" />
@@ -654,8 +654,8 @@
       <description>SPD_KNB_BTN</description>
       <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=9.4.0.0, Culture=neutral, PublicKeyToken=null" serial="Autopilot/ SN-bf3-83d" name="SPD_KNB_BTN" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <button>
-          <onPress type="MSFS2020EventIdInputAction" eventId="" />
-          <onRelease type="MSFS2020EventIdInputAction" eventId="" />
+          <onPress type="MSFS2020CustomInputAction" command="" presetId="-" />
+          <onRelease type="MSFS2020CustomInputAction" command="" presetId="-" />
         </button>
         <preconditions />
         <configrefs>
@@ -730,9 +730,9 @@
       <description>SPD_KNB</description>
       <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=9.4.0.0, Culture=neutral, PublicKeyToken=null" serial="Autopilot/ SN-bf3-83d" name="SPD_KNB" type="Encoder" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <encoder>
-          <onLeft type="MSFS2020CustomInputAction" command="(&gt;K:AP_SPD_VAR_DEC)" presetId="5f986bc3-c167-46a0-acf3-e94bd02606d2" />
+          <onLeft type="MSFS2020CustomInputAction" command="(&gt;K:VOR1_OBI_DEC)" presetId="11b28387-d166-42a4-a919-eedeb9f1ae5c" />
           <onLeftFast />
-          <onRight type="MSFS2020CustomInputAction" command="(&gt;K:AP_SPD_VAR_INC)" presetId="5a6e646f-6b5a-4ceb-9761-2250c9f0f237" />
+          <onRight type="MSFS2020CustomInputAction" command="(&gt;K:VOR1_OBI_INC)" presetId="12dc0374-c401-4d4c-9799-542a03e59bae" />
           <onRightFast />
         </encoder>
         <preconditions />
@@ -767,34 +767,18 @@
         </configrefs>
       </settings>
     </config>
-    <config guid="c38fc2e9-72fe-42d3-8cea-352aa1bcab0d">
-      <active>true</active>
-      <description>ALT_KNB_100</description>
-      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=9.4.0.0, Culture=neutral, PublicKeyToken=null" serial="Autopilot/ SN-bf3-83d" name="ALT_KNB" type="Encoder" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-        <encoder>
-          <onLeft type="MSFS2020EventIdInputAction" eventId="AS1000_AP_ALT_DEC_100" />
-          <onLeftFast />
-          <onRight type="MSFS2020EventIdInputAction" eventId="AS1000_AP_ALT_INC_100" />
-          <onRightFast />
-        </encoder>
-        <preconditions>
-          <precondition type="config" active="true" ref="ac343bab-a681-42b6-9bde-b01cd6a8d367" operand="&lt;" value="1" logic="and" />
-        </preconditions>
-        <configrefs />
-      </settings>
-    </config>
     <config guid="d340fe56-7e7e-478f-a05b-f3e4ffe7eccf">
       <active>true</active>
-      <description>ALT_KNB_1000</description>
+      <description>ALT_KNB</description>
       <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=9.4.0.0, Culture=neutral, PublicKeyToken=null" serial="Autopilot/ SN-bf3-83d" name="ALT_KNB" type="Encoder" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <encoder>
-          <onLeft type="MSFS2020EventIdInputAction" eventId="AS1000_AP_ALT_DEC_1000" />
+          <onLeft type="MSFS2020CustomInputAction" command="(&gt;K:NAV1_RADIO_WHOLE_DEC)" presetId="bcb45f55-c67a-44b9-a951-096e450ccec7" />
           <onLeftFast />
-          <onRight type="MSFS2020EventIdInputAction" eventId="AS1000_AP_ALT_INC_1000" />
+          <onRight type="MSFS2020CustomInputAction" command="(&gt;K:NAV1_RADIO_WHOLE_INC)" presetId="1ae481bc-bea6-4f58-a683-01c9d0c38e32" />
           <onRightFast />
         </encoder>
         <preconditions>
-          <precondition type="config" active="true" ref="ac343bab-a681-42b6-9bde-b01cd6a8d367" operand="&gt;" value="0" logic="and" />
+          <precondition type="config" active="false" ref="ac343bab-a681-42b6-9bde-b01cd6a8d367" operand="&gt;" value="0" logic="and" />
         </preconditions>
         <configrefs />
       </settings>

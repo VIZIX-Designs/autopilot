@@ -236,7 +236,7 @@
       </settings>
     </config>
     <config guid="6fa41018-f843-4f1a-816d-aacf9ebba41c">
-      <active>true</active>
+      <active>false</active>
       <description>Difference_ALT</description>
       <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=9.4.0.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <source type="SimConnect" VarType="CODE" Value="(A:INDICATED ALTITUDE,Feet)" />
@@ -462,25 +462,6 @@
       <description>Armed_mode</description>
       <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=9.4.0.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <source type="SimConnect" VarType="CODE" Value="(L:A32NX_FMA_VERTICAL_ARMED)" />
-        <comparison active="False" value="" operand="" ifValue="" elseValue="" />
-        <display type="" serial="-" trigger="normal" pin="" pinBrightness="255" />
-        <preconditions />
-        <transformation active="False" expression="$" substrStart="0" substrEnd="7" />
-        <configrefs>
-          <configref active="False" ref="dd6aaff4-21e3-4c34-9b07-76715427c3c6" placeholder="B" />
-          <configref active="False" ref="a38f9933-e299-4fc7-bd88-bfc2c9d87700" placeholder="A" />
-          <configref active="False" ref="5d249be0-4949-4c2d-8fb8-55573e3b5918" placeholder="@" />
-          <configref active="False" ref="b2e17bfb-b6c5-43b9-a9dd-c40967a8ef6b" placeholder="?" />
-          <configref active="False" ref="2beaa044-03ae-4f8c-8c2f-f1e5daa7e399" placeholder="!" />
-          <configref active="False" ref="4bebe448-e1f2-4cd0-8d34-3b0422075e62" placeholder="#" />
-        </configrefs>
-      </settings>
-    </config>
-    <config guid="ac343bab-a681-42b6-9bde-b01cd6a8d367">
-      <active>true</active>
-      <description>ALT_INC</description>
-      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=9.4.0.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-        <source type="Variable" varType="number" varName="ALT_Toggle" varExpression="$" />
         <comparison active="False" value="" operand="" ifValue="" elseValue="" />
         <display type="" serial="-" trigger="normal" pin="" pinBrightness="255" />
         <preconditions />
@@ -730,9 +711,9 @@
       <description>SPD_KNB</description>
       <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=9.4.0.0, Culture=neutral, PublicKeyToken=null" serial="Autopilot/ SN-bf3-83d" name="SPD_KNB" type="Encoder" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <encoder>
-          <onLeft type="MSFS2020CustomInputAction" command="(&gt;K:AP_SPD_VAR_DEC)" presetId="5f986bc3-c167-46a0-acf3-e94bd02606d2" />
+          <onLeft type="MSFS2020EventIdInputAction" eventId="AP_SPD_VAR_DEC" />
           <onLeftFast />
-          <onRight type="MSFS2020CustomInputAction" command="(&gt;K:AP_SPD_VAR_INC)" presetId="5a6e646f-6b5a-4ceb-9761-2250c9f0f237" />
+          <onRight type="MSFS2020EventIdInputAction" eventId="AP_SPD_VAR_INC" />
           <onRightFast />
         </encoder>
         <preconditions />
@@ -769,32 +750,16 @@
     </config>
     <config guid="c38fc2e9-72fe-42d3-8cea-352aa1bcab0d">
       <active>true</active>
-      <description>ALT_KNB_100</description>
+      <description>ALT_KNB</description>
       <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=9.4.0.0, Culture=neutral, PublicKeyToken=null" serial="Autopilot/ SN-bf3-83d" name="ALT_KNB" type="Encoder" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <encoder>
-          <onLeft type="MSFS2020EventIdInputAction" eventId="AS1000_AP_ALT_DEC_100" />
+          <onLeft type="MSFS2020CustomInputAction" command="(&gt;K:AP_ALT_VAR_DEC)" presetId="035b1f1d-1e4e-4809-9713-07fe5ab0581d" />
           <onLeftFast />
-          <onRight type="MSFS2020EventIdInputAction" eventId="AS1000_AP_ALT_INC_100" />
+          <onRight type="MSFS2020CustomInputAction" command="(&gt;K:AP_ALT_VAR_INC)" presetId="6b70bc27-97bf-499e-ba49-3d63984aa593" />
           <onRightFast />
         </encoder>
         <preconditions>
           <precondition type="config" active="true" ref="ac343bab-a681-42b6-9bde-b01cd6a8d367" operand="&lt;" value="1" logic="and" />
-        </preconditions>
-        <configrefs />
-      </settings>
-    </config>
-    <config guid="d340fe56-7e7e-478f-a05b-f3e4ffe7eccf">
-      <active>true</active>
-      <description>ALT_KNB_1000</description>
-      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=9.4.0.0, Culture=neutral, PublicKeyToken=null" serial="Autopilot/ SN-bf3-83d" name="ALT_KNB" type="Encoder" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-        <encoder>
-          <onLeft type="MSFS2020EventIdInputAction" eventId="AS1000_AP_ALT_DEC_1000" />
-          <onLeftFast />
-          <onRight type="MSFS2020EventIdInputAction" eventId="AS1000_AP_ALT_INC_1000" />
-          <onRightFast />
-        </encoder>
-        <preconditions>
-          <precondition type="config" active="true" ref="ac343bab-a681-42b6-9bde-b01cd6a8d367" operand="&gt;" value="0" logic="and" />
         </preconditions>
         <configrefs />
       </settings>
@@ -848,7 +813,7 @@
       <description>Range Dec</description>
       <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=9.4.0.0, Culture=neutral, PublicKeyToken=null" serial="TCA Q-Eng 1&amp;2 / JS-fde99580-0109-11ec-8001-444553540000" name="Button 18" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <button>
-          <onPress type="MSFS2020CustomInputAction" command="(&gt;H:AS1000_MFD_RANGE_DEC)" presetId="a3c8d8e0-e6a5-4c19-9b3e-31178dfa2ebb" />
+          <onPress type="MSFS2020CustomInputAction" command="(&gt;H:AS3000_TSC_Vertical_BottomKnob_Small_DEC)" presetId="01f94dfa-be63-4aa5-8440-60020d84347d" />
           <onRelease />
         </button>
         <preconditions />
@@ -860,7 +825,43 @@
       <description>Range Inc</description>
       <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=9.4.0.0, Culture=neutral, PublicKeyToken=null" serial="TCA Q-Eng 1&amp;2 / JS-fde99580-0109-11ec-8001-444553540000" name="Button 19" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <button>
-          <onPress type="MSFS2020CustomInputAction" command="(&gt;H:AS1000_MFD_RANGE_INC)" presetId="fdcb4bc4-96ee-4fa8-8514-ae2d00c14336" />
+          <onPress type="MSFS2020CustomInputAction" command="(&gt;H:AS3000_TSC_Vertical_BottomKnob_Small_INC)" presetId="14ced792-2b62-4d47-a5c7-52a8fa4c1192" />
+          <onRelease />
+        </button>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="27cd6789-1db8-4581-9526-d5a920d02913">
+      <active>true</active>
+      <description>Scroll Down</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=9.4.0.0, Culture=neutral, PublicKeyToken=null" serial="T.A320 Pilot / JS-c2aef5a0-cb8f-11eb-8002-444553540000" name="Button 15" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <button>
+          <onPress type="MSFS2020CustomInputAction" command="(&gt;H:gauges_ha420_sys_Checklist_scoll_down)" presetId="0" />
+          <onRelease />
+        </button>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="2975529e-3cb5-4a4c-9087-d2eaf2ecfeb6">
+      <active>true</active>
+      <description>Scroll Up</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=9.4.0.0, Culture=neutral, PublicKeyToken=null" serial="T.A320 Pilot / JS-c2aef5a0-cb8f-11eb-8002-444553540000" name="Button 12" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <button>
+          <onPress type="MSFS2020CustomInputAction" command="(&gt;H:gauges_ha420_sys_Checklist_scoll_up)" presetId="0" />
+          <onRelease />
+        </button>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="dd40b99f-6443-44a7-8ea1-d3e665830289">
+      <active>true</active>
+      <description>Enter</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=9.4.0.0, Culture=neutral, PublicKeyToken=null" serial="T.A320 Pilot / JS-c2aef5a0-cb8f-11eb-8002-444553540000" name="Button 13" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <button>
+          <onPress type="MSFS2020CustomInputAction" command="(&gt;H:gauges_ha420_sys_Checklist_enter)" presetId="0" />
           <onRelease />
         </button>
         <preconditions />
@@ -871,8 +872,20 @@
       <active>false</active>
       <description>Custom</description>
     </config>
-    <config guid="5c0ad248-7381-41ad-80a7-e72fd684d0bc">
+    <config guid="c85f6188-6489-4224-bddb-a7697cf78244">
       <active>true</active>
+      <description>Warning/Caution Ack</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=9.4.0.0, Culture=neutral, PublicKeyToken=null" serial="TCA YOKE BOEING / JS-f4455760-d450-11ec-8004-444553540000" name="Button 15" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <button>
+          <onPress type="MSFS2020CustomInputAction" command="(&gt;H:HPFD_Master_Warning_Push)" presetId="-" />
+          <onRelease />
+        </button>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="5c0ad248-7381-41ad-80a7-e72fd684d0bc">
+      <active>false</active>
       <description>Landing Lights</description>
       <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=9.4.0.0, Culture=neutral, PublicKeyToken=null" serial="TCA Q-Eng 1&amp;2 / JS-fde99580-0109-11ec-8001-444553540000" name="Button 4" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <button>
