@@ -892,5 +892,33 @@
         <configrefs />
       </settings>
     </config>
+    <config guid="4fb6d2a0-415d-4d8e-b1a5-589da11fd650">
+      <active>false</active>
+      <description>Stick</description>
+    </config>
+    <config guid="b2cfc136-7deb-4f7c-b8d2-745e16e29625">
+      <active>true</active>
+      <description>Hat Left</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=9.7.1.0, Culture=neutral, PublicKeyToken=null" serial="T.A320 Pilot / JS-573eb740-cb8c-11eb-8001-444553540000" name="POV Hat SwitchL" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <button>
+          <onPress type="MSFS2020CustomInputAction" command="55901 (&gt;K:ROTOR_BRAKE)" presetId="9be49309-7d3a-4581-9f81-e26910e30f8e" />
+          <onRelease />
+        </button>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="e6e340e1-6178-4dbf-a65c-93bbae0a2d32">
+      <active>true</active>
+      <description>Hat Right</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=9.7.1.0, Culture=neutral, PublicKeyToken=null" serial="T.A320 Pilot / JS-573eb740-cb8c-11eb-8001-444553540000" name="POV Hat SwitchR" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <button>
+          <onPress type="MSFS2020CustomInputAction" command="56001 (&gt;K:ROTOR_BRAKE)" presetId="b28bcfeb-81e2-46b7-b760-c63bf7bb6eac" />
+          <onRelease />
+        </button>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
   </inputs>
 </MobiflightConnector>

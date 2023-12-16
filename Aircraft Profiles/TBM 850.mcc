@@ -819,16 +819,33 @@
     </config>
     <config guid="c38fc2e9-72fe-42d3-8cea-352aa1bcab0d">
       <active>true</active>
-      <description>ALT_KNB_100</description>
+      <description>ALT_KNB_100_INC</description>
       <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=9.7.1.0, Culture=neutral, PublicKeyToken=null" serial="Autopilot/ SN-bf3-83d" name="ALT_KNB" type="Encoder" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <encoder>
-          <onLeft type="MSFS2020EventIdInputAction" eventId="AS1000_AP_ALT_DEC_100" />
+          <onLeft type="MSFS2020CustomInputAction" command="" presetId="0" />
           <onLeftFast />
-          <onRight type="MSFS2020EventIdInputAction" eventId="AS1000_AP_ALT_INC_100" />
+          <onRight type="MSFS2020CustomInputAction" command=" (A:AUTOPILOT ALTITUDE LOCK VAR, feet) 100 + (&gt;K:AP_ALT_VAR_SET_ENGLISH) (&gt;H:AP_KNOB_Up)" presetId="0" />
           <onRightFast />
         </encoder>
         <preconditions>
           <precondition type="config" active="true" ref="ac343bab-a681-42b6-9bde-b01cd6a8d367" operand="&lt;" value="1" logic="and" />
+        </preconditions>
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="1e0011aa-1ea6-4d3a-8720-d4222ee3ecfe">
+      <active>true</active>
+      <description>ALT_KNB_100_DEC</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=9.7.1.0, Culture=neutral, PublicKeyToken=null" serial="Autopilot/ SN-bf3-83d" name="ALT_KNB" type="Encoder" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <encoder>
+          <onLeft type="MSFS2020CustomInputAction" command=" (A:AUTOPILOT ALTITUDE LOCK VAR, feet) 100 - (&gt;K:AP_ALT_VAR_SET_ENGLISH) (&gt;H:AP_KNOB_Up)" presetId="0" />
+          <onLeftFast />
+          <onRight type="MSFS2020CustomInputAction" command="" presetId="-" />
+          <onRightFast />
+        </encoder>
+        <preconditions>
+          <precondition type="config" active="true" ref="ac343bab-a681-42b6-9bde-b01cd6a8d367" operand="&lt;" value="1" logic="and" />
+          <precondition type="config" active="true" ref="6e4debd9-cffb-4298-95bf-388d43ae5775" operand="&gt;=" value="100" logic="and" />
         </preconditions>
         <configrefs />
       </settings>
@@ -898,7 +915,7 @@
       <description>Range Dec</description>
       <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=9.7.1.0, Culture=neutral, PublicKeyToken=null" serial="Bravo Throttle Quadrant / JS-0f7f6820-2241-11ed-8001-444553540000" name="Button 14" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <button>
-          <onPress type="MSFS2020CustomInputAction" command="(&gt;H:AS1000_MFD_RANGE_DEC)" presetId="a3c8d8e0-e6a5-4c19-9b3e-31178dfa2ebb" />
+          <onPress type="MSFS2020CustomInputAction" command="(&gt;H:AS530_RNG_Zoom)&#xA;0 (&gt;K:GPS_PAGE_KNOB_INC)" presetId="0" />
           <onRelease />
         </button>
         <preconditions />
@@ -910,7 +927,7 @@
       <description>Range Inc</description>
       <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=9.7.1.0, Culture=neutral, PublicKeyToken=null" serial="Bravo Throttle Quadrant / JS-0f7f6820-2241-11ed-8001-444553540000" name="Button 13" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <button>
-          <onPress type="MSFS2020CustomInputAction" command="(&gt;H:AS1000_MFD_RANGE_INC)" presetId="fdcb4bc4-96ee-4fa8-8514-ae2d00c14336" />
+          <onPress type="MSFS2020CustomInputAction" command="(&gt;H:AS530_RNG_Dezoom)&#xA;0 (&gt;K:GPS_PAGE_KNOB_DEC)" presetId="-" />
           <onRelease />
         </button>
         <preconditions />
@@ -924,6 +941,86 @@
         <button>
           <onPress type="MSFS2020CustomInputAction" command="2 (&gt;L:SWS_LIGHTING_Switch_Light_Landing, Enum)" presetId="6b6f43f2-17a3-45f4-9750-d93d1c5c8b5b" />
           <onRelease type="MSFS2020CustomInputAction" command="0 (&gt;L:SWS_LIGHTING_Switch_Light_Landing, Enum)" presetId="023fd070-e61b-4ce3-a537-7f12df29664c" />
+        </button>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="2c136d1c-6d10-4d1b-830e-6a27e268a53e">
+      <active>true</active>
+      <description>850 Mode</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=9.7.1.0, Culture=neutral, PublicKeyToken=null" serial="Bravo Throttle Quadrant / JS-0f7f6820-2241-11ed-8001-444553540000" name="Button 46" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <button>
+          <onPress type="MSFS2020CustomInputAction" command="1 (&gt;L:var_850Mode)" presetId="0" />
+          <onRelease type="MSFS2020CustomInputAction" command="0 (&gt;L:var_850Mode)" presetId="-" />
+        </button>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="5f629b12-692b-40fb-93d0-4aea95ebacd9">
+      <active>true</active>
+      <description>Throttle Cut</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=9.7.1.0, Culture=neutral, PublicKeyToken=null" serial="Bravo Throttle Quadrant / JS-0f7f6820-2241-11ed-8001-444553540000" name="Button 24" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <button>
+          <onPress type="MSFS2020CustomInputAction" command="(&gt;K:THROTTLE1_CUT)" presetId="811d3c93-707e-42fa-8aec-fb182a0beb9c" />
+          <onRelease type="MSFS2020CustomInputAction" command="" presetId="-" />
+        </button>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="581c4564-1c7b-4870-b466-f4701c5d2a45">
+      <active>false</active>
+      <description>Yoke</description>
+    </config>
+    <config guid="8aa19b95-f11b-47ad-962d-e207bb1bbc91">
+      <active>true</active>
+      <description>Master Warning</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=9.7.1.0, Culture=neutral, PublicKeyToken=null" serial="TCA YOKE BOEING / JS-f4455760-d450-11ec-8004-444553540000" name="Button 16" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <button>
+          <onPress type="MSFS2020CustomInputAction" command="2 (&gt;L:var_masterWarningLatching)" presetId="-" />
+          <onRelease />
+        </button>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="a65cfdae-4686-4663-aad3-8eec8c0d031c">
+      <active>true</active>
+      <description>Master Caution</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=9.7.1.0, Culture=neutral, PublicKeyToken=null" serial="TCA YOKE BOEING / JS-f4455760-d450-11ec-8004-444553540000" name="Button 15" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <button>
+          <onPress type="MSFS2020CustomInputAction" command="2 (&gt;L:var_masterCautionLatching)" presetId="0" />
+          <onRelease />
+        </button>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="6aab7f02-ffef-49b2-b915-a57b7041c5b9">
+      <active>false</active>
+      <description>Side Stick</description>
+    </config>
+    <config guid="8093d86b-fa13-4cd7-aec9-3ad9e99a86b3">
+      <active>true</active>
+      <description>Big Knob Dec</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=9.7.1.0, Culture=neutral, PublicKeyToken=null" serial="Bravo Throttle Quadrant / JS-0f7f6820-2241-11ed-8001-444553540000" name="Button 6" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <button>
+          <onPress type="MSFS2020CustomInputAction" command="0 (&gt;K:GPS_GROUP_KNOB_DEC)" presetId="754adeec-4863-4728-991c-54764af93ad2" />
+          <onRelease />
+        </button>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="23acee97-43e3-4a0e-9ecf-762e16e00e50">
+      <active>true</active>
+      <description>Big Knob Inc</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=9.7.1.0, Culture=neutral, PublicKeyToken=null" serial="Bravo Throttle Quadrant / JS-0f7f6820-2241-11ed-8001-444553540000" name="Button 7" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <button>
+          <onPress type="MSFS2020CustomInputAction" command="0 (&gt;K:GPS_GROUP_KNOB_INC)" presetId="b85de373-60a4-4ce5-b556-29198cba551d" />
+          <onRelease />
         </button>
         <preconditions />
         <configrefs />
