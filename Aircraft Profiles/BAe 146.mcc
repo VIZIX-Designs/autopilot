@@ -410,7 +410,7 @@
       <active>true</active>
       <description>TMS SYNC Light</description>
       <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=10.2.2.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-        <source type="SimConnect" VarType="CODE" Value="(L:R_TMS_Sync_il)" UUID="-" />
+        <source type="SimConnect" VarType="CODE" Value="(L:R_TMS_Sync_il)" UUID="0" />
         <test type="Float" value="1" />
         <modifiers />
         <display type="Output" serial="Bravo Throttle Quadrant / JS-0f7f6820-2241-11ed-8001-444553540000" trigger="normal" pin="AP Mode - IAS" pinBrightness="255" />
@@ -844,7 +844,7 @@
       <description>TMS SYNC</description>
       <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.2.2.0, Culture=neutral, PublicKeyToken=null" serial="Bravo Throttle Quadrant / JS-0f7f6820-2241-11ed-8001-444553540000" name="Button 7" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <button>
-          <onPress type="MSFS2020CustomInputAction" command="1 (&gt;L:R_TMS_Sync)" presetId="0" />
+          <onPress type="MSFS2020CustomInputAction" command="1 (&gt;L:R_TMS_Sync)" presetId="feb82be8-3f43-4d65-a98c-726e6aa63180" />
         </button>
         <preconditions />
         <configrefs />
