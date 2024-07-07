@@ -24,10 +24,10 @@
       </settings>
     </config>
     <config guid="2beaa044-03ae-4f8c-8c2f-f1e5daa7e399">
-      <active>true</active>
+      <active>false</active>
       <description>HDG_LED</description>
       <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=10.3.0.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-        <source type="SimConnect" VarType="CODE" Value="(L:ngx_MCP_HdgSel, number)" UUID="fc70f4c8-64c3-4093-a197-f88df7f67f19" />
+        <source type="SimConnect" VarType="CODE" Value="(L:ngx_HDGmode)" UUID="374260b9-6080-446d-a97d-1776ce975e4a" />
         <test type="Float" value="1" />
         <modifiers>
           <transformation active="False" expression="$" />
@@ -49,7 +49,7 @@
       <active>true</active>
       <description>NAV_LED</description>
       <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=10.3.0.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-        <source type="SimConnect" VarType="CODE" Value="(L:ngx_MCP_LNav, number)" UUID="17381e7f-0b5c-4a85-ab02-76ec7e4c730d" />
+        <source type="SimConnect" VarType="CODE" Value="(L:switch_2111_a, number)" UUID="12dffcd4-0427-473e-82d4-1b4441e1f253" />
         <test type="Float" value="1" />
         <modifiers>
           <transformation active="False" expression="$" />
@@ -131,7 +131,7 @@
       </settings>
     </config>
     <config guid="130a8b6d-ac51-4121-870b-1939d79529e6">
-      <active>true</active>
+      <active>false</active>
       <description>FD_LED</description>
       <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=10.3.0.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <source type="SimConnect" VarType="CODE" Value="(L:ngx_MCP_FDLeft,Number)" UUID="0c05a78a-60d5-4184-bd33-84b2140e1fcb" />
@@ -156,7 +156,7 @@
       <active>true</active>
       <description>AP_LED</description>
       <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=10.3.0.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-        <source type="SimConnect" VarType="CODE" Value="(L:ngx_MCP_CMDA, number)" UUID="c02acc61-b679-4d6f-81b8-90f113619d4d" />
+        <source type="SimConnect" VarType="CODE" Value="(L:switch_2031_a, number)" UUID="5953a719-741a-40f3-a238-d3106917bb9c" />
         <test type="Float" value="1" />
         <modifiers>
           <transformation active="False" expression="$" />
@@ -366,7 +366,7 @@
       <active>true</active>
       <description>A/T_ARM_Light</description>
       <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=10.3.0.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-        <source type="SimConnect" VarType="CODE" Value="(L:switch_3801_73X, number) 0 &gt;" UUID="938cb4b9-48f2-429d-ac83-6cfddb146237" />
+        <source type="SimConnect" VarType="CODE" Value="(L:switch_2071_a, number)" UUID="96eb1dd2-e2aa-4cd2-9246-28de2393493a" />
         <test type="Float" value="1" />
         <modifiers>
           <transformation active="False" expression="$" />
@@ -379,12 +379,17 @@
     </config>
     <config guid="88d7dd7e-e115-473b-a632-bad78096686b">
       <active>false</active>
-      <converter>Boolean</converter>
-      <comparison>=</comparison>
       <description>FCU</description>
-      <fsuipcSize>1</fsuipcSize>
-      <trigger>change</trigger>
-      <arcazeSerial>-</arcazeSerial>
+      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=10.3.0.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <source type="SimConnect" VarType="LVAR" Value="" />
+        <test type="Float" value="1" />
+        <modifiers>
+          <comparison active="True" value="" operand="=" ifValue="1" elseValue="0" />
+        </modifiers>
+        <display type="" serial="-" trigger="change" pin="" pinBrightness="255" />
+        <preconditions />
+        <configrefs />
+      </settings>
     </config>
     <config guid="0694a5c1-b5db-4a32-86af-19e542bad33a">
       <active>true</active>
@@ -398,10 +403,158 @@
         <configrefs />
       </settings>
     </config>
+    <config guid="86417028-735f-45df-8086-675250de0e10">
+      <active>true</active>
+      <description>HDG_DSP</description>
+      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=10.3.0.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <source type="SimConnect" VarType="CODE" Value="(L:ngx_HDGwindow,number)" UUID="033b6fa8-3ac4-485c-ad26-510e8ffb4980" />
+        <test type="Float" value="1" />
+        <modifiers />
+        <display type="LcdDisplay" serial="WINWING FCU / JS-23fd2220-3620-11ef-8001-444553540000" trigger="normal" address="Heading Value" />
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="1f2c58b2-4546-4e94-a859-38bbcfd66452">
+      <active>true</active>
+      <description>ALT_DSP</description>
+      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=10.3.0.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <source type="SimConnect" VarType="CODE" Value="(L:ngx_ALTwindow,number)" UUID="7aef9a1c-1be9-463c-accb-b918f736f56e" />
+        <test type="Float" value="1" />
+        <modifiers />
+        <display type="LcdDisplay" serial="WINWING FCU / JS-23fd2220-3620-11ef-8001-444553540000" trigger="normal" address="Altitude Value" />
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="bd3bf4ae-f00a-4156-9948-c62b5e3360d5">
+      <active>true</active>
+      <description>VS_DSP</description>
+      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=10.3.0.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <source type="SimConnect" VarType="CODE" Value="(L:ngx_VSwindow, number)" UUID="654bbcc2-7707-4930-8214-64fb1aef3a5b" />
+        <test type="Float" value="1" />
+        <modifiers>
+          <transformation active="True" expression="if( $==0, 8888, $ )" />
+        </modifiers>
+        <display type="LcdDisplay" serial="WINWING FCU / JS-23fd2220-3620-11ef-8001-444553540000" trigger="normal" address="VS Value" />
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="39f4ad92-6196-439e-87ea-b63a661c9997">
+      <active>true</active>
+      <description>LOC_LED</description>
+      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=10.3.0.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <source type="SimConnect" VarType="CODE" Value="(L:ngx_MCP_Loc, Number)" UUID="5c38162d-a4d2-4f05-aafc-48a410cb2fed" />
+        <test type="Float" value="1" />
+        <modifiers />
+        <display type="Output" serial="WINWING FCU / JS-23fd2220-3620-11ef-8001-444553540000" trigger="normal" pin="LOC" pinBrightness="255" />
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="ede5c697-1b99-4cb3-96ea-c05f7dd441b5">
+      <active>true</active>
+      <description>AP_LED</description>
+      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=10.3.0.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <source type="SimConnect" VarType="CODE" Value="(L:switch_2031_a, number)" UUID="5953a719-741a-40f3-a238-d3106917bb9c" />
+        <test type="Float" value="1" />
+        <modifiers />
+        <display type="Output" serial="WINWING FCU / JS-23fd2220-3620-11ef-8001-444553540000" trigger="normal" pin="AP1" pinBrightness="255" />
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="e9ef3d5f-ad4b-41fe-90ff-a70d585956e4">
+      <active>true</active>
+      <description>APPR_LED</description>
+      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=10.3.0.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <source type="SimConnect" VarType="CODE" Value="(L:ngx_MCP_App, number)" UUID="f1c44807-a05b-4445-a8f1-d3382b0fccee" />
+        <test type="Float" value="1" />
+        <modifiers />
+        <display type="Output" serial="WINWING FCU / JS-23fd2220-3620-11ef-8001-444553540000" trigger="normal" pin="APPR" pinBrightness="255" />
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="95d5e339-ff54-4409-8d5e-16afc89e7fdd">
+      <active>true</active>
+      <description>HDG/TRK_light</description>
+      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=10.3.0.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <source type="SimConnect" VarType="CODE" Value="(L:ngx_HDGmode)" UUID="374260b9-6080-446d-a97d-1776ce975e4a" />
+        <test type="Float" value="0" />
+        <modifiers>
+          <transformation active="True" expression="$-1" />
+        </modifiers>
+        <display type="LcdDisplay" serial="WINWING FCU / JS-23fd2220-3620-11ef-8001-444553540000" trigger="normal" address="TRK Mode On/Off" />
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="b22dc53e-a1ea-48c8-8e6b-492773733c62">
+      <active>true</active>
+      <description>SPD/MACH_light</description>
+      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=10.3.0.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <source type="SimConnect" VarType="CODE" Value="(L:switch_2081_a, number)" UUID="5c38162d-a4d2-4f05-aafc-48a410cb2fed" />
+        <test type="Float" value="0" />
+        <modifiers />
+        <display type="LcdDisplay" serial="WINWING FCU / JS-23fd2220-3620-11ef-8001-444553540000" trigger="normal" address="Mach Mode On/Off" />
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="4e926a25-bd51-4319-b23b-03dc32bb1505">
+      <active>true</active>
+      <description>SPD_dot</description>
+      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=10.3.0.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <source type="SimConnect" VarType="CODE" Value="(L:switch_2131_a, number)" UUID="5e1b42a9-3105-4005-b7b5-4f19569e2bdf" />
+        <test type="Float" value="1" />
+        <modifiers />
+        <display type="LcdDisplay" serial="WINWING FCU / JS-23fd2220-3620-11ef-8001-444553540000" trigger="normal" address="Speed Dot" />
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="d6d92484-e0f6-4982-bfc4-aa814f5627ef">
+      <active>false</active>
+      <description>HDG_dot</description>
+      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=10.3.0.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <source type="SimConnect" VarType="LVAR" Value="" />
+        <test type="Float" value="1" />
+        <modifiers />
+        <display type="LcdDisplay" serial="WINWING FCU / JS-23fd2220-3620-11ef-8001-444553540000" trigger="normal" address="Heading Dot" />
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="0472fc9b-9364-474c-ac0c-bdfcf16cd82f">
+      <active>true</active>
+      <description>ALT_dot</description>
+      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=10.3.0.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <source type="SimConnect" VarType="CODE" Value="(L:ngx_MCP_AltHold, number)" UUID="-" />
+        <test type="Float" value="1" />
+        <modifiers />
+        <display type="LcdDisplay" serial="WINWING FCU / JS-23fd2220-3620-11ef-8001-444553540000" trigger="normal" address="Altitude Dot" />
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="156a811f-f072-4188-94f8-f57d0db38463">
+      <active>true</active>
+      <description>Backlight</description>
+      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=10.3.0.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <source type="SimConnect" VarType="CODE" Value="(L:OH_MASTER_BRIGHT_ROTATE)" UUID="-" />
+        <test type="Float" value="20" />
+        <modifiers />
+        <display type="LcdDisplay" serial="WINWING FCU / JS-23fd2220-3620-11ef-8001-444553540000" trigger="normal" address="Backlight Percentage" />
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
   </outputs>
   <inputs>
     <config guid="82996e87-9855-43cb-9892-813f7e94e5f7">
-      <active>true</active>
+      <active>false</active>
       <description>SPD_BTN</description>
       <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.3.0.0, Culture=neutral, PublicKeyToken=null" serial="Autopilot/ SN-bf3-83d" name="SPD_BTN" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <button>
@@ -419,7 +572,7 @@
       </settings>
     </config>
     <config guid="7627201f-2be4-45d5-b8cb-8240d01cb34e">
-      <active>true</active>
+      <active>false</active>
       <description>HDG_BTN</description>
       <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.3.0.0, Culture=neutral, PublicKeyToken=null" serial="Autopilot/ SN-bf3-83d" name="HDG_BTN" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <button>
@@ -436,8 +589,30 @@
         </configrefs>
       </settings>
     </config>
+    <config guid="32cd6af5-e03c-4e46-86f4-608caf77c4d6">
+      <active>false</active>
+      <description>NAV_BTN</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.3.0.0, Culture=neutral, PublicKeyToken=null" serial="Autopilot/ SN-bf3-83d" name="NAV_BTN" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <button>
+          <onPress type="MSFS2020CustomInputAction" command="21101 (&gt;K:ROTOR_BRAKE)" presetId="4acebf3b-a8a8-41ce-a437-3502708bee20" />
+        </button>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="5a9526bc-5ca5-4af7-b28d-1f5fe0291b04">
+      <active>false</active>
+      <description>APR_BTN</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.3.0.0, Culture=neutral, PublicKeyToken=null" serial="Autopilot/ SN-bf3-83d" name="APR_BTN" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <button>
+          <onPress type="MSFS2020CustomInputAction" command="22801 (&gt;K:ROTOR_BRAKE)" presetId="595982e7-6c05-4e18-97b6-4ce1a6b637a4" />
+        </button>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
     <config guid="0d69be8e-0d64-4e9c-a437-de476a95c968">
-      <active>true</active>
+      <active>false</active>
       <description>ALT_BTN</description>
       <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.3.0.0, Culture=neutral, PublicKeyToken=null" serial="Autopilot/ SN-bf3-83d" name="ALT_BTN" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <button>
@@ -454,12 +629,23 @@
         </configrefs>
       </settings>
     </config>
+    <config guid="ea2479b6-7e1c-4e10-95dd-d5d676c064c1">
+      <active>false</active>
+      <description>FPA_BTN</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.3.0.0, Culture=neutral, PublicKeyToken=null" serial="Autopilot/ SN-bf3-83d" name="FPA_BTN" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <button>
+          <onPress type="MSFS2020CustomInputAction" command="88501 (&gt;K:ROTOR_BRAKE)" presetId="69bcd7a5-7121-40e7-9666-8cec7291de98" />
+        </button>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
     <config guid="56e68de4-6509-4104-9ddc-dff8dd770f11">
-      <active>true</active>
+      <active>false</active>
       <description>VS_BTN</description>
       <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.3.0.0, Culture=neutral, PublicKeyToken=null" serial="Autopilot/ SN-bf3-83d" name="VS_BTN" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <button>
-          <onPress type="MSFS2020CustomInputAction" command="39501 (&gt;K:ROTOR_BRAKE)" presetId="de5fba9e-ea96-462e-b3f2-30d8508e046c" />
+          <onPress type="MSFS2020CustomInputAction" command="22301 (&gt;K:ROTOR_BRAKE)" presetId="fd846103-1267-4dfc-8482-4e155e95f26f" />
         </button>
         <preconditions />
         <configrefs>
@@ -472,8 +658,30 @@
         </configrefs>
       </settings>
     </config>
+    <config guid="c2ea491d-a0f7-407b-b535-286023d290cc">
+      <active>false</active>
+      <description>FD_BTN</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.3.0.0, Culture=neutral, PublicKeyToken=null" serial="Autopilot/ SN-bf3-83d" name="FD_BTN" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <button>
+          <onPress type="MSFS2020CustomInputAction" command="20201 (&gt;K:ROTOR_BRAKE)&#xA;23001 (&gt;K:ROTOR_BRAKE)" presetId="be2cdd66-8afd-4e48-a269-16121007a902" />
+        </button>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="e535928e-caec-4ace-b45b-6971427dec6a">
+      <active>false</active>
+      <description>AP_BTN</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.3.0.0, Culture=neutral, PublicKeyToken=null" serial="Autopilot/ SN-bf3-83d" name="AP_BTN" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <button>
+          <onPress type="MSFS2020CustomInputAction" command="20301 (&gt;K:ROTOR_BRAKE)" presetId="7314340b-194a-4b36-84a6-3910dd584f75" />
+        </button>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
     <config guid="5291a4c9-c2a2-4d42-8300-bfdd6e8ab6aa">
-      <active>true</active>
+      <active>false</active>
       <description>SPD_KNB</description>
       <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.3.0.0, Culture=neutral, PublicKeyToken=null" serial="Autopilot/ SN-bf3-83d" name="SPD_KNB" type="Encoder" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <encoder>
@@ -494,7 +702,7 @@
       </settings>
     </config>
     <config guid="4a647e08-dcaa-4564-bc8a-bf5d575f888e">
-      <active>true</active>
+      <active>false</active>
       <description>HDG_KNB</description>
       <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.3.0.0, Culture=neutral, PublicKeyToken=null" serial="Autopilot/ SN-bf3-83d" name="HDG_KNB" type="Encoder" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <encoder>
@@ -514,8 +722,22 @@
         </configrefs>
       </settings>
     </config>
+    <config guid="76e01314-1735-45c9-ae2b-6b50cc2deed4">
+      <active>false</active>
+      <description>ALT_KNB</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.3.0.0, Culture=neutral, PublicKeyToken=null" serial="Autopilot/ SN-bf3-83d" name="ALT_KNB" type="Encoder" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <encoder>
+          <onLeft type="MSFS2020CustomInputAction" command="(&gt;K:AP_ALT_VAR_DEC)" presetId="035b1f1d-1e4e-4809-9713-07fe5ab0581d" />
+          <onLeftFast />
+          <onRight type="MSFS2020CustomInputAction" command="(&gt;K:AP_ALT_VAR_INC)" presetId="6b70bc27-97bf-499e-ba49-3d63984aa593" />
+          <onRightFast />
+        </encoder>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
     <config guid="8db730d3-ce69-46ed-93e3-ecfc7456acfd">
-      <active>true</active>
+      <active>false</active>
       <description>VS_KNB</description>
       <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.3.0.0, Culture=neutral, PublicKeyToken=null" serial="Autopilot/ SN-bf3-83d" name="VS_KNB" type="Encoder" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <encoder>
@@ -535,92 +757,23 @@
         </configrefs>
       </settings>
     </config>
-    <config guid="76e01314-1735-45c9-ae2b-6b50cc2deed4">
-      <active>true</active>
-      <description>ALT_KNB</description>
-      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.3.0.0, Culture=neutral, PublicKeyToken=null" serial="Autopilot/ SN-bf3-83d" name="ALT_KNB" type="Encoder" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-        <encoder>
-          <onLeft type="MSFS2020CustomInputAction" command="(&gt;K:AP_ALT_VAR_DEC)" presetId="035b1f1d-1e4e-4809-9713-07fe5ab0581d" />
-          <onLeftFast />
-          <onRight type="MSFS2020CustomInputAction" command="(&gt;K:AP_ALT_VAR_INC)" presetId="6b70bc27-97bf-499e-ba49-3d63984aa593" />
-          <onRightFast />
-        </encoder>
-        <preconditions />
-        <configrefs />
-      </settings>
-    </config>
-    <config guid="32cd6af5-e03c-4e46-86f4-608caf77c4d6">
-      <active>true</active>
-      <description>NAV_BTN</description>
-      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.3.0.0, Culture=neutral, PublicKeyToken=null" serial="Autopilot/ SN-bf3-83d" name="NAV_BTN" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-        <button>
-          <onPress type="MSFS2020CustomInputAction" command="39701  (&gt;K:ROTOR_BRAKE)" presetId="cf6f47ba-5d1d-4c8b-81db-d6c4e4d25211" />
-        </button>
-        <preconditions />
-        <configrefs />
-      </settings>
-    </config>
-    <config guid="5a9526bc-5ca5-4af7-b28d-1f5fe0291b04">
-      <active>true</active>
-      <description>APR_BTN</description>
-      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.3.0.0, Culture=neutral, PublicKeyToken=null" serial="Autopilot/ SN-bf3-83d" name="APR_BTN" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-        <button>
-          <onPress type="MSFS2020CustomInputAction" command="39301 (&gt;K:ROTOR_BRAKE)" presetId="c99ce15c-f070-4f67-9f32-262692361af0" />
-        </button>
-        <preconditions />
-        <configrefs />
-      </settings>
-    </config>
-    <config guid="e535928e-caec-4ace-b45b-6971427dec6a">
-      <active>true</active>
-      <description>AP_BTN</description>
-      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.3.0.0, Culture=neutral, PublicKeyToken=null" serial="Autopilot/ SN-bf3-83d" name="AP_BTN" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-        <button>
-          <onPress type="MSFS2020CustomInputAction" command="40201 (&gt;K:ROTOR_BRAKE)" presetId="31b765d8-137d-4294-aebf-139455e4220b" />
-        </button>
-        <preconditions />
-        <configrefs />
-      </settings>
-    </config>
-    <config guid="a8fa11e1-7bdb-42bd-9d90-146cd8861591">
-      <active>true</active>
-      <description>VS_KNB_BTN</description>
-      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.3.0.0, Culture=neutral, PublicKeyToken=null" serial="Autopilot/ SN-bf3-83d" name="VS_KNB_BTN" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-        <button>
-          <onPress type="MSFS2020CustomInputAction" command="38601 (&gt;K:ROTOR_BRAKE)" presetId="2d1fb0c2-db2f-42d1-b806-e62be1620d25" />
-        </button>
-        <preconditions />
-        <configrefs />
-      </settings>
-    </config>
     <config guid="8e0502c1-23f0-4403-a193-ac2d4e928420">
-      <active>true</active>
+      <active>false</active>
       <description>SPD_KNB_BTN</description>
       <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.3.0.0, Culture=neutral, PublicKeyToken=null" serial="Autopilot/ SN-bf3-83d" name="SPD_KNB_BTN" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <button>
-          <onPress type="MSFS2020CustomInputAction" command="38701 (&gt;K:ROTOR_BRAKE)&#xD;&#xA;38201  (&gt;K:ROTOR_BRAKE)" presetId="37f8ae3e-c803-48b2-9471-d6e432ba67ee" />
+          <onPress type="MSFS2020CustomInputAction" command="210001 (&gt;K:ROTOR_BRAKE)" presetId="a215c43a-46e7-415c-a65f-f18afd14f393" />
         </button>
         <preconditions />
         <configrefs />
       </settings>
     </config>
     <config guid="1b770c71-d31f-4468-855d-8d527cdf7399">
-      <active>true</active>
+      <active>false</active>
       <description>HDG_KNB_BTN</description>
       <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.3.0.0, Culture=neutral, PublicKeyToken=null" serial="Autopilot/ SN-bf3-83d" name="HDG_KNB_BTN" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <button>
-          <onPress type="MSFS2020CustomInputAction" command="39601 (&gt;K:ROTOR_BRAKE)" presetId="5a678ab7-6ac8-43e9-b9a2-390f77ede2c1" />
-        </button>
-        <preconditions />
-        <configrefs />
-      </settings>
-    </config>
-    <config guid="43ae341e-08a5-4600-a65a-fdb24997383d">
-      <active>true</active>
-      <description>Range Inc</description>
-      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.3.0.0, Culture=neutral, PublicKeyToken=null" serial="Bravo Throttle Quadrant / JS-0f7f6820-2241-11ed-8001-444553540000" name="Button 13" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-        <button>
-          <onPress type="MSFS2020CustomInputAction" command="36107 (&gt;K:ROTOR_BRAKE)" presetId="0d0cec15-79e1-46d9-b947-ed76238b849f" />
+          <onPress type="MSFS2020CustomInputAction" command="22701 (&gt;K:ROTOR_BRAKE)" presetId="15a4ddfb-08f8-4371-9456-79c5b3a67325" />
         </button>
         <preconditions />
         <configrefs />
@@ -637,23 +790,12 @@
         <configrefs />
       </settings>
     </config>
-    <config guid="c2ea491d-a0f7-407b-b535-286023d290cc">
-      <active>true</active>
-      <description>FD_BTN</description>
-      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.3.0.0, Culture=neutral, PublicKeyToken=null" serial="Autopilot/ SN-bf3-83d" name="FD_BTN" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <config guid="a8fa11e1-7bdb-42bd-9d90-146cd8861591">
+      <active>false</active>
+      <description>VS_KNB_BTN</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.3.0.0, Culture=neutral, PublicKeyToken=null" serial="Autopilot/ SN-bf3-83d" name="VS_KNB_BTN" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <button>
-          <onPress type="MSFS2020CustomInputAction" command="37801 (&gt;K:ROTOR_BRAKE)&#xD;&#xA;40701 (&gt;K:ROTOR_BRAKE)" presetId="99c6200d-cc7f-4fe9-92a2-253a07501f19" />
-        </button>
-        <preconditions />
-        <configrefs />
-      </settings>
-    </config>
-    <config guid="ea2479b6-7e1c-4e10-95dd-d5d676c064c1">
-      <active>true</active>
-      <description>FPA_BTN</description>
-      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.3.0.0, Culture=neutral, PublicKeyToken=null" serial="Autopilot/ SN-bf3-83d" name="FPA_BTN" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-        <button>
-          <onPress type="MSFS2020CustomInputAction" command="88501 (&gt;K:ROTOR_BRAKE)" presetId="69bcd7a5-7121-40e7-9666-8cec7291de98" />
+          <onPress type="MSFS2020CustomInputAction" command="21201 (&gt;K:ROTOR_BRAKE)" presetId="a8d13ca1-5901-4209-aed7-3e76e93a2a91" />
         </button>
         <preconditions />
         <configrefs />
@@ -664,7 +806,7 @@
       <description>Yoke</description>
     </config>
     <config guid="b7c1a8fd-d1b6-4e14-b660-1b0503c1560f">
-      <active>true</active>
+      <active>false</active>
       <description>Chrono</description>
       <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.3.0.0, Culture=neutral, PublicKeyToken=null" serial="TCA YOKE BOEING / JS-f4455760-d450-11ec-8004-444553540000" name="Button 16" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <button>
@@ -676,34 +818,35 @@
       </settings>
     </config>
     <config guid="3599200a-d8c5-4d00-91c3-b0517e47547a">
-      <active>true</active>
+      <active>false</active>
       <description>Master Warning</description>
       <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.3.0.0, Culture=neutral, PublicKeyToken=null" serial="TCA YOKE BOEING / JS-f4455760-d450-11ec-8004-444553540000" name="Button 15" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <button>
-          <onPress type="MSFS2020CustomInputAction" command="34701 (&gt;K:ROTOR_BRAKE)" presetId="b7f38bab-2847-42d3-ae53-7415078cf32b" />
+          <onPress type="MSFS2020CustomInputAction" command="17701 (&gt;K:ROTOR_BRAKE)" presetId="-" />
         </button>
         <preconditions />
         <configrefs />
       </settings>
     </config>
     <config guid="e8342931-7202-4e33-95c8-05db597f7d89">
-      <active>true</active>
+      <active>false</active>
       <description>Master Caution</description>
       <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.3.0.0, Culture=neutral, PublicKeyToken=null" serial="TCA YOKE BOEING / JS-f4455760-d450-11ec-8004-444553540000" name="Button 14" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <button>
-          <onPress type="MSFS2020CustomInputAction" command="34801 (&gt;K:ROTOR_BRAKE)" presetId="e862bc42-227b-4aea-bb7a-8cf654f09b6f" />
+          <onPress type="MSFS2020CustomInputAction" command="17701 (&gt;K:ROTOR_BRAKE)" presetId="-" />
         </button>
         <preconditions />
         <configrefs />
       </settings>
     </config>
-    <config guid="b465aac7-099a-4479-aab7-660b3fd90865">
-      <active>false</active>
-      <description>Backlights</description>
-      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.3.0.0, Culture=neutral, PublicKeyToken=null" serial="TCA YOKE BOEING / JS-f4455760-d450-11ec-8004-444553540000" name="Axis RotationZ" type="AnalogInput" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-        <analog>
-          <onChange type="MSFS2020CustomInputAction" command="@ 210 / 0 max 300 min  (L:switch_328_73X) - 9 div s1&#xA;:1 &#xA;l1 0 &gt; if{ 32807 (&gt;K:ROTOR_BRAKE) l1 -- s1 g1 }&#xA;l1 0 &lt; if{ 32808 (&gt;K:ROTOR_BRAKE) l1 ++ s1 g1 }" presetId="7d6cbbdd-adda-4dd8-8f17-f4c8b421772f" />
-        </analog>
+    <config guid="9ab8c5a2-200f-4c1e-a95b-824b0e4bae2d">
+      <active>true</active>
+      <description>Park Brake</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.3.0.0, Culture=neutral, PublicKeyToken=null" serial="TCA YOKE BOEING / JS-f4455760-d450-11ec-8004-444553540000" name="Button 18" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <button>
+          <onPress type="MSFS2020CustomInputAction" command="77848 (&gt;L:CEVENT)&#xA;0 (&gt;L:MD11_THR_PARK_LVR)" presetId="0" />
+          <onRelease type="MSFS2020CustomInputAction" command="77848 (&gt;L:CEVENT)&#xA;1 (&gt;L:MD11_THR_PARK_LVR)" presetId="0" />
+        </button>
         <preconditions />
         <configrefs />
       </settings>
@@ -713,71 +856,82 @@
       <description>Throttle</description>
     </config>
     <config guid="d7beda66-761a-4b27-a4ff-ca5e021397ae">
-      <active>true</active>
+      <active>false</active>
       <description>Range Dec</description>
       <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.3.0.0, Culture=neutral, PublicKeyToken=null" serial="Bravo Throttle Quadrant / JS-0f7f6820-2241-11ed-8001-444553540000" name="Button 14" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <button>
-          <onPress type="MSFS2020CustomInputAction" command="36108 (&gt;K:ROTOR_BRAKE)" presetId="499ec54b-1d44-4da3-8a7f-17143e498048" />
+          <onPress type="MSFS2020CustomInputAction" command="18708 (&gt;K:ROTOR_BRAKE)" presetId="bca3d89e-bfcd-409e-b159-71755a8b63ba" />
+        </button>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="43ae341e-08a5-4600-a65a-fdb24997383d">
+      <active>false</active>
+      <description>Range Inc</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.3.0.0, Culture=neutral, PublicKeyToken=null" serial="Bravo Throttle Quadrant / JS-0f7f6820-2241-11ed-8001-444553540000" name="Button 13" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <button>
+          <onPress type="MSFS2020CustomInputAction" command="18707 (&gt;K:ROTOR_BRAKE)" presetId="379ff4f8-d5d9-4cb0-8325-b691a8b5c308" />
         </button>
         <preconditions />
         <configrefs />
       </settings>
     </config>
     <config guid="2d787a5d-3d10-4c95-b85e-23ddd48067b5">
-      <active>true</active>
+      <active>false</active>
       <description>Strobe Light</description>
       <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.3.0.0, Culture=neutral, PublicKeyToken=null" serial="Bravo Throttle Quadrant / JS-0f7f6820-2241-11ed-8001-444553540000" name="Button 36" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <button>
-          <onPress type="MSFS2020CustomInputAction" command="(L:switch_123_73X, number) s0&#xA;l0 50 == if{ 12302 (&gt;K:ROTOR_BRAKE) }&#xA;l0 100  == if{ 12302 (&gt;K:ROTOR_BRAKE) 12302 (&gt;K:ROTOR_BRAKE) }" presetId="4f626d01-6934-4ac2-944f-b9dcdf00ed7a" />
-          <onRelease type="MSFS2020CustomInputAction" command="(L:switch_123_73X, number) s0&#xA;l0 50 == if{ 12301 (&gt;K:ROTOR_BRAKE) }&#xA;l0 0  == if{ 12301 (&gt;K:ROTOR_BRAKE) 12301 (&gt;K:ROTOR_BRAKE) }" presetId="880b9483-bb16-4476-b62f-e391b63e5899" />
+          <onPress type="MSFS2020CustomInputAction" command="(L:switch_122_a) ! if{ 12201 (&gt;K:ROTOR_BRAKE) }" presetId="ec189ff5-847e-47b6-adee-f22f16ffdaa0" />
+          <onRelease type="MSFS2020CustomInputAction" command="(L:switch_122_a) if{ 12201 (&gt;K:ROTOR_BRAKE) }" presetId="da9ceee3-8323-4c6e-a4e8-9e40c412c61e" />
         </button>
         <preconditions />
         <configrefs />
       </settings>
     </config>
     <config guid="327e214b-0f32-4e2f-a6be-f938511b403f">
-      <active>true</active>
+      <active>false</active>
       <description>Landing Lights</description>
       <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.3.0.0, Culture=neutral, PublicKeyToken=null" serial="Bravo Throttle Quadrant / JS-0f7f6820-2241-11ed-8001-444553540000" name="Button 38" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <button>
-          <onPress type="MSFS2020CustomInputAction" command="0 (L:switch_113_73X, number) == if{ 11301 (&gt;K:ROTOR_BRAKE) }&#xD;&#xA;0 (L:switch_114_73X, number) == if{ 11401 (&gt;K:ROTOR_BRAKE) }&#xD;&#xA;(L:switch_111_73X, number) s0&#xD;&#xA;(L:switch_112_73X, number) s1&#xD;&#xA;l0 50 == if{ 11101 (&gt;K:ROTOR_BRAKE) }&#xD;&#xA;l0 0  == if{ 11101 (&gt;K:ROTOR_BRAKE) 11101 (&gt;K:ROTOR_BRAKE) }&#xD;&#xA;l1 50 == if{ 11201 (&gt;K:ROTOR_BRAKE) }&#xD;&#xA;l1 0  == if{ 11201 (&gt;K:ROTOR_BRAKE) 11201 (&gt;K:ROTOR_BRAKE) }" presetId="0" />
-          <onRelease type="MSFS2020CustomInputAction" command="100 (L:switch_113_73X, number) == if{ 11301 (&gt;K:ROTOR_BRAKE) }&#xD;&#xA;100 (L:switch_114_73X, number) == if{ 11401 (&gt;K:ROTOR_BRAKE) }&#xD;&#xA;(L:switch_111_73X, number) s0&#xD;&#xA;(L:switch_112_73X, number) s1&#xD;&#xA;l0 50 == if{ 11102 (&gt;K:ROTOR_BRAKE) }&#xD;&#xA;l0 100  == if{ 11102 (&gt;K:ROTOR_BRAKE) 11102 (&gt;K:ROTOR_BRAKE) }&#xD;&#xA;l1 50 == if{ 11202 (&gt;K:ROTOR_BRAKE) }&#xD;&#xA;l1 100  == if{ 11202 (&gt;K:ROTOR_BRAKE) 11202 (&gt;K:ROTOR_BRAKE) }" presetId="0" />
-        </button>
-        <preconditions />
-        <configrefs />
-      </settings>
-    </config>
-    <config guid="0d2f3f32-ba46-437f-bb0c-7602c93fdef4">
-      <active>true</active>
-      <description>Runway Turnoff Lights</description>
-      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.3.0.0, Culture=neutral, PublicKeyToken=null" serial="Bravo Throttle Quadrant / JS-0f7f6820-2241-11ed-8001-444553540000" name="Button 40" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-        <button>
-          <onPress type="MSFS2020CustomInputAction" command="0 (L:switch_115_73X, number) == if{ 11501 (&gt;K:ROTOR_BRAKE) }&#xA;0 (L:switch_116_73X, number) == if{ 11601 (&gt;K:ROTOR_BRAKE) }" presetId="66cced0f-1efa-4e3c-a45e-e086e29baaea" />
-          <onRelease type="MSFS2020CustomInputAction" command="100 (L:switch_115_73X, number) == if{ 11501 (&gt;K:ROTOR_BRAKE) }&#xA;100 (L:switch_116_73X, number) == if{ 11601 (&gt;K:ROTOR_BRAKE) }" presetId="74a13793-c3ad-4ef6-8596-8e88b7d4ff70" />
+          <onPress type="MSFS2020CustomInputAction" command="(L:switch_22_a) ! if{ 2201 (&gt;K:ROTOR_BRAKE) }&#xA;(L:switch_23_a) ! if{ 2301 (&gt;K:ROTOR_BRAKE) }&#xA;(L:switch_24_a) ! if{ 2401 (&gt;K:ROTOR_BRAKE) }" presetId="d86bd8c3-c113-412e-8486-4c9dd2aa806a" />
+          <onRelease type="MSFS2020CustomInputAction" command="(L:switch_22_a) if{ 2201 (&gt;K:ROTOR_BRAKE) }&#xA;(L:switch_23_a) if{ 2301 (&gt;K:ROTOR_BRAKE) }&#xA;(L:switch_24_a) if{ 2401 (&gt;K:ROTOR_BRAKE) }" presetId="fe4f8fc8-5046-47ac-ae6f-6e15e02ed29d" />
         </button>
         <preconditions />
         <configrefs />
       </settings>
     </config>
     <config guid="d37aaa90-939e-4f76-b7cd-aa4090e02729">
-      <active>true</active>
+      <active>false</active>
       <description>Wing Lights</description>
       <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.3.0.0, Culture=neutral, PublicKeyToken=null" serial="Bravo Throttle Quadrant / JS-0f7f6820-2241-11ed-8001-444553540000" name="Button 38" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <button>
-          <onPress type="MSFS2020CustomInputAction" command="0 (L:switch_125_73X, number) == if{ 12501 (&gt;K:ROTOR_BRAKE) }" presetId="54f691a3-1025-4667-814c-751fa15e37ac" />
-          <onRelease type="MSFS2020CustomInputAction" command="100 (L:switch_125_73X, number) == if{ 12501 (&gt;K:ROTOR_BRAKE) }" presetId="855da315-1686-47fc-9184-7140b22e4918" />
+          <onPress type="MSFS2020CustomInputAction" command="(L:switch_117_a) ! if{ 11701 (&gt;K:ROTOR_BRAKE) }" presetId="3e4dfd44-e089-4547-a5c0-f6f60c69f5d3" />
+          <onRelease type="MSFS2020CustomInputAction" command="(L:switch_117_a) if{ 11701 (&gt;K:ROTOR_BRAKE) }" presetId="b0831d9d-878d-4bdd-8984-dbe8ea2df4b4" />
         </button>
         <preconditions />
         <configrefs />
       </settings>
     </config>
     <config guid="df88a62e-25d9-43ef-9707-8b04aa6e998f">
-      <active>true</active>
+      <active>false</active>
       <description>Taxi Lights</description>
       <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.3.0.0, Culture=neutral, PublicKeyToken=null" serial="Bravo Throttle Quadrant / JS-0f7f6820-2241-11ed-8001-444553540000" name="Button 40" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <button>
-          <onPress type="MSFS2020CustomInputAction" command="0 (L:switch_117_73X, number) == if{ 11701 (&gt;K:ROTOR_BRAKE) } " presetId="f813b28d-cba7-4155-81ae-614f472c5a1c" />
-          <onRelease type="MSFS2020CustomInputAction" command="100 (L:switch_117_73X, number) == if{ 11701 (&gt;K:ROTOR_BRAKE) } " presetId="bffb9619-b88d-40b6-a371-9301a6921052" />
+          <onPress type="MSFS2020CustomInputAction" command="(L:switch_121_a) ! if{ 12101 (&gt;K:ROTOR_BRAKE) }" presetId="ae2572c1-7b6c-4210-9fc5-66a651835752" />
+          <onRelease type="MSFS2020CustomInputAction" command="(L:switch_121_a) if{ 12101 (&gt;K:ROTOR_BRAKE) }" presetId="7bfbfa5b-b47a-471d-a7fd-e27ffc2e8316" />
+        </button>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="0d2f3f32-ba46-437f-bb0c-7602c93fdef4">
+      <active>false</active>
+      <description>Runway Turnoff Lights</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.3.0.0, Culture=neutral, PublicKeyToken=null" serial="Bravo Throttle Quadrant / JS-0f7f6820-2241-11ed-8001-444553540000" name="Button 40" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <button>
+          <onPress type="MSFS2020CustomInputAction" command="(L:switch_119_a) ! if{ 11901 (&gt;K:ROTOR_BRAKE) }&#xA;(L:switch_120_a) ! if{ 12001 (&gt;K:ROTOR_BRAKE) }" presetId="0849bb7a-f80d-48a2-9ca6-136bea7bf01f" />
+          <onRelease type="MSFS2020CustomInputAction" command="(L:switch_119_a) if{ 11901 (&gt;K:ROTOR_BRAKE) }&#xA;(L:switch_120_a) if{ 12001 (&gt;K:ROTOR_BRAKE) }" presetId="e49e04da-04f0-49bf-8437-1b44f2715ca6" />
         </button>
         <preconditions />
         <configrefs />
@@ -795,11 +949,11 @@
       </settings>
     </config>
     <config guid="2f04ff39-1c6b-4317-89b4-08d53d2a85cc">
-      <active>true</active>
+      <active>false</active>
       <description>APU</description>
       <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.3.0.0, Culture=neutral, PublicKeyToken=null" serial="Bravo Throttle Quadrant / JS-0f7f6820-2241-11ed-8001-444553540000" name="Button 8" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <button>
-          <onPress type="MSFS2020CustomInputAction" command="100 (L:switch_118_73X,number) - 50 div s0 &#xD;&#xA;:1 &#xD;&#xA;l0 0 &gt; if{ 11801 (&gt;K:ROTOR_BRAKE) l0 -- s0 g1 } &#xD;&#xA;l0 0 &lt; if{ 11802 (&gt;K:ROTOR_BRAKE) l0 ++ s0 g1 }" presetId="4dd5b640-4704-4edd-a87a-e7891a61d900" />
+          <onPress type="MSFS2020CustomInputAction" command="100 (L:switch_03_a) - 50 div s0 :1 l0 0 &gt; if{ 307 (&gt;K:ROTOR_BRAKE) l0 -- s0 g1 } l0 0 &lt; if{ 308 (&gt;K:ROTOR_BRAKE) l0 ++ s0 g1 }" presetId="93aa64ac-5441-4f7d-8122-43bee82f18fc" />
         </button>
         <preconditions />
         <configrefs />
@@ -810,8 +964,8 @@
       <description>Arm Spoilers</description>
       <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.3.0.0, Culture=neutral, PublicKeyToken=null" serial="Bravo Throttle Quadrant / JS-0f7f6820-2241-11ed-8001-444553540000" name="Button 34" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <button>
-          <onPress type="MSFS2020CustomInputAction" command="679201 (&gt;K:ROTOR_BRAKE)" presetId="5e48b531-6874-4cc1-81d5-ed6e5b4b5ed3" />
-          <onRelease type="MSFS2020CustomInputAction" command="679201 (&gt;K:ROTOR_BRAKE)" presetId="5e48b531-6874-4cc1-81d5-ed6e5b4b5ed3" />
+          <onPress type="MSFS2020CustomInputAction" command="77829 (&gt;L:CEVENT)&#xA;0 (&gt;L:MD11_SPDBRK_HANDLE)" presetId="0" />
+          <onRelease type="MSFS2020CustomInputAction" command="77829 (&gt;L:CEVENT)&#xA;1 (&gt;L:MD11_SPDBRK_HANDLE)" presetId="0" />
         </button>
         <preconditions />
         <configrefs />
@@ -822,7 +976,7 @@
       <description>A/T ARM</description>
       <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.3.0.0, Culture=neutral, PublicKeyToken=null" serial="Bravo Throttle Quadrant / JS-0f7f6820-2241-11ed-8001-444553540000" name="Button 1" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <button>
-          <onPress type="MSFS2020CustomInputAction" command="38001  (&gt;K:ROTOR_BRAKE)" presetId="04c3eb27-5766-45af-bbbc-128325a5ec2b" />
+          <onPress type="MSFS2020CustomInputAction" command="20401 (&gt;K:ROTOR_BRAKE)&#xA;20501 (&gt;K:ROTOR_BRAKE)&#xA;20701 (&gt;K:ROTOR_BRAKE)" presetId="93f649a8-6828-41c8-9c68-7d95b9fe6541" />
         </button>
         <preconditions />
         <configrefs />
@@ -833,7 +987,7 @@
       <description>FMC_RS6</description>
       <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.3.0.0, Culture=neutral, PublicKeyToken=null" serial="Bravo Throttle Quadrant / JS-0f7f6820-2241-11ed-8001-444553540000" name="Button 7" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <button>
-          <onPress type="MSFS2020CustomInputAction" command="54501 (&gt;K:ROTOR_BRAKE)" presetId="47a0a421-9ecb-48d2-b6ab-0d9254c69224" />
+          <onPress type="MSFS2020CustomInputAction" command="33901 (&gt;K:ROTOR_BRAKE)" presetId="49547bf4-cb74-4afe-aa1b-4c7a56bacefc" />
         </button>
         <preconditions />
         <configrefs />
@@ -844,7 +998,7 @@
       <description>Auto Brake Inc</description>
       <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.3.0.0, Culture=neutral, PublicKeyToken=null" serial="Bravo Throttle Quadrant / JS-0f7f6820-2241-11ed-8001-444553540000" name="Button 16" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <button>
-          <onPress type="MSFS2020CustomInputAction" command="50 (L:switch_460_73X) - 10 div s0&#xA;:1&#xA;l0 0 &gt; if{ 46007 (&gt;K:ROTOR_BRAKE) l0 -- s0 g1 }&#xA;l0 0 &lt; if{ 46008 (&gt;K:ROTOR_BRAKE) l0 ++ s0 g1 }" presetId="3cafd19e-8f1b-4a37-b4b9-bbbe05d20ce9" />
+          <onPress type="MSFS2020CustomInputAction" command="29207 (&gt;K:ROTOR_BRAKE)" presetId="fcd54866-0998-4e9c-9385-38e60387d38a" />
         </button>
         <preconditions />
         <configrefs />
@@ -855,7 +1009,7 @@
       <description>Auto Brake Dec</description>
       <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.3.0.0, Culture=neutral, PublicKeyToken=null" serial="Bravo Throttle Quadrant / JS-0f7f6820-2241-11ed-8001-444553540000" name="Button 15" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <button>
-          <onPress type="MSFS2020CustomInputAction" command="10 (L:switch_460_73X) - 10 div s0&#xA;:1&#xA;l0 0 &gt; if{ 46007 (&gt;K:ROTOR_BRAKE) l0 -- s0 g1 }&#xA;l0 0 &lt; if{ 46008 (&gt;K:ROTOR_BRAKE) l0 ++ s0 g1 }" presetId="917a548a-9096-4736-83a4-f0829f70655c" />
+          <onPress type="MSFS2020CustomInputAction" command="29208 (&gt;K:ROTOR_BRAKE)" presetId="022b35e6-7919-4482-a8ba-87d1201d4963" />
         </button>
         <preconditions />
         <configrefs />
@@ -866,7 +1020,7 @@
       <description>EFIS_PLN</description>
       <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.3.0.0, Culture=neutral, PublicKeyToken=null" serial="Bravo Throttle Quadrant / JS-0f7f6820-2241-11ed-8001-444553540000" name="Button 21" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <button>
-          <onPress type="MSFS2020CustomInputAction" command="30 (L:switch_359_73X) - 10 div s0&#xD;&#xA;:1&#xD;&#xA;l0 0 &gt; if{ 35907 (&gt;K:ROTOR_BRAKE) l0 -- s0 g1 }&#xD;&#xA;l0 0 &lt; if{ 35908 (&gt;K:ROTOR_BRAKE) l0 ++ s0 g1 }" presetId="-" />
+          <onPress type="MSFS2020CustomInputAction" command="30 (L:switch_185_a) - 10 div s0&#xA;:1&#xA;l0 0 &gt; if{ 18507 (&gt;K:ROTOR_BRAKE) l0 -- s0 g1 }&#xA;l0 0 &lt; if{ 18508 (&gt;K:ROTOR_BRAKE) l0 ++ s0 g1 }" presetId="d2eb19bc-19f1-4d6a-b519-0fca61178b50" />
         </button>
         <preconditions />
         <configrefs />
@@ -877,7 +1031,7 @@
       <description>EFIS_MAP</description>
       <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.3.0.0, Culture=neutral, PublicKeyToken=null" serial="Bravo Throttle Quadrant / JS-0f7f6820-2241-11ed-8001-444553540000" name="Button 20" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <button>
-          <onPress type="MSFS2020CustomInputAction" command="20 (L:switch_359_73X) - 10 div s0&#xD;&#xA;:1&#xD;&#xA;l0 0 &gt; if{ 35907 (&gt;K:ROTOR_BRAKE) l0 -- s0 g1 }&#xD;&#xA;l0 0 &lt; if{ 35908 (&gt;K:ROTOR_BRAKE) l0 ++ s0 g1 }" presetId="-" />
+          <onPress type="MSFS2020CustomInputAction" command="20 (L:switch_185_a) - 10 div s0&#xA;:1&#xA;l0 0 &gt; if{ 18507 (&gt;K:ROTOR_BRAKE) l0 -- s0 g1 }&#xA;l0 0 &lt; if{ 18508 (&gt;K:ROTOR_BRAKE) l0 ++ s0 g1 }" presetId="65a27e92-e7c6-4fda-849d-f68e86699483" />
         </button>
         <preconditions />
         <configrefs />
@@ -888,7 +1042,7 @@
       <description>EFIS_VOR</description>
       <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.3.0.0, Culture=neutral, PublicKeyToken=null" serial="Bravo Throttle Quadrant / JS-0f7f6820-2241-11ed-8001-444553540000" name="Button 19" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <button>
-          <onPress type="MSFS2020CustomInputAction" command="10 (L:switch_359_73X) - 10 div s0&#xD;&#xA;:1&#xD;&#xA;l0 0 &gt; if{ 35907 (&gt;K:ROTOR_BRAKE) l0 -- s0 g1 }&#xD;&#xA;l0 0 &lt; if{ 35908 (&gt;K:ROTOR_BRAKE) l0 ++ s0 g1 }" presetId="-" />
+          <onPress type="MSFS2020CustomInputAction" command="10 (L:switch_185_a) - 10 div s0&#xA;:1&#xA;l0 0 &gt; if{ 18507 (&gt;K:ROTOR_BRAKE) l0 -- s0 g1 }&#xA;l0 0 &lt; if{ 18508 (&gt;K:ROTOR_BRAKE) l0 ++ s0 g1 }" presetId="896c01c0-0c37-4f49-9a31-60b7522db092" />
         </button>
         <preconditions />
         <configrefs />
@@ -899,7 +1053,7 @@
       <description>EFIS_APP</description>
       <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.3.0.0, Culture=neutral, PublicKeyToken=null" serial="Bravo Throttle Quadrant / JS-0f7f6820-2241-11ed-8001-444553540000" name="Button 18" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <button>
-          <onPress type="MSFS2020CustomInputAction" command="0 (L:switch_359_73X) - 10 div s0&#xD;&#xA;:1&#xD;&#xA;l0 0 &gt; if{ 35907 (&gt;K:ROTOR_BRAKE) l0 -- s0 g1 }&#xD;&#xA;l0 0 &lt; if{ 35908 (&gt;K:ROTOR_BRAKE) l0 ++ s0 g1 }" presetId="-" />
+          <onPress type="MSFS2020CustomInputAction" command="0 (L:switch_185_a) - 10 div s0&#xA;:1&#xA;l0 0 &gt; if{ 18507 (&gt;K:ROTOR_BRAKE) l0 -- s0 g1 }&#xA;l0 0 &lt; if{ 18508 (&gt;K:ROTOR_BRAKE) l0 ++ s0 g1 }" presetId="19d83e00-0bbf-40bb-924a-3dac4709d964" />
         </button>
         <preconditions />
         <configrefs />
@@ -914,7 +1068,7 @@
       <description>Hat Left</description>
       <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.3.0.0, Culture=neutral, PublicKeyToken=null" serial="T.A320 Pilot / JS-573eb740-cb8c-11eb-8001-444553540000" name="POV Hat SwitchL" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <button>
-          <onPress type="MSFS2020CustomInputAction" command="55901 (&gt;K:ROTOR_BRAKE)" presetId="9be49309-7d3a-4581-9f81-e26910e30f8e" />
+          <onPress type="MSFS2020CustomInputAction" command="35201 (&gt;K:ROTOR_BRAKE)" presetId="1475c2a6-2670-4a71-b422-b3d3809df7ca" />
         </button>
         <preconditions />
         <configrefs />
@@ -925,8 +1079,19 @@
       <description>Hat Right</description>
       <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.3.0.0, Culture=neutral, PublicKeyToken=null" serial="T.A320 Pilot / JS-573eb740-cb8c-11eb-8001-444553540000" name="POV Hat SwitchR" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <button>
-          <onPress type="MSFS2020CustomInputAction" command="56001 (&gt;K:ROTOR_BRAKE)" presetId="b28bcfeb-81e2-46b7-b760-c63bf7bb6eac" />
+          <onPress type="MSFS2020CustomInputAction" command="35301 (&gt;K:ROTOR_BRAKE)" presetId="9ea20dfc-42d9-4835-83c2-ed063284294f" />
         </button>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="b465aac7-099a-4479-aab7-660b3fd90865">
+      <active>true</active>
+      <description>Backlights</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.3.0.0, Culture=neutral, PublicKeyToken=null" serial="T.A320 Pilot / JS-573eb740-cb8c-11eb-8001-444553540000" name="Axis Slider1" type="AnalogInput" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <analog>
+          <onChange type="MSFS2020CustomInputAction" command="@ 700 / 100 min (&gt;L:OH_MASTER_BRIGHT_ROTATE)" presetId="0" />
+        </analog>
         <preconditions />
         <configrefs />
       </settings>
@@ -957,12 +1122,210 @@
         <configrefs />
       </settings>
     </config>
+    <config guid="b0421f50-8026-435d-96a1-566abb857855">
+      <active>true</active>
+      <description>SPD_KNB_push</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.3.0.0, Culture=neutral, PublicKeyToken=null" serial="WINWING FCU / JS-23fd2220-3620-11ef-8001-444553540000" name="Button 12" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <button>
+          <onPress type="MSFS2020CustomInputAction" command="210001 (&gt;K:ROTOR_BRAKE)" presetId="a215c43a-46e7-415c-a65f-f18afd14f393" />
+        </button>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
     <config guid="00801215-1a9f-4754-9ce7-508c38e652ec">
       <active>true</active>
       <description>SPD_KNB_pull</description>
       <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.3.0.0, Culture=neutral, PublicKeyToken=null" serial="WINWING FCU / JS-23fd2220-3620-11ef-8001-444553540000" name="Button 13" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <button>
           <onPress type="MSFS2020CustomInputAction" command="(&gt;K:FLIGHT_LEVEL_CHANGE) (A:AIRSPEED INDICATED, knots) (&gt;K:AP_SPD_VAR_SET)" presetId="-" />
+        </button>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="3c213354-01df-41f2-af00-7c8777a972e3">
+      <active>true</active>
+      <description>LOC_BTN</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.3.0.0, Culture=neutral, PublicKeyToken=null" serial="WINWING FCU / JS-23fd2220-3620-11ef-8001-444553540000" name="Button 2" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <button>
+          <onPress type="MSFS2020CustomInputAction" command="22701 (&gt;K:ROTOR_BRAKE)" presetId="15a4ddfb-08f8-4371-9456-79c5b3a67325" />
+        </button>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="2c85136a-7348-458a-b021-480e8736ec11">
+      <active>true</active>
+      <description>HDG_KNB_dec</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.3.0.0, Culture=neutral, PublicKeyToken=null" serial="WINWING FCU / JS-23fd2220-3620-11ef-8001-444553540000" name="Button 14" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <button>
+          <onPress type="MSFS2020CustomInputAction" command="218008 (&gt;K:ROTOR_BRAKE)" presetId="1c88d6f4-66df-4430-b329-9606cac1de63" />
+        </button>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="52820c57-dd22-449c-b7cf-a284c1a07b36">
+      <active>true</active>
+      <description>HDG_KNB_inc</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.3.0.0, Culture=neutral, PublicKeyToken=null" serial="WINWING FCU / JS-23fd2220-3620-11ef-8001-444553540000" name="Button 15" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <button>
+          <onPress type="MSFS2020CustomInputAction" command="218007 (&gt;K:ROTOR_BRAKE)" presetId="2560332d-c066-4a1a-9942-277cc6287a49" />
+        </button>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="36c6c836-7cb8-44a2-9f72-8501e411a755">
+      <active>true</active>
+      <description>HDG_KNB_pull</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.3.0.0, Culture=neutral, PublicKeyToken=null" serial="WINWING FCU / JS-23fd2220-3620-11ef-8001-444553540000" name="Button 17" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <button>
+          <onPress type="MSFS2020CustomInputAction" command="21801 (&gt;K:ROTOR_BRAKE)" presetId="5f015033-1a56-48fa-ab1b-8f317b27cd65" />
+        </button>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="e4fa21cc-4886-40e6-9b2b-9540119039df">
+      <active>true</active>
+      <description>HDG_KNB_push</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.3.0.0, Culture=neutral, PublicKeyToken=null" serial="WINWING FCU / JS-23fd2220-3620-11ef-8001-444553540000" name="Button 16" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <button>
+          <onPress type="MSFS2020CustomInputAction" command="21101 (&gt;K:ROTOR_BRAKE)" presetId="4acebf3b-a8a8-41ce-a437-3502708bee20" />
+        </button>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="f1724115-681b-4808-b6a4-ab2e277fc57b">
+      <active>true</active>
+      <description>ALT_KNB_dec</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.3.0.0, Culture=neutral, PublicKeyToken=null" serial="WINWING FCU / JS-23fd2220-3620-11ef-8001-444553540000" name="Button 18" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <button>
+          <onPress type="MSFS2020CustomInputAction" command="225008 (&gt;K:ROTOR_BRAKE)" presetId="6afe361f-e762-41e5-bda1-4da350312815" />
+        </button>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="2ae5d9d3-503b-4127-bd4a-5b2de3caa954">
+      <active>true</active>
+      <description>ALT_KNB_inc</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.3.0.0, Culture=neutral, PublicKeyToken=null" serial="WINWING FCU / JS-23fd2220-3620-11ef-8001-444553540000" name="Button 19" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <button>
+          <onPress type="MSFS2020CustomInputAction" command="225007 (&gt;K:ROTOR_BRAKE)" presetId="b4a400b0-4723-476d-a325-02c2ce9bf38f" />
+        </button>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="8f2a452b-60ef-46e4-aa21-5b80f375590a">
+      <active>true</active>
+      <description>ALT_KNB_pull</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.3.0.0, Culture=neutral, PublicKeyToken=null" serial="WINWING FCU / JS-23fd2220-3620-11ef-8001-444553540000" name="Button 21" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <button>
+          <onPress type="MSFS2020CustomInputAction" command="22601 (&gt;K:ROTOR_BRAKE)" presetId="09c4f105-695f-4264-89c4-ae63f6a1b93f" />
+        </button>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="94775075-571c-4535-bcb8-8ccedc49c808">
+      <active>true</active>
+      <description>VS_KNB_dec</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.3.0.0, Culture=neutral, PublicKeyToken=null" serial="WINWING FCU / JS-23fd2220-3620-11ef-8001-444553540000" name="Button 22" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <button>
+          <onPress type="MSFS2020CustomInputAction" command="22207 (&gt;K:ROTOR_BRAKE)" presetId="22c6677f-8a05-47db-8463-8bc30bc2289f" />
+        </button>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="10cdda53-a864-43e3-a246-79edba096823">
+      <active>true</active>
+      <description>VS_KNB_inc</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.3.0.0, Culture=neutral, PublicKeyToken=null" serial="WINWING FCU / JS-23fd2220-3620-11ef-8001-444553540000" name="Button 23" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <button>
+          <onPress type="MSFS2020CustomInputAction" command="22208 (&gt;K:ROTOR_BRAKE)" presetId="4eb08c10-3f54-4024-83ba-d00deb6a9edd" />
+        </button>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="2995e5e8-5634-440c-86ff-575cf5cdb56e">
+      <active>true</active>
+      <description>VS_KNB_push</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.3.0.0, Culture=neutral, PublicKeyToken=null" serial="WINWING FCU / JS-23fd2220-3620-11ef-8001-444553540000" name="Button 24" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <button>
+          <onPress type="MSFS2020CustomInputAction" command="21201 (&gt;K:ROTOR_BRAKE)" presetId="a8d13ca1-5901-4209-aed7-3e76e93a2a91" />
+        </button>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="8ff799a6-b60b-4c03-9f4d-5fb72f7d9014">
+      <active>true</active>
+      <description>VS_KNB_pull</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.3.0.0, Culture=neutral, PublicKeyToken=null" serial="WINWING FCU / JS-23fd2220-3620-11ef-8001-444553540000" name="Button 25" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <button>
+          <onPress type="MSFS2020CustomInputAction" command="22301 (&gt;K:ROTOR_BRAKE)" presetId="fd846103-1267-4dfc-8482-4e155e95f26f" />
+        </button>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="bee0e07b-e432-4f92-8ff3-564829e72d46">
+      <active>true</active>
+      <description>APPR_BTN</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.3.0.0, Culture=neutral, PublicKeyToken=null" serial="WINWING FCU / JS-23fd2220-3620-11ef-8001-444553540000" name="Button 9" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <button>
+          <onPress type="MSFS2020CustomInputAction" command="22801 (&gt;K:ROTOR_BRAKE)" presetId="595982e7-6c05-4e18-97b6-4ce1a6b637a4" />
+        </button>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="a77d7d6e-4796-45ef-bcbf-97c25a1f75f3">
+      <active>true</active>
+      <description>SPD/MACH_BTN</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.3.0.0, Culture=neutral, PublicKeyToken=null" serial="WINWING FCU / JS-23fd2220-3620-11ef-8001-444553540000" name="Button 1" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <button>
+          <onPress type="MSFS2020CustomInputAction" command="20801 (&gt;K:ROTOR_BRAKE)" presetId="ef8b916b-edc2-4311-8483-ad5470f46828" />
+        </button>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="1f6564ba-6d54-495e-8f78-b58dd436afeb">
+      <active>true</active>
+      <description>HDG/TRK_BTN</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.3.0.0, Culture=neutral, PublicKeyToken=null" serial="WINWING FCU / JS-23fd2220-3620-11ef-8001-444553540000" name="Button 3" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <button>
+          <onPress type="MSFS2020CustomInputAction" command="21601 (&gt;K:ROTOR_BRAKE)" presetId="8fd53777-4ec3-484e-b69a-111d96a69593" />
+        </button>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="48976eee-5e18-4443-bdcf-520af2c83c0d">
+      <active>true</active>
+      <description>ALT_100_BTN</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.3.0.0, Culture=neutral, PublicKeyToken=null" serial="WINWING FCU / JS-23fd2220-3620-11ef-8001-444553540000" name="Button 26" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <button>
+          <onPress type="MSFS2020CustomInputAction" command="22501 (&gt;K:ROTOR_BRAKE)" presetId="9ed9f0d9-9516-453a-9a58-631b51ab0038" />
+        </button>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="ef50a4c9-aeb2-465f-af5e-0acc863bed9d">
+      <active>true</active>
+      <description>ALT_1000_BTN</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.3.0.0, Culture=neutral, PublicKeyToken=null" serial="WINWING FCU / JS-23fd2220-3620-11ef-8001-444553540000" name="Button 27" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <button>
+          <onPress type="MSFS2020CustomInputAction" command="22501 (&gt;K:ROTOR_BRAKE)" presetId="9ed9f0d9-9516-453a-9a58-631b51ab0038" />
         </button>
         <preconditions />
         <configrefs />
