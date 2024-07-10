@@ -203,8 +203,8 @@
         <source type="SimConnect" VarType="CODE" Value="(L:MD11_AFS_SPD)" UUID="6ce7a708-e3cc-4c03-9ca5-6d61ee8ec82e" />
         <test type="Float" value="1" />
         <modifiers>
-          <transformation active="True" expression="if( $&gt;=0, $, 88888 )" />
-          <comparison active="True" value="88888" operand="=" ifValue="   " elseValue="" />
+          <transformation active="False" expression="if( $&gt;=0, $, 88888 )" />
+          <comparison active="True" value="0" operand="&lt;" ifValue="---" elseValue="" />
           <interpolation active="False">
             <value x="1" y="1" />
             <value x="1024" y="1024" />
@@ -232,7 +232,7 @@
         <test type="Float" value="1" />
         <modifiers>
           <transformation active="True" expression="Round($,0)" />
-          <comparison active="False" value="0" operand="&lt;" ifValue="---" elseValue="" />
+          <comparison active="True" value="0" operand="&lt;" ifValue="---" elseValue="" />
         </modifiers>
         <display type="Display Module" serial="Autopilot/ SN-bf3-83d" trigger="normal" ledAddress="SPD_HDG_ALT_DSP" ledConnector="1" ledModuleSize="8" ledPadding="True" ledPaddingChar="0" ledDigits="0,1,2" />
         <preconditions>
@@ -449,6 +449,20 @@
         <configrefs />
       </settings>
     </config>
+    <config guid="afc32509-9f13-41fd-affa-dc7418462f77">
+      <active>true</active>
+      <description>SPD_dashes</description>
+      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=10.3.0.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <source type="SimConnect" VarType="CODE" Value="(L:MD11_AFS_SPD)" UUID="6ce7a708-e3cc-4c03-9ca5-6d61ee8ec82e" />
+        <test type="Float" value="0" />
+        <modifiers>
+          <comparison active="True" value="0" operand="&lt;" ifValue="1" elseValue="0" />
+        </modifiers>
+        <display type="LcdDisplay" serial="WINWING FCU / JS-23fd2220-3620-11ef-8001-444553540000" trigger="normal" address="Speed Dashes On/Off" />
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
     <config guid="0472fc9b-9364-474c-ac0c-bdfcf16cd82f">
       <active>false</active>
       <description>ALT_dot</description>
@@ -469,6 +483,20 @@
         <test type="Float" value="1" />
         <modifiers />
         <display type="LcdDisplay" serial="WINWING FCU / JS-23fd2220-3620-11ef-8001-444553540000" trigger="normal" address="Heading Value" />
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="91c0f227-9ffd-4fcc-90d7-b5f11ef681c5">
+      <active>true</active>
+      <description>HDG_dashes</description>
+      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=10.3.0.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <source type="SimConnect" VarType="CODE" Value="(L:MD11_AFS_HDG)" UUID="863cb4b6-a4f7-44d8-b588-297e92d5823c" />
+        <test type="Float" value="0" />
+        <modifiers>
+          <comparison active="True" value="0" operand="&lt;" ifValue="1" elseValue="0" />
+        </modifiers>
+        <display type="LcdDisplay" serial="WINWING FCU / JS-23fd2220-3620-11ef-8001-444553540000" trigger="normal" address="Heading Dashes On/Off" />
         <preconditions />
         <configrefs />
       </settings>
@@ -916,8 +944,8 @@
       <description>Chrono</description>
       <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.3.0.0, Culture=neutral, PublicKeyToken=null" serial="TCA YOKE BOEING / JS-f4455760-d450-11ec-8004-444553540000" name="Button 16" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <button>
-          <onPress type="MSFS2020CustomInputAction" command="94208 (&gt;L:CEVENT)" presetId="-" />
-          <onRelease type="MSFS2020CustomInputAction" command="94209 (&gt;L:CEVENT)" presetId="-" />
+          <onPress type="MSFS2020CustomInputAction" command="1 (&gt;L:MD11_LSIDE_TIMER_SW)&#xA;94208 (&gt;L:CEVENT)" presetId="0" />
+          <onRelease type="MSFS2020CustomInputAction" command="94209 (&gt;L:CEVENT)" presetId="0" />
         </button>
         <preconditions />
         <configrefs />
@@ -1195,7 +1223,8 @@
       <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.3.0.0, Culture=neutral, PublicKeyToken=null" serial="Bravo Throttle Quadrant / JS-0f7f6820-2241-11ed-8001-444553540000" name="Button 21" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <button>
           <onPress type="MSFS2020CustomInputAction" command="86022 (&gt;L:CEVENT)" presetId="d2eb19bc-19f1-4d6a-b519-0fca61178b50" />
-          <onRelease type="MSFS2020CustomInputAction" command="86023 (&gt;L:CEVENT)" presetId="-" />
+          <onRelease type="MSFS2020CustomInputAction" command="86023 (&gt;L:CEVENT)" presetId="0" />
+          <onHold holdDelay="350" repeatDelay="0" type="MSFS2020CustomInputAction" command="86023 (&gt;L:CEVENT)" presetId="-" />
         </button>
         <preconditions />
         <configrefs />
@@ -1207,7 +1236,8 @@
       <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.3.0.0, Culture=neutral, PublicKeyToken=null" serial="Bravo Throttle Quadrant / JS-0f7f6820-2241-11ed-8001-444553540000" name="Button 20" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <button>
           <onPress type="MSFS2020CustomInputAction" command="86018 (&gt;L:CEVENT)" presetId="65a27e92-e7c6-4fda-849d-f68e86699483" />
-          <onRelease type="MSFS2020CustomInputAction" command="86019 (&gt;L:CEVENT)" presetId="-" />
+          <onRelease type="MSFS2020CustomInputAction" command="86019 (&gt;L:CEVENT)" presetId="0" />
+          <onHold holdDelay="350" repeatDelay="0" type="MSFS2020CustomInputAction" command="86019 (&gt;L:CEVENT)" presetId="-" />
         </button>
         <preconditions />
         <configrefs />
@@ -1219,7 +1249,8 @@
       <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.3.0.0, Culture=neutral, PublicKeyToken=null" serial="Bravo Throttle Quadrant / JS-0f7f6820-2241-11ed-8001-444553540000" name="Button 19" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <button>
           <onPress type="MSFS2020CustomInputAction" command="86020 (&gt;L:CEVENT)" presetId="896c01c0-0c37-4f49-9a31-60b7522db092" />
-          <onRelease type="MSFS2020CustomInputAction" command="86021 (&gt;L:CEVENT)" presetId="-" />
+          <onRelease type="MSFS2020CustomInputAction" command="86021 (&gt;L:CEVENT)" presetId="0" />
+          <onHold holdDelay="350" repeatDelay="0" type="MSFS2020CustomInputAction" command="86021 (&gt;L:CEVENT)" presetId="-" />
         </button>
         <preconditions />
         <configrefs />
@@ -1231,7 +1262,8 @@
       <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.3.0.0, Culture=neutral, PublicKeyToken=null" serial="Bravo Throttle Quadrant / JS-0f7f6820-2241-11ed-8001-444553540000" name="Button 18" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <button>
           <onPress type="MSFS2020CustomInputAction" command="86024 (&gt;L:CEVENT)" presetId="19d83e00-0bbf-40bb-924a-3dac4709d964" />
-          <onRelease type="MSFS2020CustomInputAction" command="86025 (&gt;L:CEVENT)" presetId="-" />
+          <onRelease type="MSFS2020CustomInputAction" command="86025 (&gt;L:CEVENT)" presetId="0" />
+          <onHold holdDelay="350" repeatDelay="0" type="MSFS2020CustomInputAction" command="86025 (&gt;L:CEVENT)" presetId="-" />
         </button>
         <preconditions />
         <configrefs />
