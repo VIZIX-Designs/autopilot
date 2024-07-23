@@ -980,8 +980,8 @@
       <description>Park Brake</description>
       <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.3.0.0, Culture=neutral, PublicKeyToken=null" serial="TCA YOKE BOEING / JS-f4455760-d450-11ec-8004-444553540000" name="Button 18" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <button>
-          <onPress type="MSFS2020CustomInputAction" command="77848 (&gt;L:CEVENT)&#xA;0 (&gt;L:MD11_THR_PARK_LVR)" presetId="0" />
-          <onRelease type="MSFS2020CustomInputAction" command="77848 (&gt;L:CEVENT)&#xA;1 (&gt;L:MD11_THR_PARK_LVR)" presetId="0" />
+          <onPress type="MSFS2020CustomInputAction" command="77848 (&gt;L:CEVENT)&#xA;1 (&gt;L:MD11_THR_PARK_LVR)" presetId="0" />
+          <onRelease type="MSFS2020CustomInputAction" command="77848 (&gt;L:CEVENT)&#xA;0 (&gt;L:MD11_THR_PARK_LVR)" presetId="0" />
         </button>
         <preconditions />
         <configrefs />
@@ -1116,8 +1116,8 @@
       <description>Taxi Lights</description>
       <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.3.0.0, Culture=neutral, PublicKeyToken=null" serial="Bravo Throttle Quadrant / JS-0f7f6820-2241-11ed-8001-444553540000" name="Button 40" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <button>
-          <onPress type="MSFS2020CustomInputAction" command="1 (&gt;L:MD11_OVHD_LTS_NOSE_SW)" presetId="ae2572c1-7b6c-4210-9fc5-66a651835752" />
-          <onRelease type="MSFS2020CustomInputAction" command="0 (&gt;L:MD11_OVHD_LTS_NOSE_SW)" presetId="7bfbfa5b-b47a-471d-a7fd-e27ffc2e8316" />
+          <onPress type="MSFS2020CustomInputAction" command="(L:MD11_OVHD_LTS_NOSE_SW) 0 == if{ 1 (&gt;L:MD11_OVHD_LTS_NOSE_SW) }" presetId="ae2572c1-7b6c-4210-9fc5-66a651835752" />
+          <onRelease type="MSFS2020CustomInputAction" command="(L:MD11_OVHD_LTS_NOSE_SW) 1 == if{ 0 (&gt;L:MD11_OVHD_LTS_NOSE_SW) }" presetId="7bfbfa5b-b47a-471d-a7fd-e27ffc2e8316" />
         </button>
         <preconditions />
         <configrefs />
@@ -1302,7 +1302,7 @@
       <description>Slider</description>
       <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.3.0.0, Culture=neutral, PublicKeyToken=null" serial="T.A320 Pilot / JS-573eb740-cb8c-11eb-8001-444553540000" name="Axis Slider1" type="AnalogInput" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <analog>
-          <onChange type="MSFS2020CustomInputAction" command="@ -1 * 65536 + 6553.6 / (&gt;L:MD11_CGS_PNL_LT_KB)" presetId="0" />
+          <onChange type="MSFS2020CustomInputAction" command="@ -1 * 65536 + 6553.6 / (&gt;L:MD11_CGS_PNL_LT_KB)&#xA;@ -1 * 65536 + 6553.6 / (&gt;L:MD11_OVHD_LTS_OUTER_OVHD_PNL_FLOOD_KB)&#xA;@ -1 * 65536 + 6553.6 / (&gt;L:MD11_OVHD_LTS_OUTER_INSTR_PED_PNL_FLOOD_KB)" presetId="0" />
         </analog>
         <preconditions />
         <configrefs />
