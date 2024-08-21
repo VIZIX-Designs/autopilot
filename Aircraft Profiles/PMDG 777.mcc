@@ -1234,6 +1234,17 @@
         <configrefs />
       </settings>
     </config>
+    <config guid="48976eee-5e18-4443-bdcf-520af2c83c0d">
+      <active>true</active>
+      <description>ALT_100_BTN</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.3.0.0, Culture=neutral, PublicKeyToken=null" serial="WINWING FCU / JS-23fd2220-3620-11ef-8001-444553540000" name="Button 26" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <button>
+          <onPress type="MSFS2020CustomInputAction" command="22501 (&gt;K:ROTOR_BRAKE)" presetId="9ed9f0d9-9516-453a-9a58-631b51ab0038" />
+        </button>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
     <config guid="36c6c836-7cb8-44a2-9f72-8501e411a755">
       <active>true</active>
       <description>HDG_KNB_pull</description>
@@ -1361,17 +1372,6 @@
       <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.3.0.0, Culture=neutral, PublicKeyToken=null" serial="WINWING FCU / JS-23fd2220-3620-11ef-8001-444553540000" name="Button 3" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <button>
           <onPress type="MSFS2020CustomInputAction" command="21601 (&gt;K:ROTOR_BRAKE)" presetId="8fd53777-4ec3-484e-b69a-111d96a69593" />
-        </button>
-        <preconditions />
-        <configrefs />
-      </settings>
-    </config>
-    <config guid="48976eee-5e18-4443-bdcf-520af2c83c0d">
-      <active>true</active>
-      <description>ALT_100_BTN</description>
-      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.3.0.0, Culture=neutral, PublicKeyToken=null" serial="WINWING FCU / JS-23fd2220-3620-11ef-8001-444553540000" name="Button 26" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-        <button>
-          <onPress type="MSFS2020CustomInputAction" command="22501 (&gt;K:ROTOR_BRAKE)" presetId="9ed9f0d9-9516-453a-9a58-631b51ab0038" />
         </button>
         <preconditions />
         <configrefs />

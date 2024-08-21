@@ -810,10 +810,6 @@
         <configrefs />
       </settings>
     </config>
-    <config guid="dba340aa-9fad-4b25-ba52-be4c5259064c">
-      <active>false</active>
-      <description>||||||||||||||||||||||||||||||Yoke||||||||||||||||||||||||||||||</description>
-    </config>
     <config guid="5291a4c9-c2a2-4d42-8300-bfdd6e8ab6aa">
       <active>true</active>
       <description>SPD_KNB</description>
@@ -938,6 +934,10 @@
         <preconditions />
         <configrefs />
       </settings>
+    </config>
+    <config guid="dba340aa-9fad-4b25-ba52-be4c5259064c">
+      <active>false</active>
+      <description>||||||||||||||||||||||||||||||Yoke||||||||||||||||||||||||||||||</description>
     </config>
     <config guid="b7c1a8fd-d1b6-4e14-b660-1b0503c1560f">
       <active>true</active>
@@ -1147,20 +1147,8 @@
         <configrefs />
       </settings>
     </config>
-    <config guid="ca2453e9-4258-4200-b6b8-198364e6f6a7">
-      <active>true</active>
-      <description>Hat Down</description>
-      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.3.0.0, Culture=neutral, PublicKeyToken=null" serial="T.A320 Pilot / JS-573eb740-cb8c-11eb-8001-444553540000" name="POV Hat SwitchD" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-        <button>
-          <onPress type="MSFS2020CustomInputAction" command="81979 (&gt;L:CEVENT)" presetId="1475c2a6-2670-4a71-b422-b3d3809df7ca" />
-          <onRelease type="MSFS2020CustomInputAction" command="81980 (&gt;L:CEVENT)" presetId="0" />
-        </button>
-        <preconditions />
-        <configrefs />
-      </settings>
-    </config>
     <config guid="b1ed7646-9d64-444f-bc3c-cf90eda23db0">
-      <active>true</active>
+      <active>false</active>
       <description>Arm Spoilers</description>
       <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.3.0.0, Culture=neutral, PublicKeyToken=null" serial="Bravo Throttle Quadrant / JS-0f7f6820-2241-11ed-8001-444553540000" name="Button 34" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <button>
@@ -1276,10 +1264,22 @@
     <config guid="b2cfc136-7deb-4f7c-b8d2-745e16e29625">
       <active>true</active>
       <description>Hat Up</description>
-      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.3.0.0, Culture=neutral, PublicKeyToken=null" serial="T.A320 Pilot / JS-573eb740-cb8c-11eb-8001-444553540000" name="POV Hat SwitchU" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.3.0.0, Culture=neutral, PublicKeyToken=null" serial="WINWING URSA MINOR CIVIL FLIGHT STICK L / JS-ecd42e10-5032-11ef-8001-444553540000" name="POV Hat SwitchU" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <button>
           <onPress type="MSFS2020CustomInputAction" command="81975 (&gt;L:CEVENT)" presetId="1475c2a6-2670-4a71-b422-b3d3809df7ca" />
-          <onRelease type="MSFS2020CustomInputAction" command="81976 (&gt;L:CEVENT)" presetId="-" />
+          <onRelease type="MSFS2020CustomInputAction" command="81976 (&gt;L:CEVENT)" presetId="0" />
+        </button>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="ca2453e9-4258-4200-b6b8-198364e6f6a7">
+      <active>true</active>
+      <description>Hat Down</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.3.0.0, Culture=neutral, PublicKeyToken=null" serial="WINWING URSA MINOR CIVIL FLIGHT STICK L / JS-ecd42e10-5032-11ef-8001-444553540000" name="POV Hat SwitchD" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <button>
+          <onPress type="MSFS2020CustomInputAction" command="81979 (&gt;L:CEVENT)" presetId="1475c2a6-2670-4a71-b422-b3d3809df7ca" />
+          <onRelease type="MSFS2020CustomInputAction" command="81980 (&gt;L:CEVENT)" presetId="0" />
         </button>
         <preconditions />
         <configrefs />
@@ -1288,10 +1288,10 @@
     <config guid="e6e340e1-6178-4dbf-a65c-93bbae0a2d32">
       <active>true</active>
       <description>Hat Right</description>
-      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.3.0.0, Culture=neutral, PublicKeyToken=null" serial="T.A320 Pilot / JS-573eb740-cb8c-11eb-8001-444553540000" name="POV Hat SwitchR" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.3.0.0, Culture=neutral, PublicKeyToken=null" serial="WINWING URSA MINOR CIVIL FLIGHT STICK L / JS-ecd42e10-5032-11ef-8001-444553540000" name="POV Hat SwitchR" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <button>
           <onPress type="MSFS2020CustomInputAction" command="81977 (&gt;L:CEVENT)" presetId="9ea20dfc-42d9-4835-83c2-ed063284294f" />
-          <onRelease type="MSFS2020CustomInputAction" command="81978 (&gt;L:CEVENT)" presetId="-" />
+          <onRelease type="MSFS2020CustomInputAction" command="81978 (&gt;L:CEVENT)" presetId="0" />
         </button>
         <preconditions />
         <configrefs />
@@ -1300,10 +1300,32 @@
     <config guid="b465aac7-099a-4479-aab7-660b3fd90865">
       <active>true</active>
       <description>Slider</description>
-      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.3.0.0, Culture=neutral, PublicKeyToken=null" serial="T.A320 Pilot / JS-573eb740-cb8c-11eb-8001-444553540000" name="Axis Slider1" type="AnalogInput" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.3.0.0, Culture=neutral, PublicKeyToken=null" serial="WINWING URSA MINOR CIVIL FLIGHT STICK L / JS-ecd42e10-5032-11ef-8001-444553540000" name="Axis Slider1" type="AnalogInput" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <analog>
           <onChange type="MSFS2020CustomInputAction" command="@ -1 * 65536 + 6553.6 / (&gt;L:MD11_CGS_PNL_LT_KB)&#xA;@ -1 * 65536 + 6553.6 / (&gt;L:MD11_OVHD_LTS_OUTER_OVHD_PNL_FLOOD_KB)&#xA;@ -1 * 65536 + 6553.6 / (&gt;L:MD11_OVHD_LTS_OUTER_INSTR_PED_PNL_FLOOD_KB)" presetId="0" />
         </analog>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="637df5de-69f7-433d-9e4f-c7ad1b48cea5">
+      <active>true</active>
+      <description>Screen Bightness Up</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.3.0.0, Culture=neutral, PublicKeyToken=null" serial="WINWING URSA MINOR CIVIL FLIGHT STICK L / JS-ecd42e10-5032-11ef-8001-444553540000" name="Button 8" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <button>
+          <onPress type="MSFS2020CustomInputAction" command="(L:MD11_PED_DU1_BRT_KB) 10 &lt; if{ (L:MD11_PED_DU1_BRT_KB) 1 + (&gt;L:MD11_PED_DU1_BRT_KB) }&#xA;(L:MD11_PED_DU2_BRT_KB) 10 &lt; if{ (L:MD11_PED_DU2_BRT_KB) 1 + (&gt;L:MD11_PED_DU2_BRT_KB) }&#xA;(L:MD11_PED_DU3_BRT_KB) 10 &lt; if{ (L:MD11_PED_DU3_BRT_KB) 1 + (&gt;L:MD11_PED_DU3_BRT_KB) }&#xA;(L:MD11_PED_DU4_BRT_KB) 10 &lt; if{ (L:MD11_PED_DU4_BRT_KB) 1 + (&gt;L:MD11_PED_DU4_BRT_KB) }&#xA;(L:MD11_PED_DU5_BRT_KB) 10 &lt; if{ (L:MD11_PED_DU5_BRT_KB) 1 + (&gt;L:MD11_PED_DU5_BRT_KB) }&#xA;(L:MD11_PED_DU6_BRT_KB) 10 &lt; if{ (L:MD11_PED_DU6_BRT_KB) 1 + (&gt;L:MD11_PED_DU6_BRT_KB) }" presetId="0" />
+        </button>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="f4640dfc-90e6-4df1-98c2-3e55524cb0d4">
+      <active>true</active>
+      <description>Screen Bightness Down</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.3.0.0, Culture=neutral, PublicKeyToken=null" serial="WINWING URSA MINOR CIVIL FLIGHT STICK L / JS-ecd42e10-5032-11ef-8001-444553540000" name="Button 10" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <button>
+          <onPress type="MSFS2020CustomInputAction" command="(L:MD11_PED_DU1_BRT_KB) 0 &gt; if{ (L:MD11_PED_DU1_BRT_KB) 1 - (&gt;L:MD11_PED_DU1_BRT_KB) }&#xA;(L:MD11_PED_DU2_BRT_KB) 0 &gt; if{ (L:MD11_PED_DU2_BRT_KB) 1 - (&gt;L:MD11_PED_DU2_BRT_KB) }&#xA;(L:MD11_PED_DU3_BRT_KB) 0 &gt; if{ (L:MD11_PED_DU3_BRT_KB) 1 - (&gt;L:MD11_PED_DU3_BRT_KB) }&#xA;(L:MD11_PED_DU4_BRT_KB) 0 &gt; if{ (L:MD11_PED_DU4_BRT_KB) 1 - (&gt;L:MD11_PED_DU4_BRT_KB) }&#xA;(L:MD11_PED_DU5_BRT_KB) 0 &gt; if{ (L:MD11_PED_DU5_BRT_KB) 1 - (&gt;L:MD11_PED_DU5_BRT_KB) }&#xA;(L:MD11_PED_DU6_BRT_KB) 0 &gt; if{ (L:MD11_PED_DU6_BRT_KB) 1 - (&gt;L:MD11_PED_DU6_BRT_KB) }" presetId="0" />
+        </button>
         <preconditions />
         <configrefs />
       </settings>
@@ -1596,6 +1618,18 @@
         <button>
           <onPress type="MSFS2020CustomInputAction" command="94218 (&gt;L:CEVENT)" presetId="-" />
           <onRelease type="MSFS2020CustomInputAction" command="94219 (&gt;L:CEVENT)" presetId="-" />
+        </button>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="790cb71e-981b-494d-a3f7-4de2e26cd032">
+      <active>true</active>
+      <description>Metric_ALT_BTN</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.3.0.0, Culture=neutral, PublicKeyToken=null" serial="WINWING FCU / JS-23fd2220-3620-11ef-8001-444553540000" name="Button 8" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <button>
+          <onPress type="MSFS2020CustomInputAction" command="86104 (&gt;L:CEVENT)" presetId="-" />
+          <onRelease type="MSFS2020CustomInputAction" command="86105 (&gt;L:CEVENT)" presetId="-" />
         </button>
         <preconditions />
         <configrefs />
