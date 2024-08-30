@@ -423,12 +423,30 @@
       <active>true</active>
       <description>SPD_DSP</description>
       <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=10.3.0.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-        <source type="SimConnect" VarType="CODE" Value="(L:ngx_SPDwindow, number)" UUID="-" />
+        <source type="SimConnect" VarType="CODE" Value="(L:ngx_SPDwindow, number)" UUID="6120d8a3-c644-48d2-9811-55d7abc7eca2" />
         <test type="Float" value="1" />
         <modifiers />
         <display type="LcdDisplay" serial="WINWING FCU / JS-23fd2220-3620-11ef-8001-444553540000" trigger="normal" address="Speed Value" />
-        <preconditions />
+        <preconditions>
+          <precondition type="config" active="true" ref="150f5410-2035-4dda-ad79-24ccd2894f37" operand="=" value="0" logic="and" />
+        </preconditions>
         <configrefs />
+      </settings>
+    </config>
+    <config guid="150f5410-2035-4dda-ad79-24ccd2894f37">
+      <active>true</active>
+      <description>SPD_dashes</description>
+      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=10.3.0.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <source type="SimConnect" VarType="CODE" Value="" UUID="-" />
+        <test type="Float" value="1" />
+        <modifiers>
+          <transformation active="True" expression="if( #&lt;100, 1, 0 )" />
+        </modifiers>
+        <display type="LcdDisplay" serial="WINWING FCU / JS-23fd2220-3620-11ef-8001-444553540000" trigger="normal" address="Speed Dashes On/Off" />
+        <preconditions />
+        <configrefs>
+          <configref active="True" ref="0694a5c1-b5db-4a32-86af-19e542bad33a" placeholder="#" testvalue="1" />
+        </configrefs>
       </settings>
     </config>
     <config guid="8d694e6f-7c25-484c-a3e0-88c1146e7a50">
