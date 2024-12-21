@@ -618,7 +618,7 @@
           <transformation active="False" expression="if( #==1, $, 88888 )" />
           <comparison active="False" value="88888" operand="=" ifValue="---" elseValue="" />
         </modifiers>
-        <display type="LcdDisplay" serial="WINWING FCU / JS-23fd2220-3620-11ef-8001-444553540000" trigger="normal" address="Speed Value" />
+        <display type="LcdDisplay" serial="WINWING FCU + EFIS-32L / JS-c8c08990-ac05-11ef-8001-444553540000" trigger="normal" address="Speed Value" />
         <preconditions>
           <precondition type="config" active="true" ref="d8ba046c-371a-43d2-8fc5-33b2f433f3e1" operand="&gt;" value="0" logic="and" />
         </preconditions>
@@ -641,7 +641,7 @@
         <modifiers>
           <transformation active="True" expression="if( #&lt;1, 1, 0 )" />
         </modifiers>
-        <display type="LcdDisplay" serial="WINWING FCU / JS-23fd2220-3620-11ef-8001-444553540000" trigger="normal" address="Speed Dashes On/Off" />
+        <display type="LcdDisplay" serial="WINWING FCU + EFIS-32L / JS-c8c08990-ac05-11ef-8001-444553540000" trigger="normal" address="Speed Dashes On/Off" />
         <preconditions />
         <configrefs>
           <configref active="True" ref="d8ba046c-371a-43d2-8fc5-33b2f433f3e1" placeholder="#" testvalue="1" />
@@ -658,7 +658,7 @@
           <transformation active="True" expression="Round($,0)" />
           <comparison active="False" value="0" operand="&lt;" ifValue="---" elseValue="" />
         </modifiers>
-        <display type="LcdDisplay" serial="WINWING FCU / JS-23fd2220-3620-11ef-8001-444553540000" trigger="normal" address="Heading Value" />
+        <display type="LcdDisplay" serial="WINWING FCU + EFIS-32L / JS-c8c08990-ac05-11ef-8001-444553540000" trigger="normal" address="Heading Value" />
         <preconditions>
           <precondition type="config" active="true" ref="c56e9cd4-b0ac-40d1-b7b1-ccda1b44fe1e" operand="&lt;" value="1" logic="and" />
         </preconditions>
@@ -682,7 +682,7 @@
           <transformation active="False" expression="$" />
           <comparison active="False" value="" operand="" ifValue="" elseValue="" />
         </modifiers>
-        <display type="LcdDisplay" serial="WINWING FCU / JS-23fd2220-3620-11ef-8001-444553540000" trigger="normal" address="Altitude Value" />
+        <display type="LcdDisplay" serial="WINWING FCU + EFIS-32L / JS-c8c08990-ac05-11ef-8001-444553540000" trigger="normal" address="Altitude Value" />
         <preconditions />
         <configrefs>
           <configref active="False" ref="dd6aaff4-21e3-4c34-9b07-76715427c3c6" placeholder="B" testvalue="1" />
@@ -704,7 +704,7 @@
           <transformation active="False" expression="if( #==1, $, 88888 )" />
           <comparison active="False" value="88888" operand="=" ifValue="-----" elseValue="" />
         </modifiers>
-        <display type="LcdDisplay" serial="WINWING FCU / JS-23fd2220-3620-11ef-8001-444553540000" trigger="normal" address="VS Value" />
+        <display type="LcdDisplay" serial="WINWING FCU + EFIS-32L / JS-c8c08990-ac05-11ef-8001-444553540000" trigger="normal" address="VS Value" />
         <preconditions>
           <precondition type="config" active="true" ref="1db187b5-f2b9-456f-bbbe-32c0a34bb4da" operand="=" value="1" logic="and" />
         </preconditions>
@@ -727,7 +727,7 @@
         <modifiers>
           <transformation active="True" expression="if( #==0, 1, 0 )" />
         </modifiers>
-        <display type="LcdDisplay" serial="WINWING FCU / JS-23fd2220-3620-11ef-8001-444553540000" trigger="normal" address="VS Dashes On/Off" />
+        <display type="LcdDisplay" serial="WINWING FCU + EFIS-32L / JS-c8c08990-ac05-11ef-8001-444553540000" trigger="normal" address="VS Dashes On/Off" />
         <preconditions>
           <precondition type="config" active="false" ref="1db187b5-f2b9-456f-bbbe-32c0a34bb4da" operand="=" value="0" logic="and" />
         </preconditions>
@@ -768,7 +768,7 @@
           <transformation active="False" expression="$" />
           <comparison active="True" value="0" operand="&gt;" ifValue="1" elseValue="0" />
         </modifiers>
-        <display type="LcdDisplay" serial="WINWING FCU / JS-23fd2220-3620-11ef-8001-444553540000" trigger="normal" address="Speed Dot" />
+        <display type="LcdDisplay" serial="WINWING FCU + EFIS-32L / JS-c8c08990-ac05-11ef-8001-444553540000" trigger="normal" address="Speed Dot" />
         <preconditions />
         <configrefs>
           <configref active="False" ref="2beaa044-03ae-4f8c-8c2f-f1e5daa7e399" placeholder="#" testvalue="1" />
@@ -790,7 +790,7 @@
           <transformation active="False" expression="$" />
           <comparison active="False" value="0" operand="&gt;" ifValue="0" elseValue="1" />
         </modifiers>
-        <display type="LcdDisplay" serial="WINWING FCU / JS-23fd2220-3620-11ef-8001-444553540000" trigger="normal" address="Heading Dot" />
+        <display type="LcdDisplay" serial="WINWING FCU + EFIS-32L / JS-c8c08990-ac05-11ef-8001-444553540000" trigger="normal" address="Heading Dot" />
         <preconditions />
         <configrefs>
           <configref active="False" ref="4bebe448-e1f2-4cd0-8d34-3b0422075e62" placeholder="#" testvalue="1" />
@@ -812,7 +812,7 @@
           <transformation active="False" expression="$" />
           <comparison active="False" value="" operand="" ifValue="" elseValue="" />
         </modifiers>
-        <display type="Output" serial="WINWING FCU / JS-23fd2220-3620-11ef-8001-444553540000" trigger="normal" pin="LOC" pinBrightness="255" />
+        <display type="Output" serial="WINWING FCU + EFIS-32L / JS-c8c08990-ac05-11ef-8001-444553540000" trigger="normal" pin="LOC" pinBrightness="255" />
         <preconditions />
         <configrefs>
           <configref active="False" ref="2beaa044-03ae-4f8c-8c2f-f1e5daa7e399" placeholder="!" testvalue="1" />
@@ -834,7 +834,7 @@
           <transformation active="False" expression="$" />
           <comparison active="False" value="" operand="" ifValue="" elseValue="" />
         </modifiers>
-        <display type="Output" serial="WINWING FCU / JS-23fd2220-3620-11ef-8001-444553540000" trigger="normal" pin="APPR" pinBrightness="255" />
+        <display type="Output" serial="WINWING FCU + EFIS-32L / JS-c8c08990-ac05-11ef-8001-444553540000" trigger="normal" pin="APPR" pinBrightness="255" />
         <preconditions />
         <configrefs>
           <configref active="False" ref="b2e17bfb-b6c5-43b9-a9dd-c40967a8ef6b" placeholder="?" testvalue="1" />
@@ -856,7 +856,7 @@
           <transformation active="False" expression="if( ( $==10 &amp;&amp; #&lt;70 ) || $=11 || !==1 ,1,0)" />
           <comparison active="False" value="0" operand="&gt;" ifValue="1" elseValue="0" />
         </modifiers>
-        <display type="LcdDisplay" serial="WINWING FCU / JS-23fd2220-3620-11ef-8001-444553540000" trigger="normal" address="Altitude Dot" />
+        <display type="LcdDisplay" serial="WINWING FCU + EFIS-32L / JS-c8c08990-ac05-11ef-8001-444553540000" trigger="normal" address="Altitude Dot" />
         <preconditions />
         <configrefs>
           <configref active="False" ref="5d249be0-4949-4c2d-8fb8-55573e3b5918" placeholder="@" testvalue="1" />
@@ -870,7 +870,7 @@
     </config>
     <config guid="acfd7e0c-9ea0-4aaa-949c-0399e5a5dfa7">
       <active>true</active>
-      <description>A/THR_LED</description>
+      <description>FD_LED</description>
       <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=10.4.0.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <source type="SimConnect" VarType="CODE" Value="(A:AUTOPILOT FLIGHT DIRECTOR ACTIVE,Bool)" UUID="2ac729ee-dcb3-4103-b61b-da3913a471e2" />
         <test type="Float" value="1" />
@@ -878,7 +878,7 @@
           <transformation active="False" expression="$" />
           <comparison active="False" value="" operand="" ifValue="" elseValue="" />
         </modifiers>
-        <display type="Output" serial="WINWING FCU / JS-23fd2220-3620-11ef-8001-444553540000" trigger="normal" pin="ATHR" pinBrightness="255" />
+        <display type="Output" serial="WINWING FCU + EFIS-32L / JS-c8c08990-ac05-11ef-8001-444553540000" trigger="normal" pin="FD Left" pinBrightness="255" />
         <preconditions />
         <configrefs>
           <configref active="False" ref="dd6aaff4-21e3-4c34-9b07-76715427c3c6" placeholder="B" testvalue="1" />
@@ -900,7 +900,7 @@
           <transformation active="False" expression="$" />
           <comparison active="False" value="" operand="" ifValue="" elseValue="" />
         </modifiers>
-        <display type="Output" serial="WINWING FCU / JS-23fd2220-3620-11ef-8001-444553540000" trigger="normal" pin="AP1" pinBrightness="255" />
+        <display type="Output" serial="WINWING FCU + EFIS-32L / JS-c8c08990-ac05-11ef-8001-444553540000" trigger="normal" pin="AP1" pinBrightness="255" />
         <preconditions />
         <configrefs>
           <configref active="False" ref="dd6aaff4-21e3-4c34-9b07-76715427c3c6" placeholder="B" testvalue="1" />
@@ -919,7 +919,7 @@
         <source type="SimConnect" VarType="CODE" Value="(A:AUTOPILOT YAW DAMPER, Bool)" UUID="c0284b75-a789-43a8-849e-54af8d430259" />
         <test type="Float" value="1" />
         <modifiers />
-        <display type="Output" serial="WINWING FCU / JS-23fd2220-3620-11ef-8001-444553540000" trigger="normal" pin="AP2" pinBrightness="255" />
+        <display type="Output" serial="WINWING FCU + EFIS-32L / JS-c8c08990-ac05-11ef-8001-444553540000" trigger="normal" pin="AP2" pinBrightness="255" />
         <preconditions />
         <configrefs />
       </settings>
@@ -1413,7 +1413,7 @@
     <config guid="ab98b27f-a4e6-4ae9-8fc1-09994bf86317">
       <active>true</active>
       <description>SPD_KNB_dec</description>
-      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.4.0.0, Culture=neutral, PublicKeyToken=null" serial="WINWING FCU / JS-23fd2220-3620-11ef-8001-444553540000" name="Button 10" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.4.0.0, Culture=neutral, PublicKeyToken=null" serial="WINWING FCU + EFIS-32L / JS-c8c08990-ac05-11ef-8001-444553540000" name="Button 10" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <button>
           <onPress type="MSFS2020CustomInputAction" command="(&gt;K:AP_SPD_VAR_DEC)" presetId="-" />
         </button>
@@ -1431,7 +1431,7 @@
     <config guid="bc5d1a14-b7cd-48e8-98fc-8ecf40b9a69c">
       <active>true</active>
       <description>SPD_KNB_inc</description>
-      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.4.0.0, Culture=neutral, PublicKeyToken=null" serial="WINWING FCU / JS-23fd2220-3620-11ef-8001-444553540000" name="Button 11" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.4.0.0, Culture=neutral, PublicKeyToken=null" serial="WINWING FCU + EFIS-32L / JS-c8c08990-ac05-11ef-8001-444553540000" name="Button 11" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <button>
           <onPress type="MSFS2020CustomInputAction" command="(&gt;K:AP_SPD_VAR_INC)" presetId="-" />
         </button>
@@ -1449,7 +1449,7 @@
     <config guid="46dca24f-cfd3-44fa-9cf4-3e6f58df4844">
       <active>true</active>
       <description>SPD_KNB_pull</description>
-      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.4.0.0, Culture=neutral, PublicKeyToken=null" serial="WINWING FCU / JS-23fd2220-3620-11ef-8001-444553540000" name="Button 13" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.4.0.0, Culture=neutral, PublicKeyToken=null" serial="WINWING FCU + EFIS-32L / JS-c8c08990-ac05-11ef-8001-444553540000" name="Button 13" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <button>
           <onPress type="MSFS2020CustomInputAction" command="(&gt;K:FLIGHT_LEVEL_CHANGE) (A:AIRSPEED INDICATED, knots) (&gt;K:AP_SPD_VAR_SET)" presetId="7084478a-6770-4b81-824a-a4a172681268" />
         </button>
@@ -1467,7 +1467,7 @@
     <config guid="78655064-de31-46ee-8f00-cd5baf5f0375">
       <active>true</active>
       <description>HDG_KNB_push</description>
-      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.4.0.0, Culture=neutral, PublicKeyToken=null" serial="WINWING FCU / JS-23fd2220-3620-11ef-8001-444553540000" name="Button 16" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.4.0.0, Culture=neutral, PublicKeyToken=null" serial="WINWING FCU + EFIS-32L / JS-c8c08990-ac05-11ef-8001-444553540000" name="Button 16" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <button>
           <onPress type="MSFS2020CustomInputAction" command="(A:HEADING INDICATOR, degrees) (&gt;K:HEADING_BUG_SET)" presetId="67c38b01-e4cd-448c-a572-cba1b6d250f5" />
         </button>
@@ -1485,7 +1485,7 @@
     <config guid="8d9d6603-b3f2-4aab-a551-5c2c1fa4f688">
       <active>true</active>
       <description>HDG_KNB_dec</description>
-      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.4.0.0, Culture=neutral, PublicKeyToken=null" serial="WINWING FCU / JS-23fd2220-3620-11ef-8001-444553540000" name="Button 14" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.4.0.0, Culture=neutral, PublicKeyToken=null" serial="WINWING FCU + EFIS-32L / JS-c8c08990-ac05-11ef-8001-444553540000" name="Button 14" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <button>
           <onPress type="MSFS2020CustomInputAction" command="1 (&gt;K:HEADING_BUG_DEC)" presetId="-" />
         </button>
@@ -1503,7 +1503,7 @@
     <config guid="cb9724cc-226d-4f9c-b261-cb1e0d058632">
       <active>true</active>
       <description>VS_KNB_inc</description>
-      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.4.0.0, Culture=neutral, PublicKeyToken=null" serial="WINWING FCU / JS-23fd2220-3620-11ef-8001-444553540000" name="Button 23" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.4.0.0, Culture=neutral, PublicKeyToken=null" serial="WINWING FCU + EFIS-32L / JS-c8c08990-ac05-11ef-8001-444553540000" name="Button 23" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <button>
           <onPress type="MSFS2020CustomInputAction" command="(&gt;K:AP_VS_VAR_INC)" presetId="-" />
         </button>
@@ -1521,7 +1521,7 @@
     <config guid="411ee409-0665-4888-8a20-565821f51ddc">
       <active>true</active>
       <description>VS_KNB_pull</description>
-      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.4.0.0, Culture=neutral, PublicKeyToken=null" serial="WINWING FCU / JS-23fd2220-3620-11ef-8001-444553540000" name="Button 25" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.4.0.0, Culture=neutral, PublicKeyToken=null" serial="WINWING FCU + EFIS-32L / JS-c8c08990-ac05-11ef-8001-444553540000" name="Button 25" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <button>
           <onPress type="MSFS2020CustomInputAction" command="(&gt;K:AP_PANEL_VS_HOLD)" presetId="1f6f5a4d-6b7d-4fea-bf7b-3b330a6f94d3" />
         </button>
@@ -1539,7 +1539,7 @@
     <config guid="953317b1-828b-4ca9-a158-be14544fe136">
       <active>true</active>
       <description>HDG_KNB_inc</description>
-      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.4.0.0, Culture=neutral, PublicKeyToken=null" serial="WINWING FCU / JS-23fd2220-3620-11ef-8001-444553540000" name="Button 15" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.4.0.0, Culture=neutral, PublicKeyToken=null" serial="WINWING FCU + EFIS-32L / JS-c8c08990-ac05-11ef-8001-444553540000" name="Button 15" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <button>
           <onPress type="MSFS2020CustomInputAction" command="1 (&gt;K:HEADING_BUG_INC)" presetId="-" />
         </button>
@@ -1557,7 +1557,7 @@
     <config guid="237566b3-46a5-4886-91ca-3097be9fb19d">
       <active>true</active>
       <description>HDG_KNB_pull</description>
-      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.4.0.0, Culture=neutral, PublicKeyToken=null" serial="WINWING FCU / JS-23fd2220-3620-11ef-8001-444553540000" name="Button 17" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.4.0.0, Culture=neutral, PublicKeyToken=null" serial="WINWING FCU + EFIS-32L / JS-c8c08990-ac05-11ef-8001-444553540000" name="Button 17" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <button>
           <onPress type="MSFS2020CustomInputAction" command="(&gt;K:AP_HDG_HOLD)" presetId="1e879ccb-96c9-401e-b447-940c7380a410" />
         </button>
@@ -1575,7 +1575,7 @@
     <config guid="b7b2efb4-2256-4cec-9ef7-605703024e13">
       <active>true</active>
       <description>ALT_KNB_100_dec</description>
-      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.4.0.0, Culture=neutral, PublicKeyToken=null" serial="WINWING FCU / JS-23fd2220-3620-11ef-8001-444553540000" name="Button 18" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.4.0.0, Culture=neutral, PublicKeyToken=null" serial="WINWING FCU + EFIS-32L / JS-c8c08990-ac05-11ef-8001-444553540000" name="Button 18" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <button>
           <onPress type="MSFS2020CustomInputAction" command=" (A:AUTOPILOT ALTITUDE LOCK VAR, feet) 100 - (&gt;K:AP_ALT_VAR_SET_ENGLISH) (&gt;H:AP_KNOB_Up)" presetId="0" />
         </button>
@@ -1589,7 +1589,7 @@
     <config guid="e72c045a-b95b-4997-96b5-9e22fc0a3ff5">
       <active>true</active>
       <description>ALT_KNB_100_inc</description>
-      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.4.0.0, Culture=neutral, PublicKeyToken=null" serial="WINWING FCU / JS-23fd2220-3620-11ef-8001-444553540000" name="Button 19" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.4.0.0, Culture=neutral, PublicKeyToken=null" serial="WINWING FCU + EFIS-32L / JS-c8c08990-ac05-11ef-8001-444553540000" name="Button 19" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <button>
           <onPress type="MSFS2020CustomInputAction" command=" (A:AUTOPILOT ALTITUDE LOCK VAR, feet) 100 + (&gt;K:AP_ALT_VAR_SET_ENGLISH) (&gt;H:AP_KNOB_Up)" presetId="-" />
         </button>
@@ -1602,7 +1602,7 @@
     <config guid="e2afb0fc-8f37-4258-927a-ff9c3c90c73e">
       <active>true</active>
       <description>ALT_KNB_1000_dec</description>
-      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.4.0.0, Culture=neutral, PublicKeyToken=null" serial="WINWING FCU / JS-23fd2220-3620-11ef-8001-444553540000" name="Button 18" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.4.0.0, Culture=neutral, PublicKeyToken=null" serial="WINWING FCU + EFIS-32L / JS-c8c08990-ac05-11ef-8001-444553540000" name="Button 18" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <button>
           <onPress type="MSFS2020CustomInputAction" command=" (A:AUTOPILOT ALTITUDE LOCK VAR, feet) 1000 - (&gt;K:AP_ALT_VAR_SET_ENGLISH) (&gt;H:AP_KNOB_Up)" presetId="0" />
         </button>
@@ -1616,7 +1616,7 @@
     <config guid="260e9040-a953-458f-ba4b-cdcb83935dbc">
       <active>true</active>
       <description>ALT_KNB_1000_inc</description>
-      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.4.0.0, Culture=neutral, PublicKeyToken=null" serial="WINWING FCU / JS-23fd2220-3620-11ef-8001-444553540000" name="Button 19" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.4.0.0, Culture=neutral, PublicKeyToken=null" serial="WINWING FCU + EFIS-32L / JS-c8c08990-ac05-11ef-8001-444553540000" name="Button 19" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <button>
           <onPress type="MSFS2020CustomInputAction" command=" (A:AUTOPILOT ALTITUDE LOCK VAR, feet) 1000 + (&gt;K:AP_ALT_VAR_SET_ENGLISH) (&gt;H:AP_KNOB_Up)" presetId="-" />
         </button>
@@ -1629,7 +1629,7 @@
     <config guid="4fb63f15-a22a-45af-9726-6a4fc2d4cd9b">
       <active>true</active>
       <description>ALT_KNB_switch_100</description>
-      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.4.0.0, Culture=neutral, PublicKeyToken=null" serial="WINWING FCU / JS-23fd2220-3620-11ef-8001-444553540000" name="Button 26" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.4.0.0, Culture=neutral, PublicKeyToken=null" serial="WINWING FCU + EFIS-32L / JS-c8c08990-ac05-11ef-8001-444553540000" name="Button 26" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <button>
           <onPress type="VariableInputAction" varType="number" varName="ALT_Toggle" varExpression="0" />
         </button>
@@ -1647,7 +1647,7 @@
     <config guid="b0f0b338-a736-47ee-bc20-ceddd82e9f4a">
       <active>true</active>
       <description>ALT_KNB_switch_1000</description>
-      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.4.0.0, Culture=neutral, PublicKeyToken=null" serial="WINWING FCU / JS-23fd2220-3620-11ef-8001-444553540000" name="Button 27" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.4.0.0, Culture=neutral, PublicKeyToken=null" serial="WINWING FCU + EFIS-32L / JS-c8c08990-ac05-11ef-8001-444553540000" name="Button 27" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <button>
           <onPress type="VariableInputAction" varType="number" varName="ALT_Toggle" varExpression="1" />
         </button>
@@ -1665,7 +1665,7 @@
     <config guid="02d96d08-5410-4d65-8c6c-998fedd314cf">
       <active>true</active>
       <description>ALT_KNB_pull</description>
-      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.4.0.0, Culture=neutral, PublicKeyToken=null" serial="WINWING FCU / JS-23fd2220-3620-11ef-8001-444553540000" name="Button 21" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.4.0.0, Culture=neutral, PublicKeyToken=null" serial="WINWING FCU + EFIS-32L / JS-c8c08990-ac05-11ef-8001-444553540000" name="Button 21" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <button>
           <onPress type="MSFS2020CustomInputAction" command="(&gt;K:AP_ALT_HOLD)" presetId="fb43246e-061d-4145-9616-10012527dbc8" />
         </button>
@@ -1683,7 +1683,7 @@
     <config guid="33e88b0b-12b4-4f49-893a-390aa196e9a3">
       <active>true</active>
       <description>VS_KNB_dec</description>
-      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.4.0.0, Culture=neutral, PublicKeyToken=null" serial="WINWING FCU / JS-23fd2220-3620-11ef-8001-444553540000" name="Button 22" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.4.0.0, Culture=neutral, PublicKeyToken=null" serial="WINWING FCU + EFIS-32L / JS-c8c08990-ac05-11ef-8001-444553540000" name="Button 22" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <button>
           <onPress type="MSFS2020CustomInputAction" command="(&gt;K:AP_VS_VAR_DEC)" presetId="-" />
         </button>
@@ -1701,7 +1701,7 @@
     <config guid="93fbcdc6-c47f-4e94-ac27-2521cb1f85d2">
       <active>true</active>
       <description>LOC_BTN</description>
-      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.4.0.0, Culture=neutral, PublicKeyToken=null" serial="WINWING FCU / JS-23fd2220-3620-11ef-8001-444553540000" name="Button 2" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.4.0.0, Culture=neutral, PublicKeyToken=null" serial="WINWING FCU + EFIS-32L / JS-c8c08990-ac05-11ef-8001-444553540000" name="Button 2" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <button>
           <onPress type="MSFS2020CustomInputAction" command="(&gt;K:AP_NAV1_HOLD)" presetId="f8ec79b7-46e7-424f-b715-477343d3e151" />
         </button>
@@ -1719,7 +1719,7 @@
     <config guid="445ba110-a8b0-43ff-8ddb-d2972e827d6c">
       <active>true</active>
       <description>APPR_BTN</description>
-      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.4.0.0, Culture=neutral, PublicKeyToken=null" serial="WINWING FCU / JS-23fd2220-3620-11ef-8001-444553540000" name="Button 9" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.4.0.0, Culture=neutral, PublicKeyToken=null" serial="WINWING FCU + EFIS-32L / JS-c8c08990-ac05-11ef-8001-444553540000" name="Button 9" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <button>
           <onPress type="MSFS2020CustomInputAction" command="(&gt;K:AP_APR_HOLD)" presetId="d8872f5c-da1f-496c-875c-88099f127474" />
         </button>
@@ -1736,8 +1736,8 @@
     </config>
     <config guid="7101caac-f45c-4075-9df6-e87b98debe4c">
       <active>true</active>
-      <description>A/THR_BTN</description>
-      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.4.0.0, Culture=neutral, PublicKeyToken=null" serial="WINWING FCU / JS-23fd2220-3620-11ef-8001-444553540000" name="Button 6" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      <description>FD_BTN</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.4.0.0, Culture=neutral, PublicKeyToken=null" serial="WINWING FCU + EFIS-32L / JS-c8c08990-ac05-11ef-8001-444553540000" name="Button 33" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <button>
           <onPress type="MSFS2020CustomInputAction" command="(&gt;K:TOGGLE_FLIGHT_DIRECTOR)" presetId="fad1ae94-e742-4bee-8982-c45da3585497" />
         </button>
@@ -1755,7 +1755,7 @@
     <config guid="627a6f67-9e6a-491c-b8ed-fb44839155a5">
       <active>true</active>
       <description>AP1_BTN</description>
-      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.4.0.0, Culture=neutral, PublicKeyToken=null" serial="WINWING FCU / JS-23fd2220-3620-11ef-8001-444553540000" name="Button 4" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.4.0.0, Culture=neutral, PublicKeyToken=null" serial="WINWING FCU + EFIS-32L / JS-c8c08990-ac05-11ef-8001-444553540000" name="Button 4" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <button>
           <onPress type="MSFS2020CustomInputAction" command="(&gt;K:AP_MASTER)" presetId="b17146c8-2db3-4239-b797-e7bc11d557da" />
         </button>
@@ -1773,7 +1773,7 @@
     <config guid="58709b77-5836-430b-9efa-80cafe26c6ae">
       <active>true</active>
       <description>Blank_BTN</description>
-      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.4.0.0, Culture=neutral, PublicKeyToken=null" serial="WINWING FCU / JS-23fd2220-3620-11ef-8001-444553540000" name="Button 7" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.4.0.0, Culture=neutral, PublicKeyToken=null" serial="WINWING FCU + EFIS-32L / JS-c8c08990-ac05-11ef-8001-444553540000" name="Button 7" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <button>
           <onPress type="MSFS2020CustomInputAction" command="(L:XMLVAR_VNAVButtonValue, Bool) ! (&gt;L:XMLVAR_VNAVButtonValue)" presetId="8fd3ee23-dbc3-4c88-8ed1-65941fe87cad" />
         </button>
@@ -1791,7 +1791,7 @@
     <config guid="2c0e914a-2292-4cbb-9cc5-615b0aeb16e8">
       <active>true</active>
       <description>AP2_BTN</description>
-      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.4.0.0, Culture=neutral, PublicKeyToken=null" serial="WINWING FCU / JS-23fd2220-3620-11ef-8001-444553540000" name="Button 5" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.4.0.0, Culture=neutral, PublicKeyToken=null" serial="WINWING FCU + EFIS-32L / JS-c8c08990-ac05-11ef-8001-444553540000" name="Button 5" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <button>
           <onPress type="MSFS2020CustomInputAction" command="(&gt;K:YAW_DAMPER_TOGGLE)" presetId="2beef46b-a8ac-4a25-b7eb-6d75b136f1f9" />
         </button>
