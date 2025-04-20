@@ -1,0 +1,3681 @@
+{
+  "Name": "MobiFlight Project",
+  "ConfigFiles": [
+    {
+      "FileName": "PC-12.mcc",
+      "ReferenceOnly": false,
+      "EmbedContent": true,
+      "ConfigItems": [
+        {
+          "Source": {
+            "SimConnectValue": {
+              "Value": "(A:AUTOPILOT FLIGHT LEVEL CHANGE,bool)",
+              "VarType": 2
+            },
+            "Type": "SimConnectSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 1.0,
+            "String": null
+          },
+          "Device": {
+            "Name": "SPD_LED",
+            "DisplayPin": "SPD_LED",
+            "DisplayPinBrightness": 255,
+            "DisplayPinPWM": false,
+            "Type": "Output"
+          },
+          "DeviceType": "Output",
+          "DeviceName": "SPD_LED",
+          "GUID": "4bebe448-e1f2-4cd0-8d34-3b0422075e62",
+          "Active": true,
+          "Name": "SPD_LED",
+          "Type": "OutputConfigItem",
+          "ModuleSerial": "Autopilot/ SN-bf3-83d",
+          "Preconditions": [],
+          "Modifiers": {
+            "Items": [
+              {
+                "Type": "Transformation",
+                "Expression": "$",
+                "Active": false
+              },
+              {
+                "Type": "Comparison",
+                "Operand": ">",
+                "Value": "0",
+                "IfValue": "1",
+                "ElseValue": "0",
+                "Active": true
+              }
+            ]
+          },
+          "ConfigRefs": [
+            {
+              "Active": false,
+              "Ref": "2beaa044-03ae-4f8c-8c2f-f1e5daa7e399",
+              "Placeholder": "#",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "dd6aaff4-21e3-4c34-9b07-76715427c3c6",
+              "Placeholder": "A",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "a38f9933-e299-4fc7-bd88-bfc2c9d87700",
+              "Placeholder": "@",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "5d249be0-4949-4c2d-8fb8-55573e3b5918",
+              "Placeholder": "?",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "b2e17bfb-b6c5-43b9-a9dd-c40967a8ef6b",
+              "Placeholder": "!",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "2beaa044-03ae-4f8c-8c2f-f1e5daa7e399",
+              "Placeholder": "#",
+              "TestValue": "1"
+            }
+          ],
+          "Status": {}
+        },
+        {
+          "Source": {
+            "SimConnectValue": {
+              "Value": "(A:AUTOPILOT HEADING LOCK,Bool)",
+              "VarType": 2
+            },
+            "Type": "SimConnectSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 1.0,
+            "String": null
+          },
+          "Device": {
+            "Name": "HDG_LED",
+            "DisplayPin": "HDG_LED",
+            "DisplayPinBrightness": 255,
+            "DisplayPinPWM": false,
+            "Type": "Output"
+          },
+          "DeviceType": "Output",
+          "DeviceName": "HDG_LED",
+          "GUID": "2beaa044-03ae-4f8c-8c2f-f1e5daa7e399",
+          "Active": true,
+          "Name": "HDG_LED",
+          "Type": "OutputConfigItem",
+          "ModuleSerial": "Autopilot/ SN-bf3-83d",
+          "Preconditions": [],
+          "Modifiers": {
+            "Items": [
+              {
+                "Type": "Transformation",
+                "Expression": "$",
+                "Active": false
+              },
+              {
+                "Type": "Comparison",
+                "Operand": ">",
+                "Value": "0",
+                "IfValue": "0",
+                "ElseValue": "1",
+                "Active": false
+              }
+            ]
+          },
+          "ConfigRefs": [
+            {
+              "Active": false,
+              "Ref": "4bebe448-e1f2-4cd0-8d34-3b0422075e62",
+              "Placeholder": "#",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "dd6aaff4-21e3-4c34-9b07-76715427c3c6",
+              "Placeholder": "A",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "a38f9933-e299-4fc7-bd88-bfc2c9d87700",
+              "Placeholder": "@",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "5d249be0-4949-4c2d-8fb8-55573e3b5918",
+              "Placeholder": "?",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "b2e17bfb-b6c5-43b9-a9dd-c40967a8ef6b",
+              "Placeholder": "!",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "4bebe448-e1f2-4cd0-8d34-3b0422075e62",
+              "Placeholder": "#",
+              "TestValue": "1"
+            }
+          ],
+          "Status": {}
+        },
+        {
+          "Source": {
+            "SimConnectValue": {
+              "Value": "(A:AUTOPILOT NAV1 LOCK,Bool)",
+              "VarType": 2
+            },
+            "Type": "SimConnectSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 1.0,
+            "String": null
+          },
+          "Device": {
+            "Name": "NAV_LED",
+            "DisplayPin": "NAV_LED",
+            "DisplayPinBrightness": 255,
+            "DisplayPinPWM": false,
+            "Type": "Output"
+          },
+          "DeviceType": "Output",
+          "DeviceName": "NAV_LED",
+          "GUID": "b2e17bfb-b6c5-43b9-a9dd-c40967a8ef6b",
+          "Active": true,
+          "Name": "NAV_LED",
+          "Type": "OutputConfigItem",
+          "ModuleSerial": "Autopilot/ SN-bf3-83d",
+          "Preconditions": [],
+          "Modifiers": {
+            "Items": [
+              {
+                "Type": "Transformation",
+                "Expression": "$",
+                "Active": false
+              },
+              {
+                "Type": "Comparison",
+                "Operand": "",
+                "Value": "",
+                "IfValue": "",
+                "ElseValue": "",
+                "Active": false
+              }
+            ]
+          },
+          "ConfigRefs": [
+            {
+              "Active": false,
+              "Ref": "2beaa044-03ae-4f8c-8c2f-f1e5daa7e399",
+              "Placeholder": "!",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "4bebe448-e1f2-4cd0-8d34-3b0422075e62",
+              "Placeholder": "#",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "a38f9933-e299-4fc7-bd88-bfc2c9d87700",
+              "Placeholder": "@",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "5d249be0-4949-4c2d-8fb8-55573e3b5918",
+              "Placeholder": "?",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "2beaa044-03ae-4f8c-8c2f-f1e5daa7e399",
+              "Placeholder": "!",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "4bebe448-e1f2-4cd0-8d34-3b0422075e62",
+              "Placeholder": "#",
+              "TestValue": "1"
+            }
+          ],
+          "Status": {}
+        },
+        {
+          "Source": {
+            "SimConnectValue": {
+              "Value": "(A:AUTOPILOT APPROACH HOLD,Bool)",
+              "VarType": 2
+            },
+            "Type": "SimConnectSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 1.0,
+            "String": null
+          },
+          "Device": {
+            "Name": "APR_LED",
+            "DisplayPin": "APR_LED",
+            "DisplayPinBrightness": 255,
+            "DisplayPinPWM": false,
+            "Type": "Output"
+          },
+          "DeviceType": "Output",
+          "DeviceName": "APR_LED",
+          "GUID": "5d249be0-4949-4c2d-8fb8-55573e3b5918",
+          "Active": true,
+          "Name": "APR_LED",
+          "Type": "OutputConfigItem",
+          "ModuleSerial": "Autopilot/ SN-bf3-83d",
+          "Preconditions": [],
+          "Modifiers": {
+            "Items": [
+              {
+                "Type": "Transformation",
+                "Expression": "$",
+                "Active": false
+              },
+              {
+                "Type": "Comparison",
+                "Operand": "",
+                "Value": "",
+                "IfValue": "",
+                "ElseValue": "",
+                "Active": false
+              }
+            ]
+          },
+          "ConfigRefs": [
+            {
+              "Active": false,
+              "Ref": "b2e17bfb-b6c5-43b9-a9dd-c40967a8ef6b",
+              "Placeholder": "?",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "2beaa044-03ae-4f8c-8c2f-f1e5daa7e399",
+              "Placeholder": "!",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "4bebe448-e1f2-4cd0-8d34-3b0422075e62",
+              "Placeholder": "#",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "b2e17bfb-b6c5-43b9-a9dd-c40967a8ef6b",
+              "Placeholder": "?",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "2beaa044-03ae-4f8c-8c2f-f1e5daa7e399",
+              "Placeholder": "!",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "4bebe448-e1f2-4cd0-8d34-3b0422075e62",
+              "Placeholder": "#",
+              "TestValue": "1"
+            }
+          ],
+          "Status": {}
+        },
+        {
+          "Source": {
+            "SimConnectValue": {
+              "Value": "(A:AUTOPILOT ALTITUDE LOCK,Bool)",
+              "VarType": 2
+            },
+            "Type": "SimConnectSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 1.0,
+            "String": null
+          },
+          "Device": {
+            "Name": "ALT_LED",
+            "DisplayPin": "ALT_LED",
+            "DisplayPinBrightness": 255,
+            "DisplayPinPWM": false,
+            "Type": "Output"
+          },
+          "DeviceType": "Output",
+          "DeviceName": "ALT_LED",
+          "GUID": "a38f9933-e299-4fc7-bd88-bfc2c9d87700",
+          "Active": true,
+          "Name": "ALT_LED",
+          "Type": "OutputConfigItem",
+          "ModuleSerial": "Autopilot/ SN-bf3-83d",
+          "Preconditions": [],
+          "Modifiers": {
+            "Items": [
+              {
+                "Type": "Transformation",
+                "Expression": "if( ( $==10 && #<70 ) || $=11 || !==1 ,1,0)",
+                "Active": false
+              },
+              {
+                "Type": "Comparison",
+                "Operand": ">",
+                "Value": "0",
+                "IfValue": "1",
+                "ElseValue": "0",
+                "Active": false
+              }
+            ]
+          },
+          "ConfigRefs": [
+            {
+              "Active": false,
+              "Ref": "5d249be0-4949-4c2d-8fb8-55573e3b5918",
+              "Placeholder": "@",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "b2e17bfb-b6c5-43b9-a9dd-c40967a8ef6b",
+              "Placeholder": "?",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "2beaa044-03ae-4f8c-8c2f-f1e5daa7e399",
+              "Placeholder": "!",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "4bebe448-e1f2-4cd0-8d34-3b0422075e62",
+              "Placeholder": "#",
+              "TestValue": "1"
+            },
+            {
+              "Active": true,
+              "Ref": "2660a092-93e8-4537-bbbe-c9c730029638",
+              "Placeholder": "!",
+              "TestValue": "1"
+            },
+            {
+              "Active": true,
+              "Ref": "6fa41018-f843-4f1a-816d-aacf9ebba41c",
+              "Placeholder": "#",
+              "TestValue": "1"
+            }
+          ],
+          "Status": {}
+        },
+        {
+          "Source": {
+            "SimConnectValue": {
+              "Value": "(A:AUTOPILOT VERTICAL HOLD,Bool)",
+              "VarType": 2
+            },
+            "Type": "SimConnectSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 1.0,
+            "String": null
+          },
+          "Device": {
+            "Name": "VS_LED",
+            "DisplayPin": "VS_LED",
+            "DisplayPinBrightness": 255,
+            "DisplayPinPWM": false,
+            "Type": "Output"
+          },
+          "DeviceType": "Output",
+          "DeviceName": "VS_LED",
+          "GUID": "dd6aaff4-21e3-4c34-9b07-76715427c3c6",
+          "Active": true,
+          "Name": "VS_LED",
+          "Type": "OutputConfigItem",
+          "ModuleSerial": "Autopilot/ SN-bf3-83d",
+          "Preconditions": [],
+          "Modifiers": {
+            "Items": [
+              {
+                "Type": "Transformation",
+                "Expression": "if( $<1 && (#==14 || #==15), 1, 0 )",
+                "Active": false
+              },
+              {
+                "Type": "Comparison",
+                "Operand": ">",
+                "Value": "0",
+                "IfValue": "0",
+                "ElseValue": "1",
+                "Active": false
+              }
+            ]
+          },
+          "ConfigRefs": [
+            {
+              "Active": false,
+              "Ref": "a38f9933-e299-4fc7-bd88-bfc2c9d87700",
+              "Placeholder": "A",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "5d249be0-4949-4c2d-8fb8-55573e3b5918",
+              "Placeholder": "@",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "b2e17bfb-b6c5-43b9-a9dd-c40967a8ef6b",
+              "Placeholder": "?",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "2beaa044-03ae-4f8c-8c2f-f1e5daa7e399",
+              "Placeholder": "!",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "4bebe448-e1f2-4cd0-8d34-3b0422075e62",
+              "Placeholder": "#",
+              "TestValue": "1"
+            },
+            {
+              "Active": true,
+              "Ref": "dcd4f1f1-afb6-4d49-bb73-da06daaa4024",
+              "Placeholder": "#",
+              "TestValue": "1"
+            }
+          ],
+          "Status": {}
+        },
+        {
+          "Source": {
+            "SimConnectValue": {
+              "Value": "(A:AUTOPILOT FLIGHT DIRECTOR ACTIVE,Bool)",
+              "VarType": 2
+            },
+            "Type": "SimConnectSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 1.0,
+            "String": null
+          },
+          "Device": {
+            "Name": "FD_LED",
+            "DisplayPin": "FD_LED",
+            "DisplayPinBrightness": 255,
+            "DisplayPinPWM": false,
+            "Type": "Output"
+          },
+          "DeviceType": "Output",
+          "DeviceName": "FD_LED",
+          "GUID": "130a8b6d-ac51-4121-870b-1939d79529e6",
+          "Active": true,
+          "Name": "FD_LED",
+          "Type": "OutputConfigItem",
+          "ModuleSerial": "Autopilot/ SN-bf3-83d",
+          "Preconditions": [],
+          "Modifiers": {
+            "Items": [
+              {
+                "Type": "Transformation",
+                "Expression": "$",
+                "Active": false
+              },
+              {
+                "Type": "Comparison",
+                "Operand": "",
+                "Value": "",
+                "IfValue": "",
+                "ElseValue": "",
+                "Active": false
+              }
+            ]
+          },
+          "ConfigRefs": [
+            {
+              "Active": false,
+              "Ref": "dd6aaff4-21e3-4c34-9b07-76715427c3c6",
+              "Placeholder": "B",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "a38f9933-e299-4fc7-bd88-bfc2c9d87700",
+              "Placeholder": "A",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "5d249be0-4949-4c2d-8fb8-55573e3b5918",
+              "Placeholder": "@",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "b2e17bfb-b6c5-43b9-a9dd-c40967a8ef6b",
+              "Placeholder": "?",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "2beaa044-03ae-4f8c-8c2f-f1e5daa7e399",
+              "Placeholder": "!",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "4bebe448-e1f2-4cd0-8d34-3b0422075e62",
+              "Placeholder": "#",
+              "TestValue": "1"
+            }
+          ],
+          "Status": {}
+        },
+        {
+          "Source": {
+            "SimConnectValue": {
+              "Value": "(A:AUTOPILOT MASTER,Bool)",
+              "VarType": 2
+            },
+            "Type": "SimConnectSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 1.0,
+            "String": null
+          },
+          "Device": {
+            "Name": "AP_LED",
+            "DisplayPin": "AP_LED",
+            "DisplayPinBrightness": 255,
+            "DisplayPinPWM": false,
+            "Type": "Output"
+          },
+          "DeviceType": "Output",
+          "DeviceName": "AP_LED",
+          "GUID": "f01be5c2-7337-4f7c-bd32-a76692c83d15",
+          "Active": true,
+          "Name": "AP_LED",
+          "Type": "OutputConfigItem",
+          "ModuleSerial": "Autopilot/ SN-bf3-83d",
+          "Preconditions": [],
+          "Modifiers": {
+            "Items": [
+              {
+                "Type": "Transformation",
+                "Expression": "$",
+                "Active": false
+              },
+              {
+                "Type": "Comparison",
+                "Operand": "",
+                "Value": "",
+                "IfValue": "",
+                "ElseValue": "",
+                "Active": false
+              }
+            ]
+          },
+          "ConfigRefs": [
+            {
+              "Active": false,
+              "Ref": "dd6aaff4-21e3-4c34-9b07-76715427c3c6",
+              "Placeholder": "B",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "a38f9933-e299-4fc7-bd88-bfc2c9d87700",
+              "Placeholder": "A",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "5d249be0-4949-4c2d-8fb8-55573e3b5918",
+              "Placeholder": "@",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "b2e17bfb-b6c5-43b9-a9dd-c40967a8ef6b",
+              "Placeholder": "?",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "2beaa044-03ae-4f8c-8c2f-f1e5daa7e399",
+              "Placeholder": "!",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "4bebe448-e1f2-4cd0-8d34-3b0422075e62",
+              "Placeholder": "#",
+              "TestValue": "1"
+            }
+          ],
+          "Status": {}
+        },
+        {
+          "Source": {
+            "SimConnectValue": {
+              "Value": "(A:AUTOPILOT AIRSPEED HOLD VAR,Knots)",
+              "VarType": 2
+            },
+            "Type": "SimConnectSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 1.0,
+            "String": null
+          },
+          "Device": {
+            "Name": "SPD_HDG_ALT_DSP",
+            "DisplayLedAddress": "SPD_HDG_ALT_DSP",
+            "DisplayLedConnector": 1,
+            "DisplayLedModuleSize": 8,
+            "DisplayLedPadding": true,
+            "DisplayLedPaddingChar": "0",
+            "DisplayLedDigits": [
+              "5",
+              "6",
+              "7"
+            ],
+            "DisplayLedDecimalPoints": [],
+            "DisplayLedReverseDigits": false,
+            "DisplayLedBrightnessReference": "",
+            "Type": "LedModule"
+          },
+          "DeviceType": "Display Module",
+          "DeviceName": "SPD_HDG_ALT_DSP",
+          "GUID": "83ce2479-b749-46cd-98c1-cb21e94a1c4e",
+          "Active": true,
+          "Name": "SPD_DSP",
+          "Type": "OutputConfigItem",
+          "ModuleSerial": "Autopilot/ SN-bf3-83d",
+          "Preconditions": [
+            {
+              "PreconditionType": "config",
+              "PreconditionRef": "e4a1285a-874e-4853-88f7-3277c6f75f10",
+              "PreconditionSerial": null,
+              "PreconditionPin": null,
+              "PreconditionOperand": "<",
+              "PreconditionValue": "1",
+              "PreconditionLogic": "and",
+              "PreconditionActive": true
+            }
+          ],
+          "Modifiers": {
+            "Items": [
+              {
+                "Type": "Transformation",
+                "Expression": "if( #==1, $, 88888 )",
+                "Active": true
+              },
+              {
+                "Type": "Comparison",
+                "Operand": "=",
+                "Value": "88888",
+                "IfValue": "---",
+                "ElseValue": "",
+                "Active": true
+              }
+            ]
+          },
+          "ConfigRefs": [
+            {
+              "Active": false,
+              "Ref": "dd6aaff4-21e3-4c34-9b07-76715427c3c6",
+              "Placeholder": "B",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "a38f9933-e299-4fc7-bd88-bfc2c9d87700",
+              "Placeholder": "A",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "5d249be0-4949-4c2d-8fb8-55573e3b5918",
+              "Placeholder": "@",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "b2e17bfb-b6c5-43b9-a9dd-c40967a8ef6b",
+              "Placeholder": "?",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "2beaa044-03ae-4f8c-8c2f-f1e5daa7e399",
+              "Placeholder": "!",
+              "TestValue": "1"
+            },
+            {
+              "Active": true,
+              "Ref": "4bebe448-e1f2-4cd0-8d34-3b0422075e62",
+              "Placeholder": "#",
+              "TestValue": "1"
+            }
+          ],
+          "Status": {}
+        },
+        {
+          "Source": {
+            "SimConnectValue": {
+              "Value": "(A:AUTOPILOT HEADING LOCK DIR,Degrees)",
+              "VarType": 2
+            },
+            "Type": "SimConnectSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 1.0,
+            "String": null
+          },
+          "Device": {
+            "Name": "SPD_HDG_ALT_DSP",
+            "DisplayLedAddress": "SPD_HDG_ALT_DSP",
+            "DisplayLedConnector": 1,
+            "DisplayLedModuleSize": 8,
+            "DisplayLedPadding": true,
+            "DisplayLedPaddingChar": "0",
+            "DisplayLedDigits": [
+              "0",
+              "1",
+              "2"
+            ],
+            "DisplayLedDecimalPoints": [],
+            "DisplayLedReverseDigits": false,
+            "DisplayLedBrightnessReference": "",
+            "Type": "LedModule"
+          },
+          "DeviceType": "Display Module",
+          "DeviceName": "SPD_HDG_ALT_DSP",
+          "GUID": "b624eca7-e117-4352-ada6-00188d8fe7f0",
+          "Active": true,
+          "Name": "HDG_DSP",
+          "Type": "OutputConfigItem",
+          "ModuleSerial": "Autopilot/ SN-bf3-83d",
+          "Preconditions": [
+            {
+              "PreconditionType": "config",
+              "PreconditionRef": "c56e9cd4-b0ac-40d1-b7b1-ccda1b44fe1e",
+              "PreconditionSerial": null,
+              "PreconditionPin": null,
+              "PreconditionOperand": "<",
+              "PreconditionValue": "1",
+              "PreconditionLogic": "and",
+              "PreconditionActive": true
+            }
+          ],
+          "Modifiers": {
+            "Items": [
+              {
+                "Type": "Transformation",
+                "Expression": "Round($,0)",
+                "Active": true
+              },
+              {
+                "Type": "Comparison",
+                "Operand": "<",
+                "Value": "0",
+                "IfValue": "---",
+                "ElseValue": "",
+                "Active": false
+              }
+            ]
+          },
+          "ConfigRefs": [
+            {
+              "Active": false,
+              "Ref": "dd6aaff4-21e3-4c34-9b07-76715427c3c6",
+              "Placeholder": "B",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "a38f9933-e299-4fc7-bd88-bfc2c9d87700",
+              "Placeholder": "A",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "5d249be0-4949-4c2d-8fb8-55573e3b5918",
+              "Placeholder": "@",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "b2e17bfb-b6c5-43b9-a9dd-c40967a8ef6b",
+              "Placeholder": "?",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "2beaa044-03ae-4f8c-8c2f-f1e5daa7e399",
+              "Placeholder": "!",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "4bebe448-e1f2-4cd0-8d34-3b0422075e62",
+              "Placeholder": "#",
+              "TestValue": "1"
+            }
+          ],
+          "Status": {}
+        },
+        {
+          "Source": {
+            "SimConnectValue": {
+              "UUID": "7ac4737f-b97d-4bbb-af35-7067a5f1c1aa",
+              "Value": "(A:AUTOPILOT ALTITUDE LOCK VAR,Feet)",
+              "VarType": 2
+            },
+            "Type": "SimConnectSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 1.0,
+            "String": null
+          },
+          "Device": {
+            "Name": "SPD_HDG_ALT_DSP",
+            "DisplayLedAddress": "SPD_HDG_ALT_DSP",
+            "DisplayLedConnector": 2,
+            "DisplayLedModuleSize": 8,
+            "DisplayLedPadding": true,
+            "DisplayLedPaddingChar": " ",
+            "DisplayLedDigits": [
+              "0",
+              "1",
+              "2",
+              "3",
+              "4"
+            ],
+            "DisplayLedDecimalPoints": [],
+            "DisplayLedReverseDigits": false,
+            "DisplayLedBrightnessReference": "",
+            "Type": "LedModule"
+          },
+          "DeviceType": "Display Module",
+          "DeviceName": "SPD_HDG_ALT_DSP",
+          "GUID": "6e4debd9-cffb-4298-95bf-388d43ae5775",
+          "Active": true,
+          "Name": "ALT_DSP",
+          "Type": "OutputConfigItem",
+          "ModuleSerial": "Autopilot/ SN-bf3-83d",
+          "Preconditions": [],
+          "Modifiers": {
+            "Items": [
+              {
+                "Type": "Transformation",
+                "Expression": "$",
+                "Active": false
+              },
+              {
+                "Type": "Comparison",
+                "Operand": ">",
+                "Value": "60000",
+                "IfValue": "-----",
+                "ElseValue": "$",
+                "Active": true
+              }
+            ]
+          },
+          "ConfigRefs": [
+            {
+              "Active": false,
+              "Ref": "dd6aaff4-21e3-4c34-9b07-76715427c3c6",
+              "Placeholder": "B",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "a38f9933-e299-4fc7-bd88-bfc2c9d87700",
+              "Placeholder": "A",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "5d249be0-4949-4c2d-8fb8-55573e3b5918",
+              "Placeholder": "@",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "b2e17bfb-b6c5-43b9-a9dd-c40967a8ef6b",
+              "Placeholder": "?",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "2beaa044-03ae-4f8c-8c2f-f1e5daa7e399",
+              "Placeholder": "!",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "4bebe448-e1f2-4cd0-8d34-3b0422075e62",
+              "Placeholder": "#",
+              "TestValue": "1"
+            }
+          ],
+          "Status": {}
+        },
+        {
+          "Source": {
+            "SimConnectValue": {
+              "Value": "(A:AUTOPILOT VERTICAL HOLD VAR,Feet/minute)",
+              "VarType": 2
+            },
+            "Type": "SimConnectSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 1.0,
+            "String": null
+          },
+          "Device": {
+            "Name": "VS_DSP",
+            "DisplayLedAddress": "VS_DSP",
+            "DisplayLedConnector": 1,
+            "DisplayLedModuleSize": 8,
+            "DisplayLedPadding": true,
+            "DisplayLedPaddingChar": " ",
+            "DisplayLedDigits": [
+              "3",
+              "4",
+              "5",
+              "6",
+              "7"
+            ],
+            "DisplayLedDecimalPoints": [],
+            "DisplayLedReverseDigits": false,
+            "DisplayLedBrightnessReference": "",
+            "Type": "LedModule"
+          },
+          "DeviceType": "Display Module",
+          "DeviceName": "VS_DSP",
+          "GUID": "ccd999a4-a842-4a70-82df-2c5cc7328008",
+          "Active": true,
+          "Name": "VS_DSP",
+          "Type": "OutputConfigItem",
+          "ModuleSerial": "Autopilot/ SN-bf3-83d",
+          "Preconditions": [
+            {
+              "PreconditionType": "config",
+              "PreconditionRef": "0031b6da-d54d-4347-b04a-6369076e694d",
+              "PreconditionSerial": null,
+              "PreconditionPin": null,
+              "PreconditionOperand": "=",
+              "PreconditionValue": "1",
+              "PreconditionLogic": "and",
+              "PreconditionActive": true
+            }
+          ],
+          "Modifiers": {
+            "Items": [
+              {
+                "Type": "Transformation",
+                "Expression": "if( #==1, $, 88888 )",
+                "Active": true
+              },
+              {
+                "Type": "Comparison",
+                "Operand": "=",
+                "Value": "88888",
+                "IfValue": "-----",
+                "ElseValue": "",
+                "Active": true
+              }
+            ]
+          },
+          "ConfigRefs": [
+            {
+              "Active": false,
+              "Ref": "dd6aaff4-21e3-4c34-9b07-76715427c3c6",
+              "Placeholder": "B",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "a38f9933-e299-4fc7-bd88-bfc2c9d87700",
+              "Placeholder": "A",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "5d249be0-4949-4c2d-8fb8-55573e3b5918",
+              "Placeholder": "@",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "b2e17bfb-b6c5-43b9-a9dd-c40967a8ef6b",
+              "Placeholder": "?",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "4bebe448-e1f2-4cd0-8d34-3b0422075e62",
+              "Placeholder": "!",
+              "TestValue": "1"
+            },
+            {
+              "Active": true,
+              "Ref": "dd6aaff4-21e3-4c34-9b07-76715427c3c6",
+              "Placeholder": "#",
+              "TestValue": "1"
+            }
+          ],
+          "Status": {}
+        },
+        {
+          "Source": {
+            "SimConnectValue": {
+              "Value": "(A:INDICATED ALTITUDE,Feet)",
+              "VarType": 2
+            },
+            "Type": "SimConnectSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 1.0,
+            "String": null
+          },
+          "DeviceType": "",
+          "DeviceName": null,
+          "GUID": "6fa41018-f843-4f1a-816d-aacf9ebba41c",
+          "Active": false,
+          "Name": "Difference_ALT",
+          "Type": "OutputConfigItem",
+          "ModuleSerial": "-",
+          "Preconditions": [],
+          "Modifiers": {
+            "Items": [
+              {
+                "Type": "Transformation",
+                "Expression": "if($-!<0,-1*($-!),$-!)",
+                "Active": true
+              },
+              {
+                "Type": "Comparison",
+                "Operand": "",
+                "Value": "",
+                "IfValue": "",
+                "ElseValue": "",
+                "Active": false
+              }
+            ]
+          },
+          "ConfigRefs": [
+            {
+              "Active": false,
+              "Ref": "dd6aaff4-21e3-4c34-9b07-76715427c3c6",
+              "Placeholder": "B",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "a38f9933-e299-4fc7-bd88-bfc2c9d87700",
+              "Placeholder": "A",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "5d249be0-4949-4c2d-8fb8-55573e3b5918",
+              "Placeholder": "@",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "b2e17bfb-b6c5-43b9-a9dd-c40967a8ef6b",
+              "Placeholder": "?",
+              "TestValue": "1"
+            },
+            {
+              "Active": true,
+              "Ref": "6e4debd9-cffb-4298-95bf-388d43ae5775",
+              "Placeholder": "!",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "4bebe448-e1f2-4cd0-8d34-3b0422075e62",
+              "Placeholder": "#",
+              "TestValue": "1"
+            }
+          ],
+          "Status": {}
+        },
+        {
+          "Source": {
+            "SimConnectValue": {
+              "Value": "(L:A32NX_TRK_FPA_MODE_ACTIVE)",
+              "VarType": 2
+            },
+            "Type": "SimConnectSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 1.0,
+            "String": null
+          },
+          "DeviceType": "",
+          "DeviceName": null,
+          "GUID": "0031b6da-d54d-4347-b04a-6369076e694d",
+          "Active": true,
+          "Name": "VS_DSP_Mode",
+          "Type": "OutputConfigItem",
+          "ModuleSerial": "-",
+          "Preconditions": [],
+          "Modifiers": {
+            "Items": [
+              {
+                "Type": "Transformation",
+                "Expression": "if( #>0, 0, if( $<1, 1, 2 ) )",
+                "Active": true
+              },
+              {
+                "Type": "Comparison",
+                "Operand": "",
+                "Value": "",
+                "IfValue": "",
+                "ElseValue": "",
+                "Active": false
+              }
+            ]
+          },
+          "ConfigRefs": [
+            {
+              "Active": false,
+              "Ref": "dd6aaff4-21e3-4c34-9b07-76715427c3c6",
+              "Placeholder": "B",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "a38f9933-e299-4fc7-bd88-bfc2c9d87700",
+              "Placeholder": "A",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "5d249be0-4949-4c2d-8fb8-55573e3b5918",
+              "Placeholder": "@",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "b2e17bfb-b6c5-43b9-a9dd-c40967a8ef6b",
+              "Placeholder": "?",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "2beaa044-03ae-4f8c-8c2f-f1e5daa7e399",
+              "Placeholder": "!",
+              "TestValue": "1"
+            },
+            {
+              "Active": true,
+              "Ref": "1a51e1e4-4bfb-4fc3-baea-f49bace6bc30",
+              "Placeholder": "#",
+              "TestValue": "1"
+            }
+          ],
+          "Status": {}
+        },
+        {
+          "Source": {
+            "SimConnectValue": {
+              "Value": "(L:A32NX_AUTOPILOT_FPA_SELECTED)",
+              "VarType": 2
+            },
+            "Type": "SimConnectSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 1.0,
+            "String": null
+          },
+          "Device": {
+            "Name": "VS_DSP",
+            "DisplayLedAddress": "VS_DSP",
+            "DisplayLedConnector": 1,
+            "DisplayLedModuleSize": 8,
+            "DisplayLedPadding": true,
+            "DisplayLedPaddingChar": " ",
+            "DisplayLedDigits": [
+              "3",
+              "4",
+              "5",
+              "6",
+              "7"
+            ],
+            "DisplayLedDecimalPoints": [
+              "4"
+            ],
+            "DisplayLedReverseDigits": false,
+            "DisplayLedBrightnessReference": "",
+            "Type": "LedModule"
+          },
+          "DeviceType": "Display Module",
+          "DeviceName": "VS_DSP",
+          "GUID": "7eaa2197-1955-4f5b-9d00-1622077d1cf6",
+          "Active": true,
+          "Name": "VS_DSP_FPA",
+          "Type": "OutputConfigItem",
+          "ModuleSerial": "Autopilot/ SN-bf3-83d",
+          "Preconditions": [
+            {
+              "PreconditionType": "config",
+              "PreconditionRef": "0031b6da-d54d-4347-b04a-6369076e694d",
+              "PreconditionSerial": null,
+              "PreconditionPin": null,
+              "PreconditionOperand": "=",
+              "PreconditionValue": "2",
+              "PreconditionLogic": "and",
+              "PreconditionActive": true
+            }
+          ],
+          "Modifiers": {
+            "Items": [
+              {
+                "Type": "Transformation",
+                "Expression": "Round($,1)*10",
+                "Active": true
+              },
+              {
+                "Type": "Comparison",
+                "Operand": "",
+                "Value": "",
+                "IfValue": "",
+                "ElseValue": "",
+                "Active": false
+              },
+              {
+                "Type": "Interpolation",
+                "Values": {
+                  "-1024": 1024.0,
+                  "0": 0.0,
+                  "1024": 1024.0
+                },
+                "Count": 3,
+                "Max": 1024.0,
+                "Min": 0.0,
+                "Active": false
+              }
+            ]
+          },
+          "ConfigRefs": [
+            {
+              "Active": false,
+              "Ref": "dd6aaff4-21e3-4c34-9b07-76715427c3c6",
+              "Placeholder": "B",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "a38f9933-e299-4fc7-bd88-bfc2c9d87700",
+              "Placeholder": "A",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "5d249be0-4949-4c2d-8fb8-55573e3b5918",
+              "Placeholder": "@",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "b2e17bfb-b6c5-43b9-a9dd-c40967a8ef6b",
+              "Placeholder": "?",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "2beaa044-03ae-4f8c-8c2f-f1e5daa7e399",
+              "Placeholder": "!",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "4bebe448-e1f2-4cd0-8d34-3b0422075e62",
+              "Placeholder": "#",
+              "TestValue": "1"
+            }
+          ],
+          "Status": {}
+        },
+        {
+          "Source": {
+            "SimConnectValue": {
+              "VarType": 0
+            },
+            "Type": "SimConnectSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 1.0,
+            "String": null
+          },
+          "Device": {
+            "Name": "VS_DSP",
+            "DisplayLedAddress": "VS_DSP",
+            "DisplayLedConnector": 1,
+            "DisplayLedModuleSize": 8,
+            "DisplayLedPadding": false,
+            "DisplayLedPaddingChar": "0",
+            "DisplayLedDigits": [
+              "3",
+              "4",
+              "5",
+              "6",
+              "7"
+            ],
+            "DisplayLedDecimalPoints": [],
+            "DisplayLedReverseDigits": false,
+            "DisplayLedBrightnessReference": "",
+            "Type": "LedModule"
+          },
+          "DeviceType": "Display Module",
+          "DeviceName": "VS_DSP",
+          "GUID": "7ec44ba2-7749-432c-8084-aa90c47b5004",
+          "Active": true,
+          "Name": "VS_DSP_Managed",
+          "Type": "OutputConfigItem",
+          "ModuleSerial": "Autopilot/ SN-bf3-83d",
+          "Preconditions": [
+            {
+              "PreconditionType": "config",
+              "PreconditionRef": "0031b6da-d54d-4347-b04a-6369076e694d",
+              "PreconditionSerial": null,
+              "PreconditionPin": null,
+              "PreconditionOperand": "=",
+              "PreconditionValue": "0",
+              "PreconditionLogic": "and",
+              "PreconditionActive": true
+            }
+          ],
+          "Modifiers": {
+            "Items": [
+              {
+                "Type": "Transformation",
+                "Expression": "99999",
+                "Active": true
+              },
+              {
+                "Type": "Comparison",
+                "Operand": "=",
+                "Value": "99999",
+                "IfValue": "-----",
+                "ElseValue": "",
+                "Active": true
+              }
+            ]
+          },
+          "ConfigRefs": [
+            {
+              "Active": false,
+              "Ref": "dd6aaff4-21e3-4c34-9b07-76715427c3c6",
+              "Placeholder": "B",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "a38f9933-e299-4fc7-bd88-bfc2c9d87700",
+              "Placeholder": "A",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "5d249be0-4949-4c2d-8fb8-55573e3b5918",
+              "Placeholder": "@",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "b2e17bfb-b6c5-43b9-a9dd-c40967a8ef6b",
+              "Placeholder": "?",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "2beaa044-03ae-4f8c-8c2f-f1e5daa7e399",
+              "Placeholder": "!",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "4bebe448-e1f2-4cd0-8d34-3b0422075e62",
+              "Placeholder": "#",
+              "TestValue": "1"
+            }
+          ],
+          "Status": {}
+        },
+        {
+          "Source": {
+            "SimConnectValue": {
+              "Value": "(L:A32NX_TRK_FPA_MODE_ACTIVE)",
+              "VarType": 2
+            },
+            "Type": "SimConnectSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 1.0,
+            "String": null
+          },
+          "DeviceType": "",
+          "DeviceName": null,
+          "GUID": "58e31dc4-0aee-4363-b589-e89ccff19971",
+          "Active": true,
+          "Name": "FPA_Mode",
+          "Type": "OutputConfigItem",
+          "ModuleSerial": "-",
+          "Preconditions": [],
+          "Modifiers": {
+            "Items": [
+              {
+                "Type": "Transformation",
+                "Expression": "$",
+                "Active": false
+              },
+              {
+                "Type": "Comparison",
+                "Operand": "",
+                "Value": "",
+                "IfValue": "",
+                "ElseValue": "",
+                "Active": false
+              }
+            ]
+          },
+          "ConfigRefs": [
+            {
+              "Active": false,
+              "Ref": "dd6aaff4-21e3-4c34-9b07-76715427c3c6",
+              "Placeholder": "B",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "a38f9933-e299-4fc7-bd88-bfc2c9d87700",
+              "Placeholder": "A",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "5d249be0-4949-4c2d-8fb8-55573e3b5918",
+              "Placeholder": "@",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "b2e17bfb-b6c5-43b9-a9dd-c40967a8ef6b",
+              "Placeholder": "?",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "2beaa044-03ae-4f8c-8c2f-f1e5daa7e399",
+              "Placeholder": "!",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "4bebe448-e1f2-4cd0-8d34-3b0422075e62",
+              "Placeholder": "#",
+              "TestValue": "1"
+            }
+          ],
+          "Status": {}
+        },
+        {
+          "Source": {
+            "SimConnectValue": {
+              "Value": "(L:A32NX_FCU_HDG_MANAGED_DASHES)",
+              "VarType": 2
+            },
+            "Type": "SimConnectSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 1.0,
+            "String": null
+          },
+          "DeviceType": "",
+          "DeviceName": null,
+          "GUID": "c56e9cd4-b0ac-40d1-b7b1-ccda1b44fe1e",
+          "Active": true,
+          "Name": "HDG_Managed",
+          "Type": "OutputConfigItem",
+          "ModuleSerial": "-",
+          "Preconditions": [],
+          "Modifiers": {
+            "Items": [
+              {
+                "Type": "Transformation",
+                "Expression": "$",
+                "Active": false
+              },
+              {
+                "Type": "Comparison",
+                "Operand": "",
+                "Value": "",
+                "IfValue": "",
+                "ElseValue": "",
+                "Active": false
+              }
+            ]
+          },
+          "ConfigRefs": [
+            {
+              "Active": false,
+              "Ref": "dd6aaff4-21e3-4c34-9b07-76715427c3c6",
+              "Placeholder": "B",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "a38f9933-e299-4fc7-bd88-bfc2c9d87700",
+              "Placeholder": "A",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "5d249be0-4949-4c2d-8fb8-55573e3b5918",
+              "Placeholder": "@",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "b2e17bfb-b6c5-43b9-a9dd-c40967a8ef6b",
+              "Placeholder": "?",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "2beaa044-03ae-4f8c-8c2f-f1e5daa7e399",
+              "Placeholder": "!",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "4bebe448-e1f2-4cd0-8d34-3b0422075e62",
+              "Placeholder": "#",
+              "TestValue": "1"
+            }
+          ],
+          "Status": {}
+        },
+        {
+          "Source": {
+            "SimConnectValue": {
+              "VarType": 0
+            },
+            "Type": "SimConnectSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 1.0,
+            "String": null
+          },
+          "Device": {
+            "Name": "SPD_HDG_ALT_DSP",
+            "DisplayLedAddress": "SPD_HDG_ALT_DSP",
+            "DisplayLedConnector": 1,
+            "DisplayLedModuleSize": 8,
+            "DisplayLedPadding": false,
+            "DisplayLedPaddingChar": "0",
+            "DisplayLedDigits": [
+              "0",
+              "1",
+              "2"
+            ],
+            "DisplayLedDecimalPoints": [],
+            "DisplayLedReverseDigits": false,
+            "DisplayLedBrightnessReference": "",
+            "Type": "LedModule"
+          },
+          "DeviceType": "Display Module",
+          "DeviceName": "SPD_HDG_ALT_DSP",
+          "GUID": "29d6ead1-cd74-4dd6-b527-f71cbeb12bf0",
+          "Active": true,
+          "Name": "HDG_DSP_Managed",
+          "Type": "OutputConfigItem",
+          "ModuleSerial": "Autopilot/ SN-bf3-83d",
+          "Preconditions": [
+            {
+              "PreconditionType": "config",
+              "PreconditionRef": "c56e9cd4-b0ac-40d1-b7b1-ccda1b44fe1e",
+              "PreconditionSerial": null,
+              "PreconditionPin": null,
+              "PreconditionOperand": ">",
+              "PreconditionValue": "0",
+              "PreconditionLogic": "and",
+              "PreconditionActive": true
+            }
+          ],
+          "Modifiers": {
+            "Items": [
+              {
+                "Type": "Transformation",
+                "Expression": "999",
+                "Active": true
+              },
+              {
+                "Type": "Comparison",
+                "Operand": "=",
+                "Value": "999",
+                "IfValue": "---",
+                "ElseValue": "",
+                "Active": true
+              }
+            ]
+          },
+          "ConfigRefs": [
+            {
+              "Active": false,
+              "Ref": "dd6aaff4-21e3-4c34-9b07-76715427c3c6",
+              "Placeholder": "B",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "a38f9933-e299-4fc7-bd88-bfc2c9d87700",
+              "Placeholder": "A",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "5d249be0-4949-4c2d-8fb8-55573e3b5918",
+              "Placeholder": "@",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "b2e17bfb-b6c5-43b9-a9dd-c40967a8ef6b",
+              "Placeholder": "?",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "2beaa044-03ae-4f8c-8c2f-f1e5daa7e399",
+              "Placeholder": "!",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "c56e9cd4-b0ac-40d1-b7b1-ccda1b44fe1e",
+              "Placeholder": "#",
+              "TestValue": "1"
+            }
+          ],
+          "Status": {}
+        },
+        {
+          "Source": {
+            "SimConnectValue": {
+              "Value": "(L:A32NX_FCU_SPD_MANAGED_DASHES)",
+              "VarType": 2
+            },
+            "Type": "SimConnectSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 1.0,
+            "String": null
+          },
+          "DeviceType": "",
+          "DeviceName": null,
+          "GUID": "e4a1285a-874e-4853-88f7-3277c6f75f10",
+          "Active": true,
+          "Name": "SPD_Managed",
+          "Type": "OutputConfigItem",
+          "ModuleSerial": "-",
+          "Preconditions": [],
+          "Modifiers": {
+            "Items": [
+              {
+                "Type": "Transformation",
+                "Expression": "$",
+                "Active": false
+              },
+              {
+                "Type": "Comparison",
+                "Operand": "",
+                "Value": "",
+                "IfValue": "",
+                "ElseValue": "",
+                "Active": false
+              }
+            ]
+          },
+          "ConfigRefs": [
+            {
+              "Active": false,
+              "Ref": "dd6aaff4-21e3-4c34-9b07-76715427c3c6",
+              "Placeholder": "B",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "a38f9933-e299-4fc7-bd88-bfc2c9d87700",
+              "Placeholder": "A",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "5d249be0-4949-4c2d-8fb8-55573e3b5918",
+              "Placeholder": "@",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "b2e17bfb-b6c5-43b9-a9dd-c40967a8ef6b",
+              "Placeholder": "?",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "2beaa044-03ae-4f8c-8c2f-f1e5daa7e399",
+              "Placeholder": "!",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "4bebe448-e1f2-4cd0-8d34-3b0422075e62",
+              "Placeholder": "#",
+              "TestValue": "1"
+            }
+          ],
+          "Status": {}
+        },
+        {
+          "Source": {
+            "SimConnectValue": {
+              "VarType": 0
+            },
+            "Type": "SimConnectSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 1.0,
+            "String": null
+          },
+          "Device": {
+            "Name": "SPD_HDG_ALT_DSP",
+            "DisplayLedAddress": "SPD_HDG_ALT_DSP",
+            "DisplayLedConnector": 1,
+            "DisplayLedModuleSize": 8,
+            "DisplayLedPadding": false,
+            "DisplayLedPaddingChar": "0",
+            "DisplayLedDigits": [
+              "5",
+              "6",
+              "7"
+            ],
+            "DisplayLedDecimalPoints": [],
+            "DisplayLedReverseDigits": false,
+            "DisplayLedBrightnessReference": "",
+            "Type": "LedModule"
+          },
+          "DeviceType": "Display Module",
+          "DeviceName": "SPD_HDG_ALT_DSP",
+          "GUID": "931e56b2-fd65-4843-8063-cb585b0d4de3",
+          "Active": true,
+          "Name": "SPD_DSP_Managed",
+          "Type": "OutputConfigItem",
+          "ModuleSerial": "Autopilot/ SN-bf3-83d",
+          "Preconditions": [
+            {
+              "PreconditionType": "config",
+              "PreconditionRef": "e4a1285a-874e-4853-88f7-3277c6f75f10",
+              "PreconditionSerial": null,
+              "PreconditionPin": null,
+              "PreconditionOperand": ">",
+              "PreconditionValue": "0",
+              "PreconditionLogic": "and",
+              "PreconditionActive": true
+            }
+          ],
+          "Modifiers": {
+            "Items": [
+              {
+                "Type": "Transformation",
+                "Expression": "999",
+                "Active": true
+              },
+              {
+                "Type": "Comparison",
+                "Operand": "=",
+                "Value": "999",
+                "IfValue": "---",
+                "ElseValue": "",
+                "Active": true
+              }
+            ]
+          },
+          "ConfigRefs": [
+            {
+              "Active": false,
+              "Ref": "dd6aaff4-21e3-4c34-9b07-76715427c3c6",
+              "Placeholder": "B",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "a38f9933-e299-4fc7-bd88-bfc2c9d87700",
+              "Placeholder": "A",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "5d249be0-4949-4c2d-8fb8-55573e3b5918",
+              "Placeholder": "@",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "b2e17bfb-b6c5-43b9-a9dd-c40967a8ef6b",
+              "Placeholder": "?",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "2beaa044-03ae-4f8c-8c2f-f1e5daa7e399",
+              "Placeholder": "!",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "4bebe448-e1f2-4cd0-8d34-3b0422075e62",
+              "Placeholder": "#",
+              "TestValue": "1"
+            }
+          ],
+          "Status": {}
+        },
+        {
+          "Source": {
+            "SimConnectValue": {
+              "Value": "(L:A32NX_FCU_VS_MANAGED)",
+              "VarType": 2
+            },
+            "Type": "SimConnectSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 1.0,
+            "String": null
+          },
+          "DeviceType": "",
+          "DeviceName": null,
+          "GUID": "1a51e1e4-4bfb-4fc3-baea-f49bace6bc30",
+          "Active": true,
+          "Name": "VS_Managed",
+          "Type": "OutputConfigItem",
+          "ModuleSerial": "-",
+          "Preconditions": [],
+          "Modifiers": {
+            "Items": [
+              {
+                "Type": "Transformation",
+                "Expression": "$",
+                "Active": false
+              },
+              {
+                "Type": "Comparison",
+                "Operand": "",
+                "Value": "",
+                "IfValue": "",
+                "ElseValue": "",
+                "Active": false
+              }
+            ]
+          },
+          "ConfigRefs": [
+            {
+              "Active": false,
+              "Ref": "dd6aaff4-21e3-4c34-9b07-76715427c3c6",
+              "Placeholder": "B",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "a38f9933-e299-4fc7-bd88-bfc2c9d87700",
+              "Placeholder": "A",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "5d249be0-4949-4c2d-8fb8-55573e3b5918",
+              "Placeholder": "@",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "b2e17bfb-b6c5-43b9-a9dd-c40967a8ef6b",
+              "Placeholder": "?",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "2beaa044-03ae-4f8c-8c2f-f1e5daa7e399",
+              "Placeholder": "!",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "4bebe448-e1f2-4cd0-8d34-3b0422075e62",
+              "Placeholder": "#",
+              "TestValue": "1"
+            }
+          ],
+          "Status": {}
+        },
+        {
+          "Source": {
+            "SimConnectValue": {
+              "Value": "(L:A32NX_FMA_VERTICAL_MODE)",
+              "VarType": 2
+            },
+            "Type": "SimConnectSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 1.0,
+            "String": null
+          },
+          "DeviceType": "",
+          "DeviceName": null,
+          "GUID": "dcd4f1f1-afb6-4d49-bb73-da06daaa4024",
+          "Active": true,
+          "Name": "Vertical_Mode",
+          "Type": "OutputConfigItem",
+          "ModuleSerial": "-",
+          "Preconditions": [],
+          "Modifiers": {
+            "Items": [
+              {
+                "Type": "Transformation",
+                "Expression": "$",
+                "Active": false
+              },
+              {
+                "Type": "Comparison",
+                "Operand": "",
+                "Value": "",
+                "IfValue": "",
+                "ElseValue": "",
+                "Active": false
+              }
+            ]
+          },
+          "ConfigRefs": [
+            {
+              "Active": false,
+              "Ref": "dd6aaff4-21e3-4c34-9b07-76715427c3c6",
+              "Placeholder": "B",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "a38f9933-e299-4fc7-bd88-bfc2c9d87700",
+              "Placeholder": "A",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "5d249be0-4949-4c2d-8fb8-55573e3b5918",
+              "Placeholder": "@",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "b2e17bfb-b6c5-43b9-a9dd-c40967a8ef6b",
+              "Placeholder": "?",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "2beaa044-03ae-4f8c-8c2f-f1e5daa7e399",
+              "Placeholder": "!",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "4bebe448-e1f2-4cd0-8d34-3b0422075e62",
+              "Placeholder": "#",
+              "TestValue": "1"
+            }
+          ],
+          "Status": {}
+        },
+        {
+          "Source": {
+            "SimConnectValue": {
+              "Value": "(L:A32NX_FMA_VERTICAL_ARMED)",
+              "VarType": 2
+            },
+            "Type": "SimConnectSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 1.0,
+            "String": null
+          },
+          "DeviceType": "",
+          "DeviceName": null,
+          "GUID": "2660a092-93e8-4537-bbbe-c9c730029638",
+          "Active": true,
+          "Name": "Armed_mode",
+          "Type": "OutputConfigItem",
+          "ModuleSerial": "-",
+          "Preconditions": [],
+          "Modifiers": {
+            "Items": [
+              {
+                "Type": "Transformation",
+                "Expression": "$",
+                "Active": false
+              },
+              {
+                "Type": "Comparison",
+                "Operand": "",
+                "Value": "",
+                "IfValue": "",
+                "ElseValue": "",
+                "Active": false
+              }
+            ]
+          },
+          "ConfigRefs": [
+            {
+              "Active": false,
+              "Ref": "dd6aaff4-21e3-4c34-9b07-76715427c3c6",
+              "Placeholder": "B",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "a38f9933-e299-4fc7-bd88-bfc2c9d87700",
+              "Placeholder": "A",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "5d249be0-4949-4c2d-8fb8-55573e3b5918",
+              "Placeholder": "@",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "b2e17bfb-b6c5-43b9-a9dd-c40967a8ef6b",
+              "Placeholder": "?",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "2beaa044-03ae-4f8c-8c2f-f1e5daa7e399",
+              "Placeholder": "!",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "4bebe448-e1f2-4cd0-8d34-3b0422075e62",
+              "Placeholder": "#",
+              "TestValue": "1"
+            }
+          ],
+          "Status": {}
+        },
+        {
+          "Source": {
+            "MobiFlightVariable": {
+              "TYPE": "number",
+              "Name": "ALT_Toggle",
+              "Number": 0.0,
+              "Text": "",
+              "Expression": "$"
+            },
+            "Type": "VariableSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 1.0,
+            "String": null
+          },
+          "DeviceType": "",
+          "DeviceName": null,
+          "GUID": "ac343bab-a681-42b6-9bde-b01cd6a8d367",
+          "Active": true,
+          "Name": "ALT_INC",
+          "Type": "OutputConfigItem",
+          "ModuleSerial": "-",
+          "Preconditions": [],
+          "Modifiers": {
+            "Items": [
+              {
+                "Type": "Transformation",
+                "Expression": "$",
+                "Active": false
+              },
+              {
+                "Type": "Comparison",
+                "Operand": "",
+                "Value": "",
+                "IfValue": "",
+                "ElseValue": "",
+                "Active": false
+              }
+            ]
+          },
+          "ConfigRefs": [
+            {
+              "Active": false,
+              "Ref": "dd6aaff4-21e3-4c34-9b07-76715427c3c6",
+              "Placeholder": "B",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "a38f9933-e299-4fc7-bd88-bfc2c9d87700",
+              "Placeholder": "A",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "5d249be0-4949-4c2d-8fb8-55573e3b5918",
+              "Placeholder": "@",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "b2e17bfb-b6c5-43b9-a9dd-c40967a8ef6b",
+              "Placeholder": "?",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "2beaa044-03ae-4f8c-8c2f-f1e5daa7e399",
+              "Placeholder": "!",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "4bebe448-e1f2-4cd0-8d34-3b0422075e62",
+              "Placeholder": "#",
+              "TestValue": "1"
+            }
+          ],
+          "Status": {}
+        },
+        {
+          "Source": {
+            "SimConnectValue": {
+              "UUID": "60bd03ca-ede9-455e-ad7d-10efdf31a42d",
+              "Value": "(A:AILERON POSITION,Position)",
+              "VarType": 2
+            },
+            "Type": "SimConnectSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 1.0,
+            "String": null
+          },
+          "AnalogInputConfig": {
+            "onChange": {
+              "Type": "MSFS2020CustomInputAction",
+              "Command": "",
+              "PresetId": "0"
+            }
+          },
+          "DeviceType": "InputAction",
+          "DeviceName": null,
+          "GUID": "be211ae3-d5c5-4b24-b01f-cad747764e73",
+          "Active": false,
+          "Name": "Aileron Position",
+          "Type": "OutputConfigItem",
+          "ModuleSerial": "-",
+          "Preconditions": [],
+          "Modifiers": {
+            "Items": []
+          },
+          "ConfigRefs": [],
+          "Status": {}
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "MSFS2020EventIdInputAction",
+              "EventId": "AS1000_MFD_FLC_Push"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "SPD_BTN",
+          "GUID": "82996e87-9855-43cb-9892-813f7e94e5f7",
+          "Active": true,
+          "Name": "SPD_BTN",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "Autopilot/ SN-bf3-83d",
+          "Preconditions": [],
+          "Modifiers": {
+            "Items": []
+          },
+          "ConfigRefs": [
+            {
+              "Active": false,
+              "Ref": "dd6aaff4-21e3-4c34-9b07-76715427c3c6",
+              "Placeholder": "B",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "a38f9933-e299-4fc7-bd88-bfc2c9d87700",
+              "Placeholder": "A",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "5d249be0-4949-4c2d-8fb8-55573e3b5918",
+              "Placeholder": "@",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "b2e17bfb-b6c5-43b9-a9dd-c40967a8ef6b",
+              "Placeholder": "?",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "2beaa044-03ae-4f8c-8c2f-f1e5daa7e399",
+              "Placeholder": "!",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "4bebe448-e1f2-4cd0-8d34-3b0422075e62",
+              "Placeholder": "#",
+              "TestValue": "1"
+            }
+          ],
+          "Status": {}
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "MSFS2020EventIdInputAction",
+              "EventId": "AP_HDG_HOLD"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "HDG_BTN",
+          "GUID": "7627201f-2be4-45d5-b8cb-8240d01cb34e",
+          "Active": true,
+          "Name": "HDG_BTN",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "Autopilot/ SN-bf3-83d",
+          "Preconditions": [],
+          "Modifiers": {
+            "Items": []
+          },
+          "ConfigRefs": [
+            {
+              "Active": false,
+              "Ref": "dd6aaff4-21e3-4c34-9b07-76715427c3c6",
+              "Placeholder": "B",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "a38f9933-e299-4fc7-bd88-bfc2c9d87700",
+              "Placeholder": "A",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "5d249be0-4949-4c2d-8fb8-55573e3b5918",
+              "Placeholder": "@",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "b2e17bfb-b6c5-43b9-a9dd-c40967a8ef6b",
+              "Placeholder": "?",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "2beaa044-03ae-4f8c-8c2f-f1e5daa7e399",
+              "Placeholder": "!",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "4bebe448-e1f2-4cd0-8d34-3b0422075e62",
+              "Placeholder": "#",
+              "TestValue": "1"
+            }
+          ],
+          "Status": {}
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "MSFS2020EventIdInputAction",
+              "EventId": "AP_NAV1_HOLD"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "NAV_BTN",
+          "GUID": "747c103f-6455-438b-8b1e-ee73d5852aee",
+          "Active": true,
+          "Name": "NAV_BTN",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "Autopilot/ SN-bf3-83d",
+          "Preconditions": [],
+          "Modifiers": {
+            "Items": []
+          },
+          "ConfigRefs": [
+            {
+              "Active": false,
+              "Ref": "dd6aaff4-21e3-4c34-9b07-76715427c3c6",
+              "Placeholder": "B",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "a38f9933-e299-4fc7-bd88-bfc2c9d87700",
+              "Placeholder": "A",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "5d249be0-4949-4c2d-8fb8-55573e3b5918",
+              "Placeholder": "@",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "b2e17bfb-b6c5-43b9-a9dd-c40967a8ef6b",
+              "Placeholder": "?",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "2beaa044-03ae-4f8c-8c2f-f1e5daa7e399",
+              "Placeholder": "!",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "4bebe448-e1f2-4cd0-8d34-3b0422075e62",
+              "Placeholder": "#",
+              "TestValue": "1"
+            }
+          ],
+          "Status": {}
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "MSFS2020EventIdInputAction",
+              "EventId": "AP_APR_HOLD"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "APR_BTN",
+          "GUID": "e204f152-4469-439c-9820-872ab66cdf6f",
+          "Active": true,
+          "Name": "APR_BTN",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "Autopilot/ SN-bf3-83d",
+          "Preconditions": [],
+          "Modifiers": {
+            "Items": []
+          },
+          "ConfigRefs": [
+            {
+              "Active": false,
+              "Ref": "dd6aaff4-21e3-4c34-9b07-76715427c3c6",
+              "Placeholder": "B",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "a38f9933-e299-4fc7-bd88-bfc2c9d87700",
+              "Placeholder": "A",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "5d249be0-4949-4c2d-8fb8-55573e3b5918",
+              "Placeholder": "@",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "b2e17bfb-b6c5-43b9-a9dd-c40967a8ef6b",
+              "Placeholder": "?",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "2beaa044-03ae-4f8c-8c2f-f1e5daa7e399",
+              "Placeholder": "!",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "4bebe448-e1f2-4cd0-8d34-3b0422075e62",
+              "Placeholder": "#",
+              "TestValue": "1"
+            }
+          ],
+          "Status": {}
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "MSFS2020EventIdInputAction",
+              "EventId": "AP_ALT_HOLD"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "ALT_BTN",
+          "GUID": "0d69be8e-0d64-4e9c-a437-de476a95c968",
+          "Active": true,
+          "Name": "ALT_BTN",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "Autopilot/ SN-bf3-83d",
+          "Preconditions": [],
+          "Modifiers": {
+            "Items": []
+          },
+          "ConfigRefs": [
+            {
+              "Active": false,
+              "Ref": "dd6aaff4-21e3-4c34-9b07-76715427c3c6",
+              "Placeholder": "B",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "a38f9933-e299-4fc7-bd88-bfc2c9d87700",
+              "Placeholder": "A",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "5d249be0-4949-4c2d-8fb8-55573e3b5918",
+              "Placeholder": "@",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "b2e17bfb-b6c5-43b9-a9dd-c40967a8ef6b",
+              "Placeholder": "?",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "2beaa044-03ae-4f8c-8c2f-f1e5daa7e399",
+              "Placeholder": "!",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "4bebe448-e1f2-4cd0-8d34-3b0422075e62",
+              "Placeholder": "#",
+              "TestValue": "1"
+            }
+          ],
+          "Status": {}
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "MSFS2020EventIdInputAction",
+              "EventId": "AP_PANEL_VS_HOLD"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "VS_BTN",
+          "GUID": "56e68de4-6509-4104-9ddc-dff8dd770f11",
+          "Active": true,
+          "Name": "VS_BTN",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "Autopilot/ SN-bf3-83d",
+          "Preconditions": [],
+          "Modifiers": {
+            "Items": []
+          },
+          "ConfigRefs": [
+            {
+              "Active": false,
+              "Ref": "dd6aaff4-21e3-4c34-9b07-76715427c3c6",
+              "Placeholder": "B",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "a38f9933-e299-4fc7-bd88-bfc2c9d87700",
+              "Placeholder": "A",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "5d249be0-4949-4c2d-8fb8-55573e3b5918",
+              "Placeholder": "@",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "b2e17bfb-b6c5-43b9-a9dd-c40967a8ef6b",
+              "Placeholder": "?",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "2beaa044-03ae-4f8c-8c2f-f1e5daa7e399",
+              "Placeholder": "!",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "4bebe448-e1f2-4cd0-8d34-3b0422075e62",
+              "Placeholder": "#",
+              "TestValue": "1"
+            }
+          ],
+          "Status": {}
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "MSFS2020CustomInputAction",
+              "Command": "(>K:TOGGLE_FLIGHT_DIRECTOR)",
+              "PresetId": "fad1ae94-e742-4bee-8982-c45da3585497"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "FD_BTN",
+          "GUID": "11f8edce-9417-4f6c-a714-448fb6dd3c5a",
+          "Active": true,
+          "Name": "FD_BTN",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "Autopilot/ SN-bf3-83d",
+          "Preconditions": [],
+          "Modifiers": {
+            "Items": []
+          },
+          "ConfigRefs": [
+            {
+              "Active": false,
+              "Ref": "dd6aaff4-21e3-4c34-9b07-76715427c3c6",
+              "Placeholder": "B",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "a38f9933-e299-4fc7-bd88-bfc2c9d87700",
+              "Placeholder": "A",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "5d249be0-4949-4c2d-8fb8-55573e3b5918",
+              "Placeholder": "@",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "b2e17bfb-b6c5-43b9-a9dd-c40967a8ef6b",
+              "Placeholder": "?",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "2beaa044-03ae-4f8c-8c2f-f1e5daa7e399",
+              "Placeholder": "!",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "4bebe448-e1f2-4cd0-8d34-3b0422075e62",
+              "Placeholder": "#",
+              "TestValue": "1"
+            }
+          ],
+          "Status": {}
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "MSFS2020EventIdInputAction",
+              "EventId": "AP_MASTER"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "AP_BTN",
+          "GUID": "a6194fa8-ff76-491c-900c-71c65ce8fc48",
+          "Active": true,
+          "Name": "AP_BTN",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "Autopilot/ SN-bf3-83d",
+          "Preconditions": [],
+          "Modifiers": {
+            "Items": []
+          },
+          "ConfigRefs": [
+            {
+              "Active": false,
+              "Ref": "dd6aaff4-21e3-4c34-9b07-76715427c3c6",
+              "Placeholder": "B",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "a38f9933-e299-4fc7-bd88-bfc2c9d87700",
+              "Placeholder": "A",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "5d249be0-4949-4c2d-8fb8-55573e3b5918",
+              "Placeholder": "@",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "b2e17bfb-b6c5-43b9-a9dd-c40967a8ef6b",
+              "Placeholder": "?",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "2beaa044-03ae-4f8c-8c2f-f1e5daa7e399",
+              "Placeholder": "!",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "4bebe448-e1f2-4cd0-8d34-3b0422075e62",
+              "Placeholder": "#",
+              "TestValue": "1"
+            }
+          ],
+          "Status": {}
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "MSFS2020CustomInputAction",
+              "Command": "",
+              "PresetId": "-"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "VS_KNB_BTN",
+          "GUID": "380ca81e-6a39-42df-aa7e-552d966550ba",
+          "Active": false,
+          "Name": "VS_KNB_BTN",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "Autopilot/ SN-bf3-83d",
+          "Preconditions": [],
+          "Modifiers": {
+            "Items": []
+          },
+          "ConfigRefs": [
+            {
+              "Active": false,
+              "Ref": "dd6aaff4-21e3-4c34-9b07-76715427c3c6",
+              "Placeholder": "B",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "a38f9933-e299-4fc7-bd88-bfc2c9d87700",
+              "Placeholder": "A",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "5d249be0-4949-4c2d-8fb8-55573e3b5918",
+              "Placeholder": "@",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "b2e17bfb-b6c5-43b9-a9dd-c40967a8ef6b",
+              "Placeholder": "?",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "2beaa044-03ae-4f8c-8c2f-f1e5daa7e399",
+              "Placeholder": "!",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "4bebe448-e1f2-4cd0-8d34-3b0422075e62",
+              "Placeholder": "#",
+              "TestValue": "1"
+            }
+          ],
+          "Status": {}
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "MSFS2020EventIdInputAction",
+              "EventId": ""
+            },
+            "onRelease": {
+              "Type": "MSFS2020EventIdInputAction",
+              "EventId": ""
+            },
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "SPD_KNB_BTN",
+          "GUID": "8d909230-df2b-419c-be84-942876d9fa36",
+          "Active": true,
+          "Name": "SPD_KNB_BTN",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "Autopilot/ SN-bf3-83d",
+          "Preconditions": [],
+          "Modifiers": {
+            "Items": []
+          },
+          "ConfigRefs": [
+            {
+              "Active": false,
+              "Ref": "dd6aaff4-21e3-4c34-9b07-76715427c3c6",
+              "Placeholder": "B",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "a38f9933-e299-4fc7-bd88-bfc2c9d87700",
+              "Placeholder": "A",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "5d249be0-4949-4c2d-8fb8-55573e3b5918",
+              "Placeholder": "@",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "b2e17bfb-b6c5-43b9-a9dd-c40967a8ef6b",
+              "Placeholder": "?",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "2beaa044-03ae-4f8c-8c2f-f1e5daa7e399",
+              "Placeholder": "!",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "4bebe448-e1f2-4cd0-8d34-3b0422075e62",
+              "Placeholder": "#",
+              "TestValue": "1"
+            }
+          ],
+          "Status": {}
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "MSFS2020EventIdInputAction",
+              "EventId": "AS1000_MFD_HEADING_SYNC"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "HDG_KNB_BTN",
+          "GUID": "112ebc66-86e7-424a-a113-5ff9fc845224",
+          "Active": true,
+          "Name": "HDG_KNB_BTN",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "Autopilot/ SN-bf3-83d",
+          "Preconditions": [],
+          "Modifiers": {
+            "Items": []
+          },
+          "ConfigRefs": [
+            {
+              "Active": false,
+              "Ref": "dd6aaff4-21e3-4c34-9b07-76715427c3c6",
+              "Placeholder": "B",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "a38f9933-e299-4fc7-bd88-bfc2c9d87700",
+              "Placeholder": "A",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "5d249be0-4949-4c2d-8fb8-55573e3b5918",
+              "Placeholder": "@",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "b2e17bfb-b6c5-43b9-a9dd-c40967a8ef6b",
+              "Placeholder": "?",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "2beaa044-03ae-4f8c-8c2f-f1e5daa7e399",
+              "Placeholder": "!",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "4bebe448-e1f2-4cd0-8d34-3b0422075e62",
+              "Placeholder": "#",
+              "TestValue": "1"
+            }
+          ],
+          "Status": {}
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "VariableInputAction",
+              "Variable": {
+                "TYPE": "number",
+                "Name": "ALT_Toggle",
+                "Number": 0.0,
+                "Text": "",
+                "Expression": "if( $==0, 1, 0 )"
+              }
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "ALT_KNB_BTN",
+          "GUID": "3b46c027-06fe-4494-bfaa-b3f36091a2a1",
+          "Active": true,
+          "Name": "ALT_KNB_BTN",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "Autopilot/ SN-bf3-83d",
+          "Preconditions": [],
+          "Modifiers": {
+            "Items": []
+          },
+          "ConfigRefs": [
+            {
+              "Active": false,
+              "Ref": "dd6aaff4-21e3-4c34-9b07-76715427c3c6",
+              "Placeholder": "B",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "a38f9933-e299-4fc7-bd88-bfc2c9d87700",
+              "Placeholder": "A",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "5d249be0-4949-4c2d-8fb8-55573e3b5918",
+              "Placeholder": "@",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "b2e17bfb-b6c5-43b9-a9dd-c40967a8ef6b",
+              "Placeholder": "?",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "2beaa044-03ae-4f8c-8c2f-f1e5daa7e399",
+              "Placeholder": "!",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "4bebe448-e1f2-4cd0-8d34-3b0422075e62",
+              "Placeholder": "#",
+              "TestValue": "1"
+            }
+          ],
+          "Status": {}
+        },
+        {
+          "encoder": {
+            "onLeft": {
+              "Type": "MSFS2020EventIdInputAction",
+              "EventId": "AS1000_MFD_HEADING_DEC"
+            },
+            "onLeftFast": null,
+            "onRight": {
+              "Type": "MSFS2020EventIdInputAction",
+              "EventId": "AS1000_MFD_HEADING_INC"
+            },
+            "onRightFast": null
+          },
+          "DeviceType": "Encoder",
+          "DeviceName": "HDG_KNB",
+          "GUID": "4a647e08-dcaa-4564-bc8a-bf5d575f888e",
+          "Active": true,
+          "Name": "HDG_KNB",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "Autopilot/ SN-bf3-83d",
+          "Preconditions": [],
+          "Modifiers": {
+            "Items": []
+          },
+          "ConfigRefs": [
+            {
+              "Active": false,
+              "Ref": "dd6aaff4-21e3-4c34-9b07-76715427c3c6",
+              "Placeholder": "B",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "a38f9933-e299-4fc7-bd88-bfc2c9d87700",
+              "Placeholder": "A",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "5d249be0-4949-4c2d-8fb8-55573e3b5918",
+              "Placeholder": "@",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "b2e17bfb-b6c5-43b9-a9dd-c40967a8ef6b",
+              "Placeholder": "?",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "2beaa044-03ae-4f8c-8c2f-f1e5daa7e399",
+              "Placeholder": "!",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "4bebe448-e1f2-4cd0-8d34-3b0422075e62",
+              "Placeholder": "#",
+              "TestValue": "1"
+            }
+          ],
+          "Status": {}
+        },
+        {
+          "encoder": {
+            "onLeft": {
+              "Type": "MSFS2020CustomInputAction",
+              "Command": "(>K:AP_SPD_VAR_DEC)",
+              "PresetId": "5f986bc3-c167-46a0-acf3-e94bd02606d2"
+            },
+            "onLeftFast": null,
+            "onRight": {
+              "Type": "MSFS2020CustomInputAction",
+              "Command": "(>K:AP_SPD_VAR_INC)",
+              "PresetId": "5a6e646f-6b5a-4ceb-9761-2250c9f0f237"
+            },
+            "onRightFast": null
+          },
+          "DeviceType": "Encoder",
+          "DeviceName": "SPD_KNB",
+          "GUID": "5291a4c9-c2a2-4d42-8300-bfdd6e8ab6aa",
+          "Active": true,
+          "Name": "SPD_KNB",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "Autopilot/ SN-bf3-83d",
+          "Preconditions": [],
+          "Modifiers": {
+            "Items": []
+          },
+          "ConfigRefs": [
+            {
+              "Active": false,
+              "Ref": "dd6aaff4-21e3-4c34-9b07-76715427c3c6",
+              "Placeholder": "B",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "a38f9933-e299-4fc7-bd88-bfc2c9d87700",
+              "Placeholder": "A",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "5d249be0-4949-4c2d-8fb8-55573e3b5918",
+              "Placeholder": "@",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "b2e17bfb-b6c5-43b9-a9dd-c40967a8ef6b",
+              "Placeholder": "?",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "2beaa044-03ae-4f8c-8c2f-f1e5daa7e399",
+              "Placeholder": "!",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "4bebe448-e1f2-4cd0-8d34-3b0422075e62",
+              "Placeholder": "#",
+              "TestValue": "1"
+            }
+          ],
+          "Status": {}
+        },
+        {
+          "encoder": {
+            "onLeft": {
+              "Type": "MSFS2020CustomInputAction",
+              "Command": "",
+              "PresetId": "0"
+            },
+            "onLeftFast": null,
+            "onRight": {
+              "Type": "MSFS2020CustomInputAction",
+              "Command": " (A:AUTOPILOT ALTITUDE LOCK VAR, feet) 100 + (>K:AP_ALT_VAR_SET_ENGLISH) (>H:AP_KNOB_Up)",
+              "PresetId": "0"
+            },
+            "onRightFast": null
+          },
+          "DeviceType": "Encoder",
+          "DeviceName": "ALT_KNB",
+          "GUID": "c38fc2e9-72fe-42d3-8cea-352aa1bcab0d",
+          "Active": true,
+          "Name": "ALT_KNB_100_INC",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "Autopilot/ SN-bf3-83d",
+          "Preconditions": [
+            {
+              "PreconditionType": "config",
+              "PreconditionRef": "ac343bab-a681-42b6-9bde-b01cd6a8d367",
+              "PreconditionSerial": null,
+              "PreconditionPin": null,
+              "PreconditionOperand": "<",
+              "PreconditionValue": "1",
+              "PreconditionLogic": "and",
+              "PreconditionActive": true
+            }
+          ],
+          "Modifiers": {
+            "Items": []
+          },
+          "ConfigRefs": [],
+          "Status": {}
+        },
+        {
+          "encoder": {
+            "onLeft": {
+              "Type": "MSFS2020CustomInputAction",
+              "Command": " (A:AUTOPILOT ALTITUDE LOCK VAR, feet) 100 - (>K:AP_ALT_VAR_SET_ENGLISH) (>H:AP_KNOB_Up)",
+              "PresetId": "0"
+            },
+            "onLeftFast": null,
+            "onRight": {
+              "Type": "MSFS2020CustomInputAction",
+              "Command": "",
+              "PresetId": "-"
+            },
+            "onRightFast": null
+          },
+          "DeviceType": "Encoder",
+          "DeviceName": "ALT_KNB",
+          "GUID": "1e0011aa-1ea6-4d3a-8720-d4222ee3ecfe",
+          "Active": true,
+          "Name": "ALT_KNB_100_DEC",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "Autopilot/ SN-bf3-83d",
+          "Preconditions": [
+            {
+              "PreconditionType": "config",
+              "PreconditionRef": "ac343bab-a681-42b6-9bde-b01cd6a8d367",
+              "PreconditionSerial": null,
+              "PreconditionPin": null,
+              "PreconditionOperand": "<",
+              "PreconditionValue": "1",
+              "PreconditionLogic": "and",
+              "PreconditionActive": true
+            },
+            {
+              "PreconditionType": "config",
+              "PreconditionRef": "6e4debd9-cffb-4298-95bf-388d43ae5775",
+              "PreconditionSerial": null,
+              "PreconditionPin": null,
+              "PreconditionOperand": ">=",
+              "PreconditionValue": "100",
+              "PreconditionLogic": "and",
+              "PreconditionActive": true
+            }
+          ],
+          "Modifiers": {
+            "Items": []
+          },
+          "ConfigRefs": [],
+          "Status": {}
+        },
+        {
+          "encoder": {
+            "onLeft": {
+              "Type": "MSFS2020EventIdInputAction",
+              "EventId": "AS1000_AP_ALT_DEC_1000"
+            },
+            "onLeftFast": null,
+            "onRight": {
+              "Type": "MSFS2020EventIdInputAction",
+              "EventId": "AS1000_AP_ALT_INC_1000"
+            },
+            "onRightFast": null
+          },
+          "DeviceType": "Encoder",
+          "DeviceName": "ALT_KNB",
+          "GUID": "d340fe56-7e7e-478f-a05b-f3e4ffe7eccf",
+          "Active": true,
+          "Name": "ALT_KNB_1000",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "Autopilot/ SN-bf3-83d",
+          "Preconditions": [
+            {
+              "PreconditionType": "config",
+              "PreconditionRef": "ac343bab-a681-42b6-9bde-b01cd6a8d367",
+              "PreconditionSerial": null,
+              "PreconditionPin": null,
+              "PreconditionOperand": ">",
+              "PreconditionValue": "0",
+              "PreconditionLogic": "and",
+              "PreconditionActive": true
+            }
+          ],
+          "Modifiers": {
+            "Items": []
+          },
+          "ConfigRefs": [],
+          "Status": {}
+        },
+        {
+          "encoder": {
+            "onLeft": {
+              "Type": "MSFS2020EventIdInputAction",
+              "EventId": "AP_VS_VAR_DEC"
+            },
+            "onLeftFast": null,
+            "onRight": {
+              "Type": "MSFS2020EventIdInputAction",
+              "EventId": "AP_VS_VAR_INC"
+            },
+            "onRightFast": null
+          },
+          "DeviceType": "Encoder",
+          "DeviceName": "VS_KNB",
+          "GUID": "8db730d3-ce69-46ed-93e3-ecfc7456acfd",
+          "Active": true,
+          "Name": "VS_KNB",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "Autopilot/ SN-bf3-83d",
+          "Preconditions": [],
+          "Modifiers": {
+            "Items": []
+          },
+          "ConfigRefs": [
+            {
+              "Active": false,
+              "Ref": "dd6aaff4-21e3-4c34-9b07-76715427c3c6",
+              "Placeholder": "B",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "a38f9933-e299-4fc7-bd88-bfc2c9d87700",
+              "Placeholder": "A",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "5d249be0-4949-4c2d-8fb8-55573e3b5918",
+              "Placeholder": "@",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "b2e17bfb-b6c5-43b9-a9dd-c40967a8ef6b",
+              "Placeholder": "?",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "2beaa044-03ae-4f8c-8c2f-f1e5daa7e399",
+              "Placeholder": "!",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "4bebe448-e1f2-4cd0-8d34-3b0422075e62",
+              "Placeholder": "#",
+              "TestValue": "1"
+            }
+          ],
+          "Status": {}
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "MSFS2020CustomInputAction",
+              "Command": "(>K:YAW_DAMPER_TOGGLE)",
+              "PresetId": "2beef46b-a8ac-4a25-b7eb-6d75b136f1f9"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "FPA_BTN",
+          "GUID": "c3612c0e-dca8-43ae-b071-3635af344393",
+          "Active": true,
+          "Name": "FPA_BTN",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "Autopilot/ SN-bf3-83d",
+          "Preconditions": [],
+          "Modifiers": {
+            "Items": []
+          },
+          "ConfigRefs": [
+            {
+              "Active": false,
+              "Ref": "dd6aaff4-21e3-4c34-9b07-76715427c3c6",
+              "Placeholder": "B",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "a38f9933-e299-4fc7-bd88-bfc2c9d87700",
+              "Placeholder": "A",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "5d249be0-4949-4c2d-8fb8-55573e3b5918",
+              "Placeholder": "@",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "b2e17bfb-b6c5-43b9-a9dd-c40967a8ef6b",
+              "Placeholder": "?",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "2beaa044-03ae-4f8c-8c2f-f1e5daa7e399",
+              "Placeholder": "!",
+              "TestValue": "1"
+            },
+            {
+              "Active": false,
+              "Ref": "4bebe448-e1f2-4cd0-8d34-3b0422075e62",
+              "Placeholder": "#",
+              "TestValue": "1"
+            }
+          ],
+          "Status": {}
+        },
+        {
+          "DeviceType": "-",
+          "DeviceName": null,
+          "GUID": "5c252ac6-8a62-4ab0-b744-24d67f314e6c",
+          "Active": false,
+          "Name": "|||||||||||||||||||||||||||Throttle|||||||||||||||||||||||||||",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "",
+          "Preconditions": [],
+          "Modifiers": {
+            "Items": []
+          },
+          "ConfigRefs": [],
+          "Status": {}
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "MSFS2020CustomInputAction",
+              "Command": "(>H:AS530_RNG_Zoom)\n0 (>K:GPS_PAGE_KNOB_INC)\n(>H:AS430_RNG_Zoom)\n(>H:GTN750_VolInc)",
+              "PresetId": "0"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 14",
+          "GUID": "41f14eb8-bb0f-4250-b3a9-4006ea1a695a",
+          "Active": true,
+          "Name": "Range Dec",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "Bravo Throttle Quadrant / JS-0f7f6820-2241-11ed-8001-444553540000",
+          "Preconditions": [],
+          "Modifiers": {
+            "Items": []
+          },
+          "ConfigRefs": [],
+          "Status": {}
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "MSFS2020CustomInputAction",
+              "Command": "(>H:AS530_RNG_Dezoom)\n0 (>K:GPS_PAGE_KNOB_DEC)\n(>H:AS430_RNG_Dezoom)\n(>H:GTN750_VolDec)",
+              "PresetId": "0"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 13",
+          "GUID": "35ad7ec3-5066-4f17-9f4b-dffff9edd63d",
+          "Active": true,
+          "Name": "Range Inc",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "Bravo Throttle Quadrant / JS-0f7f6820-2241-11ed-8001-444553540000",
+          "Preconditions": [],
+          "Modifiers": {
+            "Items": []
+          },
+          "ConfigRefs": [],
+          "Status": {}
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "MSFS2020CustomInputAction",
+              "Command": "0 (>K:GPS_GROUP_KNOB_DEC)",
+              "PresetId": "754adeec-4863-4728-991c-54764af93ad2"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 6",
+          "GUID": "8093d86b-fa13-4cd7-aec9-3ad9e99a86b3",
+          "Active": true,
+          "Name": "Big Knob Dec",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "Bravo Throttle Quadrant / JS-0f7f6820-2241-11ed-8001-444553540000",
+          "Preconditions": [],
+          "Modifiers": {
+            "Items": []
+          },
+          "ConfigRefs": [],
+          "Status": {}
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "MSFS2020CustomInputAction",
+              "Command": "0 (>K:GPS_GROUP_KNOB_INC)",
+              "PresetId": "b85de373-60a4-4ce5-b556-29198cba551d"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 7",
+          "GUID": "23acee97-43e3-4a0e-9ecf-762e16e00e50",
+          "Active": true,
+          "Name": "Big Knob Inc",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "Bravo Throttle Quadrant / JS-0f7f6820-2241-11ed-8001-444553540000",
+          "Preconditions": [],
+          "Modifiers": {
+            "Items": []
+          },
+          "ConfigRefs": [],
+          "Status": {}
+        },
+        {
+          "DeviceType": "-",
+          "DeviceName": null,
+          "GUID": "581c4564-1c7b-4870-b466-f4701c5d2a45",
+          "Active": false,
+          "Name": "Yoke",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "",
+          "Preconditions": [],
+          "Modifiers": {
+            "Items": []
+          },
+          "ConfigRefs": [],
+          "Status": {}
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "MSFS2020CustomInputAction",
+              "Command": "1 (>L:SAFETY_Push_Warning_1)\n0 (>A:MASTER WARNING ACTIVE,bool)",
+              "PresetId": "0"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 14",
+          "GUID": "8aa19b95-f11b-47ad-962d-e207bb1bbc91",
+          "Active": true,
+          "Name": "Master Warning",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "TCA YOKE BOEING / JS-f4455760-d450-11ec-8004-444553540000",
+          "Preconditions": [],
+          "Modifiers": {
+            "Items": []
+          },
+          "ConfigRefs": [],
+          "Status": {}
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "MSFS2020CustomInputAction",
+              "Command": "1 (>L:SAFETY_Push_Caution_1)\n0 (>A:MASTER CAUTION ACTIVE,bool)",
+              "PresetId": "0"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 15",
+          "GUID": "a65cfdae-4686-4663-aad3-8eec8c0d031c",
+          "Active": true,
+          "Name": "Master Caution",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "TCA YOKE BOEING / JS-f4455760-d450-11ec-8004-444553540000",
+          "Preconditions": [],
+          "Modifiers": {
+            "Items": []
+          },
+          "ConfigRefs": [],
+          "Status": {}
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "MSFS2020CustomInputAction",
+              "Command": "(L:SAFETY_Push_StickPusher_Interrupt_1) ! (>L:SAFETY_Push_StickPusher_Interrupt_1)",
+              "PresetId": "0"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 12",
+          "GUID": "bb32f572-5e88-48c7-98f6-a2d71d80e52e",
+          "Active": true,
+          "Name": "Yoke Pusher Disconnect",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "TCA YOKE BOEING / JS-f4455760-d450-11ec-8004-444553540000",
+          "Preconditions": [],
+          "Modifiers": {
+            "Items": []
+          },
+          "ConfigRefs": [],
+          "Status": {}
+        }
+      ]
+    }
+  ]
+}
